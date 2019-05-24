@@ -1,0 +1,164 @@
+*{
+    box-sizing : border-box;
+    font-family: 'Open Sans';
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row{
+    width: 100%;
+    height: 70px;
+   /* border: solid 2px black;*/
+}
+
+.col{
+    height:100%;
+    float: left;
+   /* border: solid 2px green;*/
+}
+
+.upper{
+    border: solid 1px black;
+}
+
+.logo {
+    width: 25%;
+}
+
+.mid{
+    width: 50%;
+}
+
+.user{
+    width: 25%;
+}
+.lower{
+    padding-left: 28%;
+    padding-right: 28%;
+    height: 680px;
+}
+
+.slide{
+    
+    padding-top: 30px;
+    padding-bottom: 10px;
+    height:85px;
+}
+
+.data{
+    border:solid 1px #8257A5;
+    height:600px;
+}
+
+.info{
+    border:solid 1px #8257A5;
+    background-color: #8257A5;
+    color: white;
+    height:70px;
+    padding-top: 5%;
+    padding-left: 38%;
+    padding-right: 35%;   
+}
+
+.datatitle{
+    font-size: 20px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+.dialouge{
+    height: 130px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+.padding{
+    width:10%;
+}
+
+.userinfo{
+    width: 80%;
+}
+
+.discipline{
+    float: left;
+    padding-right: 10%;
+    margin-bottom: 10%;
+    height: 40px;
+    line-height: 40px;
+    background: #FAFAFA;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 10px;
+    color: #454545;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+.fa-plus{
+    text-align: left;
+    font-size: 13px;
+    float: right;  
+    padding-right: 10px;
+    line-height: 40px; 
+    position: relative;
+    top: 12px;
+    left: 50px;
+    color: #9e9e9e;
+}
+
+.previous{
+    text-decoration: none;
+    float: left;
+    color: #1295C9;
+    font-size: 13px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.next{
+    text-decoration: none;
+    float:right;
+    color:white;
+    background-color: #1295C9;
+    font-size: 13px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.attr{
+    
+    background: white;
+    height: 40px;
+    color: white;
+    border-radius: 90%;
+    padding-left: 32px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.profile{
+    height 40px;
+    width: 40px;
+    background-color: red;
+}

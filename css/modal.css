@@ -1,0 +1,120 @@
+*{
+    box-sizing : border-box;
+    font-family: 'Open Sans';
+}
+
+.modal-education{
+	height: 1200px;
+	width: 1200px;
+}
+/*	height: 800px;
+	width: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,.7);
+	top:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: block;		
+}*/
+
+.modal-conts{
+	justify-content: center;
+	align-items: center;
+	height: 650px;
+	width: 650px;
+	background-color: white;
+	position: relative;
+}
+
+.modal-body{
+	padding: 0px;
+}
+
+.padding,.dataform{
+	height: 470px;
+}
+
+.header-container{
+	position: relative;
+	height: 50px;
+	background-color: #8257A5;
+	text-align: center;
+    font-weight: 400;
+	padding-top: 10px;
+	font-size: 26px;
+	color:white	;
+}
+
+
+.close{
+	color: white;
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 30px;
+	cursor: pointer;
+	transform: rotate(45deg);
+}
+
+.dataform{
+	width: 80%;
+}
+.empty{
+	height: 50px;
+}
+
+.deg{
+	display: block;
+	
+	font-weight: 400;
+    float: left;
+    font-size: 15px;
+}
+
+.deg-container{
+	padding-top: 5px;
+	height: 30px;
+}
+
+
+
+.grad-stat,.performence-scale{
+	height: 70px;
+	padding-bottom: : 10px;	
+}
+
+.collegename{
+	height: 70px;
+
+}
+
+.degree_completion_status_container_completed{
+	padding-left: 150px;
+}
+
+
+
+.start-year,.end-year,.stream-name,.degree-name,.per-scale,.per-num{
+	padding-top: 20px;
+	width: 50%;
+}
+
+.chosen-year,.deg-input,.input-name,.stream-input,.perfor-scale,.per-marks{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	outline: none;
+	background-color: white;
+	margin-right: 5px;
+	width: 95%;
+}
+
+.tips_education{
+	border:solid 1px #1295C9;
+	padding-bottom: : 10px;	
+}
+
+.btn-holder{
+	padding-top: 15px;
+}

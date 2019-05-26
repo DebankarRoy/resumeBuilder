@@ -150,6 +150,10 @@ a:hover{
     border-radius: .25rem;
 }
 
+button, input, optgroup, select, textarea {
+    line-height: normal;
+}
+
 .attr{
     
     background: white;
@@ -166,3 +170,4 @@ a:hover{
     width: 40px;
     background-color: red;
 }
+

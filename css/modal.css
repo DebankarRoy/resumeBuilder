@@ -18,10 +18,14 @@
 	display: block;		
 }*/
 
+.modal-content{
+	width: 650px;
+}
+
 .modal-conts{
 	justify-content: center;
 	align-items: center;
-	height: 650px;
+	height: 630px;
 	width: 650px;
 	background-color: white;
 	position: relative;
@@ -79,13 +83,15 @@
 
 
 
-.grad-stat,.performence-scale{
-	height: 70px;
+.grad-stat,.hs-stat,.performence-scale{
+	
 	padding-bottom: : 10px;	
 }
 
-.collegename{
+.collegename,.schoolname{
 	height: 70px;
+	padding-bottom: : 10px;
+	padding-top: 10px;
 
 }
 
@@ -96,25 +102,66 @@
 
 
 .start-year,.end-year,.stream-name,.degree-name,.per-scale,.per-num{
-	padding-top: 20px;
+	padding-top: 15px;
+	margin-bottom: 15px;
 	width: 50%;
+	
 }
 
-.chosen-year,.deg-input,.input-name,.stream-input,.perfor-scale,.per-marks{
+.chosen-year,.deg-input,.input-name,.stream-input,.perfor-scale,.per-marks,.year-container{
 	border-top: none;
 	border-left: none;
 	border-right: none;
 	outline: none;
 	background-color: white;
-	margin-right: 5px;
+	padding-right: 5px;
 	width: 95%;
 }
 
 .tips_education{
+	position: relative;
+	top: 25px;
 	border:solid 1px #1295C9;
-	padding-bottom: : 10px;	
+	padding-bottom: : 10px;
+	
+	padding-right: 15px;	
+}
+.performence-scale{
+	position: relative;
+	top:25px;
 }
 
-.btn-holder{
-	padding-top: 15px;
+.next{
+	position: relative;
+	top:15px;
+	padding-top: 5px;
+	background-color: #1295C9
+}
+.start-year,.degree-name,.per-scale{
+    padding-left: 0px;
+}
+
+.list{
+	position: absolute;
+	top:10px;
+	left: 20px;
+}
+
+.year-container{
+	width: 100%;
+}
+
+.course-completion{
+	position: relative;
+	top:5px;
+		
+}
+
+.boardname{
+	position: relative;
+	top:15px;
+}
+.scl-performence-scale{
+	position: relative;
+	top: -5px;
 }

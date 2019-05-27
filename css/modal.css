@@ -3,7 +3,7 @@
     font-family: 'Open Sans';
 }
 
-.modal-education{
+.modal-education,.modal-intern{
 	height: 1200px;
 	width: 1200px;
 }
@@ -29,6 +29,9 @@
 	width: 650px;
 	background-color: white;
 	position: relative;
+}
+.secon-conts{
+	height: 570px;
 }
 
 .modal-body{
@@ -83,7 +86,7 @@
 
 
 
-.grad-stat,.hs-stat,.performence-scale{
+.grad-stat,.hs-stat,.performence-scale,.secon-stat{
 	
 	padding-bottom: : 10px;	
 }
@@ -104,8 +107,17 @@
 .start-year,.end-year,.stream-name,.degree-name,.per-scale,.per-num{
 	padding-top: 15px;
 	margin-bottom: 15px;
-	width: 50%;
-	
+	width: 50%;	
+}
+
+.dip-degree-stream{
+	position: relative;
+	top:25px;
+}
+
+.dip-stream-name{
+	width: 100%;
+	padding-left: 0px;
 }
 
 .chosen-year,.deg-input,.input-name,.stream-input,.perfor-scale,.per-marks,.year-container{
@@ -165,3 +177,4 @@
 	position: relative;
 	top: -5px;
 }
+

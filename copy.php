@@ -13,8 +13,6 @@
 
 		<title>Homepage</title>
 	</head>
-	<body>
-
 		<div class="row upper">
 			<div class="col logo"></div>
 			<div class="col mid"></div>

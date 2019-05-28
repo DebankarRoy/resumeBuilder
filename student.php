@@ -15,7 +15,7 @@
 		<div class="row lower">
 			<div class="row slide">
 				
-				<img src="img/user.png" class="attr prof">
+				<img src="img/user.png" class="attr prof-pic">
 				<img src="img/mortarboard.png" class="attr edu">
 				<img src="img/test.png" class="attr work">
 				<img src="img/artificial-intelligence.png" class="attr skills">

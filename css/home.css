@@ -254,16 +254,20 @@ a:hover{
 
 .exp{
     background-color: #FAD33A;
+    
 }
 
 .work-exp{
     height: 360px;
     width: 100%;
     border:solid 1px #FAD33A;
+    padding-right: 0px;
+     padding-left: 0px;
 }
 
 .dialouge2{
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     height: 90px;
     font-size: 18px;
 }
@@ -276,4 +280,57 @@ a:hover{
 
 .skip{
     float: right;
+}
+
+.skill{
+    background-color: #EE605F;
+}
+
+.sample{
+    background-color: #FC8D3F;
+}
+
+.bor-red{
+    border:solid 1px #EE605F;
+    height: 300px;
+}
+
+.bor-org{
+    border:solid 1px #FC8D3F;
+    height: 670px;
+}
+
+.tag{
+    height: 55px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+.font-weight-h4{
+    font-weight: 600;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.skills-in{
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+}
+
+.link-in{
+    width: 100%;
+    height: 90px;
+    font-size: 16px;
+}
+.padding-h4{
+    padding-bottom: 15px;
+}
+
+.link-input{
+    width: 100%;
+    padding-top: 12px;
+    font-size: 14px;
 }

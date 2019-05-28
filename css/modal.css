@@ -3,10 +3,10 @@
     font-family: 'Open Sans';
 }
 
-.modal-education,.modal-intern{
+/*.modal-education,.modal-intern{
 	height: 1200px;
 	width: 1200px;
-}
+}*/
 /*	height: 800px;
 	width: 100%;
 	position: absolute;
@@ -91,7 +91,7 @@
 	padding-bottom: : 10px;	
 }
 
-.collegename,.schoolname{
+.collegename,.schoolname,.prof,.loc,.org{
 	height: 70px;
 	padding-bottom: : 10px;
 	padding-top: 10px;
@@ -178,3 +178,61 @@
 	top: -5px;
 }
 
+.position{
+	position: absolute;
+	top: 150px;
+    left: 350px;
+
+}
+.date{
+	width: 40%;
+	padding-left: 0px;
+}
+
+.dated{
+	outline: none;
+	
+}
+.radio-btn{
+	padding-top: 10px;
+}
+
+.description{
+	height: 120px;
+}
+.desc-info{
+	border:solid 1px #1295C9;
+	height: 90px;
+}
+
+.input-info{
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border:0px;
+	resize: none;
+}
+
+.exp{
+   background-color: #FAD33A;
+   border:solid 1px #FAD33A;	
+}
+.bor{
+	border:solid 1px #FAD33A;
+	height: 550px;
+}
+
+.prof-pic{
+	height: 40px;
+}
+.pro{
+	height: 520px;
+}
+
+.tra{
+	height: 600px;
+}
+
+.achv{
+	height: 400px;
+}

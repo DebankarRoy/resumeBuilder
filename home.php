@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+      	rel="stylesheet">
       	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/home.css"/>
 		<link rel="stylesheet" href="css/modal.css"/>

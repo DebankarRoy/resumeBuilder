@@ -22,6 +22,12 @@
 	width: 650px;
 }
 
+@media (max-width: 600px) { 
+    .modal-content{
+    width: auto;
+    }
+ }
+
 .modal-conts{
 	justify-content: center;
 	align-items: center;
@@ -30,6 +36,13 @@
 	background-color: white;
 	position: relative;
 }
+
+@media (max-width: 600px) { 
+    .modal-conts	{
+    width: auto;
+    }
+ }
+
 .secon-conts{
 	height: 570px;
 }
@@ -145,7 +158,7 @@
 
 .next{
 	position: relative;
-	top:15px;
+	
 	padding-top: 5px;
 	background-color: #1295C9
 }
@@ -185,7 +198,7 @@
 
 }
 .date{
-	width: 40%;
+	width: 50%;
 	padding-left: 0px;
 }
 
@@ -225,6 +238,13 @@
 .prof-pic{
 	height: 40px;
 }
+
+@media (max-width: 600px) { 
+    .prof-pic {
+    height: 30px;
+    }
+ }
+
 .pro{
 	height: 520px;
 }
@@ -235,4 +255,17 @@
 
 .achv{
 	height: 400px;
+}
+
+@media (max-width: 600px) { 
+    .start-end-date{
+    height 90px;
+    }
+ }
+
+ @media (max-width: 600px) {
+ 	.degree_completion_status_container_completed{
+	 	position: relative;
+	    top: -21px;
+ 	}
 }

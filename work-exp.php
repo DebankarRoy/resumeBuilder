@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  		rel="stylesheet">
       	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/home.css"/>
 		<link rel="stylesheet" href="css/modal.css"/>
@@ -11,7 +13,7 @@
 
 		
 
-		<title>Homepage</title>
+		<title>Experience</title>
 	</head>
 	<body>
 
@@ -30,7 +32,7 @@
 
 			</div>
 			<div class="row data bor">
-				<div class="row info exp">
+				<div class="row info exp heading">
 					<div class="datatitle">Experience</div>
 				</div>
 				<div class="row dialouge"><h4>Tell us bit about your education</h4></div>
@@ -99,7 +101,7 @@
 						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
-					 									<input type="checkbox" id="present">Currently working here
+					 									<input type="checkbox" id="present">Currently Ongoing
 					 								</div>
 						 						</div>
 						 					</div>
@@ -214,7 +216,7 @@
 						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
-					 									<input type="checkbox" id="present">Currently working here
+					 									<input type="checkbox" id="present">Currently Ongoing
 					 								</div>
 						 						</div>
 						 					</div>
@@ -275,7 +277,7 @@
 						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
-					 									<input type="checkbox" id="present">Currently working here
+					 									<input type="checkbox" id="present">Currently Ongoing 
 					 								</div>
 						 						</div>
 						 					</div>

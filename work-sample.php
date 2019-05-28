@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="css/home.css"/>
 		<link rel="stylesheet" href="css/modal.css"/>
-		<title>Skills</title>
+		<title>Work Samples</title>
 	</head>
 	<body>
 		<div class="row upper">

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="css/home.css"/>
+		<link rel="stylesheet" href="css/home-2.css"/>
 		<link rel="stylesheet" href="css/modal.css"/>
 		<title>Student details</title>
 	</head>
@@ -29,9 +29,9 @@
 
 				<div class="col padding"></div>
 
-				<div class="col dataform">
-					<form role="form" novalidate="novalidate" id="personal_details" name="registration" enctype="multipart/form-data" method="POST">
 
+				<div class="col dataform">
+					<form role="form" novalidate="novalidate" id="personal_details" name="registration" enctype="multipart/form-data" method="POST" action = "student-submit.php">
 					    <div class="row form-group">
 					        <label for="name" class="control-label">Name*:</label>
 					        <div class="input-group">
@@ -48,27 +48,29 @@
 					    <div class="row form-group">
 					        <label for="number" class="control-label">Mobile Number*:</label>
 					        <div class="input-group">
-					            <input type="number"  class="wid form-control mobile-number" tabindex="6" id="phone_primary" name="phone_primary" placeholder="Your 10 digit mobile number " value="">
+					            <input type="number"  class="wid form-control mobile-number" tabindex="4" id="phone_primary" name="phone_no" placeholder="Your 10 digit mobile number " value="">
 					        </div>
 					    </div>
 
 					    <div class="row form-group">
 					        <label for="email" class="control-label">Email*:</label>
 					        <div class="input-group">
-					            <input type="text" class="wid form-control" id="email" tabindex="" name="email" placeholder="random@random.com" value="" autocomplete="off">	
+					            <input type="text" class="wid form-control" id="email" tabindex="5" name="email" placeholder="random@random.com" value="" autocomplete="off">	
 					        </div>
 					    </div>
 
 					    <div class="row form-group">
 					        <label for="current_city" class="control-label">Current City*:</label>
 					        <div class="input-group">
-					            <input type="text" class="wid form-control" id="current_city" tabindex="" name="current_city" placeholder="Start typing.." value="" autocomplete="off">	
+					            <input type="text" class="wid form-control" id="current_city" tabindex="6" name="current_city" placeholder="Start typing.." value="" autocomplete="off">	
 					        </div>
 					    </div>
 					    
 					    <div class="row button_container">
-	                        <input name="submit" class="next-button_container" id="personal-detail-submit" tabindex="9" value="NEXT" type="submit">
+	                        <input name="submit" class="next-button_container" id="personal-detail-submit" tabindex="7" value="NEXT" type="submit">
 					    </div>
+
+
 					</form>
 				</div>
 

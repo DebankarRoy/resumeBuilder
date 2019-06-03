@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="css/home.css"/>
-		<link rel="stylesheet" href="css/modal.css"/>
+    	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/home-2.css"/>
+		<link rel="stylesheet" href="css/modal-2.css"/>
+
 		<title>Skills</title>
 	</head>
 	<body>
@@ -31,17 +33,34 @@
 				<div class="col dataform tag">
 					<h4 class="font-weight-h4">What skills do you have?</h4>
 					<div class="row skill-input">
-						<input class="form-control skills-in " id="skill"index="2" name="skill" placeholder="Ex: Adobe Photoshop" value="" type="text">
+						<form role="form" novalidate="novalidate" id="skills" name="skills" enctype="multipart/form-data" method="post" action="skills-submit.php">
+							
+							<input class="form-control skills-in " id="skill"index="2" name="skill-input" placeholder="Ex: C Programming Language" value="" type="text">
+						
+							<div class="add-skills-rating-container" style="display: block;">
+							    <div id="rating_question">How would you rate yourself at this ?</div>
+							    <div class="skills_edit_cancel" style="display: none;">(×)Cancel
+							    </div>
+							    <div class="rating-container">
+							        <input class="btn btn-primary rating-value" value="Beginner" name="rating" readonly="readonly" type="submit">
+							        <input class="btn btn-primary rating-value" value="Intermediate" name="rating" readonly="readonly" type="submit">
+							        <input class="btn btn-primary rating-value" value="Advanced" name="rating" readonly="readonly" type="submit">
+							    </div>
+						    </div>
+
+						    <div class="button-container btn-pos">
+								<a href="work-exp.php" class="previous">PREVIOUS</a>
+								<input type="submit" class="next-button_container" id="personal-detail-submit" tabindex="" value="Done" type="submit">
+							</div>
+					    </form>
 					</div>
-					<div class="button-container btn-pos">
-						<a href="" class="previous">PREVIOUS</a>
-						<a href="" class="next-container"><button class="next">Next</button></a>
+					
 				</div>
-				</div>
+			</div>
 
 				<div class="col padding"></div>
-
-			</div>
 		</div>
+
+		<script src="js/skill-selector.js" type="text/javascript" charset="utf-8" async defer></script>
 	</body>
 	</html>

@@ -6,7 +6,7 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
   		rel="stylesheet">
       	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/home.css"/>
+		<link rel="stylesheet" href="css/home-2.css"/>
 		<link rel="stylesheet" href="css/modal.css"/>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/jquery-ui.min.css"/>
@@ -54,8 +54,8 @@
 						<i class="fa fa-plus education-fa-plus fa-x" aria-hidden="true"></i>
 					</div>
 					<div class="button-container">
-						<a href="" class="previous">PREVIOUS</a>
-						<a href="" class="next-container"><button class="next">Next</button></a>
+						<a href="home.php" class="previous">PREVIOUS</a>
+						<a href="skills.php" class="next-container"><button class="next">Next</button></a>
 					</div>	
 				</div>
 				<div class="colp padding"></div>

@@ -3,45 +3,25 @@
     font-family: 'Open Sans';
 }
 
-/*.modal-education,.modal-intern{
-	height: 1200px;
-	width: 1200px;
-}*/
-/*	height: 800px;
-	width: 100%;
-	position: absolute;
-	background-color: rgba(0,0,0,.7);
-	top:0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	display: block;		
-}*/
-
 .modal-content{
-	width: 650px;
+    width: auto;
 }
 
-@media (max-width: 600px) { 
-    .modal-content{
-    width: auto;
-    }
- }
+@media (min-width: 600px){
+.modal-content{
+	width: 650px;
+	}
+}
 
 .modal-conts{
 	justify-content: center;
 	align-items: center;
 	height: 630px;
-	width: 650px;
+	width: auto;
 	background-color: white;
 	position: relative;
 }
 
-@media (max-width: 600px) { 
-    .modal-conts	{
-    width: auto;
-    }
- }
 
 .secon-conts{
 	height: 570px;
@@ -157,11 +137,19 @@
 }
 
 .next{
-	position: relative;
-	
-	padding-top: 5px;
+	/*position: relative;
+	top: 15px;*/
 	background-color: #1295C9
 }
+@media (min-width: 600px){
+.next {
+    position: relative;
+    top: 0px;
+    padding-top: 5px;
+	}
+}
+
+
 .start-year,.degree-name,.per-scale{
     padding-left: 0px;
 }
@@ -170,6 +158,13 @@
 	position: absolute;
 	top:10px;
 	left: 20px;
+	font-size: 12px;
+}
+
+@media (min-width: 600px){
+.list{
+	font-size: 14px;
+	}
 }
 
 .year-container{
@@ -236,17 +231,13 @@
 }
 
 .prof-pic{
-	height: 40px;
+	height: 30px;
 }
 
-@media (max-width: 600px) { 
-    .prof-pic {
-    height: 30px;
-    }
- }
-
-.pro{
-	height: 520px;
+@media (min-width: 600px){
+	.prof-pic{
+	height: 40px;
+	}
 }
 
 .tra{
@@ -257,16 +248,27 @@
 	height: 400px;
 }
 
-@media (max-width: 600px) { 
-    .start-end-date{
+.start-end-date{
     height 90px;
-    }
- }
-
- @media (max-width: 600px) {
- 	.degree_completion_status_container_completed{
-	 	position: relative;
-	    top: -21px;
- 	}
 }
 
+.degree_completion_status_container_completed{
+	 	position: relative;
+	    top: -21px;
+}
+
+.mbl-view{
+	height: 80px;
+	font-size: 22px;
+}
+
+@media (min-width: 600px){
+	.mbl-view{
+	height: 50px;
+	font-size: 26px;
+}
+}
+
+@media (min-width: 600px){
+
+}

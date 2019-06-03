@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="css/home.css"/>
+		<link rel="stylesheet" href="css/home-2.css"/>
 		<link rel="stylesheet" href="css/modal.css"/>
 		<title>Work Samples</title>
 	</head>
@@ -30,31 +30,33 @@
 
 				<div class="col dataform ">
 					<h4 class="font-weight-h4 padding-h4">Add your work sample links here (if any):</h4>
-					<div class="row link-in">Blog Link:
-						<input class="form-control link-input " id="skill"index="2" name="skill" placeholder="http://myblog.com" value="" type="text">
-					</div>
-					
-					<div class="row link-in">GitHub Profile:
-						<input class="form-control link-input " id="skill"index="2" name="skill" placeholder="http://github.com/my_profile" value="" type="text">
-					</div>
+					<form role="form" novalidate="novalidate" id="work-samples" name="work-samples" enctype="multipart/form-data" method="POST" action = "work-sample-submit.php">
+						<div class="row link-in">Blog Link:
+							<input class="form-control link-input " id="skill"index="2" name="blog" placeholder="http://myblog.com" value="" type="text">
+						</div>
+						
+						<div class="row link-in">GitHub Profile:
+							<input class="form-control link-input " id="skill"index="2" name="github" placeholder="http://github.com/my_profile" value="" type="text">
+						</div>
 
-					<div class="row link-in">Play Store Developer A/c (Public Link):
-						<input class="form-control link-input " id="skill"index="2" name="skill" placeholder="http://play.google.com/store/apps/developer?id=myapps" value="" type="text">
-					</div>
+						<div class="row link-in">Play Store Developer A/c (Public Link):
+							<input class="form-control link-input " id="skill"index="2" name="playstore" placeholder="http://play.google.com/store/apps/developer?id=myapps" value="" type="text">
+						</div>
 
-					<div class="row link-in">Behance Portfolio Link:
-						<input class="form-control link-input " id="skill"index="2" name="skill" placeholder="http://behance.net/my_profile" value="" type="text">
-					</div>
+						<div class="row link-in">Behance Portfolio Link:
+							<input class="form-control link-input " id="skill"index="2" name="behnace" placeholder="http://behance.net/my_profile" value="" type="text">
+						</div>
 
-					<div class="row link-in">Other Portfolio Link:
-						<input class="form-control link-input " id="skill"index="2" name="skill" placeholder="http://myportfolio.com" value="" type="text">
-					</div>
-					
-					
-					<div class="button-container btn-pos">
-						<a href="" class="previous">PREVIOUS</a>
-						<a href="" class="next-container"><button class="next">Next</button></a>
-				</div>
+						<div class="row link-in">Other Portfolio Link:
+							<input class="form-control link-input " id="skill"index="2" name="other" placeholder="http://myportfolio.com" value="" type="text">
+						</div>
+						
+						
+						<div class="button-container btn-pos">
+							<a href="skills.php" class="previous">PREVIOUS</a>
+							<input name="submit" class="next-button_container" id="personal-detail-submit" tabindex="7" value="NEXT" type="submit">
+						</div>
+					</form>
 				</div>
 
 				<div class="col padding"></div>

@@ -9,8 +9,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-
-
 *{
     box-sizing : border-box;
     font-family: 'Open Sans';
@@ -22,12 +20,10 @@ input[type=number]::-webkit-outer-spin-button {
     clear: both;
 }
 
-@media (max-width: 600px) { 
-    h3 {
+/*h3 {
     position: relative;
     top: -12px;
-    }
- }
+    }*/
 
 .row{
     width: 100%;
@@ -37,13 +33,6 @@ input[type=number]::-webkit-outer-spin-button {
      display: block; 
    /* border: solid 2px black;*/
 }
-
-@media (max-width: 600px) { 
-    .start-end-date{
-    height 90px;
-    }
- }
-    
 
 .col,.colp{
     height:100%;
@@ -66,33 +55,35 @@ input[type=number]::-webkit-outer-spin-button {
 .user{
     width: 25%;
 }
+
 .lower{
-    padding-left: 28%;
-    padding-right: 28%;
-    height: 580px;
-}
-@media (max-width: 600px) { 
-    .lower{
     padding-left: 2%;
     padding-right: 2%;
     height: 580px;
     }
- }
 
-.slide{
-    
-    padding-top: 30px;
-    padding-bottom: 10px;
-    height:85px;
+@media (min-width: 600px){
+	.lower{
+    padding-left: 28%;
+    padding-right: 28%;
+    height: 580px;
+	}
 }
 
-@media (max-width: 600px) { 
-    .slide {
+.slide {
     padding-top: 10px;
     padding-bottom: 5px;
     height:45px;
     }
- }
+
+@media (min-width: 600px){
+	.slide{
+    
+    padding-top: 30px;
+    padding-bottom: 10px;
+    height:85px;
+	}
+}
 
 .data{
     border:solid 1px #8257A5;
@@ -117,17 +108,18 @@ input[type=number]::-webkit-outer-spin-button {
 
 .dialouge{
     height: 130px;
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 20px;
     padding-left: 10%;
     padding-right: 10%; 
 }
 
-@media (max-width: 600px) { 
-    .dialouge {
-    padding-top: 40px;
+@media (min-width: 600px){
+.dialouge {
+    padding-top: 60px;
     }
- }
+
+}
 
 .padding{
     width:10%;
@@ -198,8 +190,16 @@ a:hover{
     border-radius: .25rem;
 }
 
+.attr {
+    height: 30px;
+    color: white;
+    border-radius: 50%;
+    padding-left: 15px;
+    padding-right: 10px;
+    cursor: pointer;
+    }
 
-
+@media (min-width: 600px){
 .attr{
     
     height: 40px;
@@ -208,20 +208,8 @@ a:hover{
     padding-left: 42px;
     padding-right: 29px;
     cursor: pointer;
+	}
 }
-
-@media (max-width: 600px) { 
-    .attr {
-    height: 30px;
-    color: white;
-    border-radius: 50%;
-    padding-left: 15px;
-    padding-right: 10px;
-    cursor: pointer;
-    }
- }
-
-
 
 .profile{
     height: 40px;
@@ -244,14 +232,14 @@ a:hover{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
+    height: 50px;
 }
 
-@media (max-width: 600px) { 
-    .heading {
-    height: 50px;
-    text-align: center;
-    }
- }
+@media (min-width: 600px){
+	.heading{
+		height: 70px;
+	}
+}
 
 .empty{
     height: 50px;
@@ -273,15 +261,16 @@ a:hover{
     border-bottom-color: #eeeeee;
     border-bottom-width: 3px;
 }
+
 .first_name,.last_name{
-    width: 40%;
+    width: 100px;
 }
 
-@media (max-width: 600px) { 
-    .first_name,.last_name{
-    width: 100px;
-    }
- }
+@media (min-width: 600px){
+.first_name,.last_name{
+	width: 40%;
+	}
+}
 
 .wid{
     width: 70%;
@@ -353,7 +342,15 @@ a:hover{
 
 .bor-red{
     border:solid 1px #EE605F;
-    height: 300px;
+    height: 400px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+@media (min-width: 600px){
+.bor-red{
+    height: 360px;
+    }
 }
 
 .bor-org{
@@ -379,6 +376,7 @@ a:hover{
     width: 100%;
     height: 60px;
     font-size: 16px;
+    padding-bottom: 30px;
 }
 
 .link-in{
@@ -398,4 +396,40 @@ a:hover{
 
 .input-group{
     padding-top: 10px;
+}
+
+
+.start-end-date{
+    height 90px;
+    }
+
+.add-skills-rating-container{
+    height: 180px;
+}
+
+@media (min-width: 600px){
+.add-skills-rating-container{
+    height: 120px;
+    }
+}
+
+
+#rating_question{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: #1295C9;
+    border-color: #1295C9;
+    width: 100%;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+@media (min-width: 600px){
+.btn-primary{
+    width: 32%;
+    }
 }

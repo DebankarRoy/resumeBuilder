@@ -26,17 +26,17 @@ CREATE TABLE profiles(
 
 CREATE TABLE graduation(
     id int(200) NOT NULL AUTO_INCREMENT,
-    degree_status VARCHAR(20),
-    degree VARCHAR(100) ,
-    college VARCHAR(100) ,
-    start_year VARCHAR(20) ,
-    end_year VARCHAR(20) ,
-    stream varchar(40),
-    performence_scale VARCHAR(10),
-    performence_marks VARCHAR(10),
-    resume_profiles_id int,
+    degree_status VARCHAR(255),
+    degree VARCHAR(255),
+    college VARCHAR(255),
+    start_year VARCHAR(255),
+    end_year VARCHAR(255),
+    stream varchar(255),
+    performence_scale VARCHAR(255),
+    performence_marks VARCHAR(255),
+    profiles_id int,
     PRIMARY KEY (id),
-    FOREIGN KEY (profiles_id) REFERENCES resume_profiles(id)
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
 );
 
 CREATE TABLE senior_secondary(
@@ -48,12 +48,67 @@ CREATE TABLE senior_secondary(
     stream varchar(40),
     performence_scale VARCHAR(10),
     performence_marks VARCHAR(10),
-    resume_profiles_id int,
+    profiles_id int,
     PRIMARY KEY (id),
-    FOREIGN KEY (profiles_id) REFERENCES users(id)
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
 );
 
 
+CREATE TABLE secondary_details(
+    id int(200) NOT NULL AUTO_INCREMENT,
+    degree_status VARCHAR(20),
+    school VARCHAR(100) ,
+    end_year VARCHAR(20) ,
+    board varchar(40) ,
+    performence_scale VARCHAR(10),
+    performence_marks VARCHAR(10),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+CREATE TABLE post_graduation(
+    id int(200) NOT NULL AUTO_INCREMENT,
+    degree_status VARCHAR(255),
+    degree VARCHAR(255),
+    college VARCHAR(255),
+    start_year VARCHAR(255),
+    end_year VARCHAR(255),
+    stream varchar(255),
+    performence_scale VARCHAR(255),
+    performence_marks VARCHAR(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+CREATE TABLE diploma(
+    id int(200) NOT NULL AUTO_INCREMENT,
+    degree_status VARCHAR(255),
+    college VARCHAR(255),
+    start_year VARCHAR(255),
+    end_year VARCHAR(255),
+    stream varchar(255),
+    performence_scale VARCHAR(255),
+    performence_marks VARCHAR(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+CREATE TABLE phd(
+    id int(200) NOT NULL AUTO_INCREMENT,
+    degree_status VARCHAR(255),
+    college VARCHAR(255),
+    start_year VARCHAR(255),
+    end_year VARCHAR(255),
+    stream varchar(255),
+    performence_scale VARCHAR(255),
+    performence_marks VARCHAR(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
 
 CREATE TABLE resume_work_exps(
    	id int(200) NOT NULL AUTO_INCREMENT,

@@ -56,7 +56,7 @@
 					</div>
 					<div class="button-container">
 						<a href="student.php" class="previous">PREVIOUS</a>
-						<button  class="next" onclick="submitgradForm()">SUBMIT</button>
+						<button  class="next" >NEXT</button>
 					</div>	
 				</div>
 				<div class="colp padding"></div>
@@ -230,7 +230,7 @@
 							 						
 							 					</div>
 							 					<div class=" col btn-holder">
-					 									<button  class="next" data-dismiss="modal" >Save</button>
+					 									<button  class="next" data-dismiss="modal" onclick="submitgrad()">SUBMIT</button>
 
 													</div>	
 											</div>
@@ -363,10 +363,8 @@
 											</div>
 
 											<div class=" col btn-holder">
-			 									<button  class="next" data-dismiss="modal">SAVE</button>
-											</div>
-											
-											
+			 									<button  class="next" data-dismiss="modal" onclick="submitss()">SUBMIT</button>
+											</div>	
 										</div>
 										<div class="col padding"></div>
 									</form>
@@ -484,7 +482,7 @@
 											</div>
 
 											<div class=" col btn-holder">
-												<button  class="next" data-dismiss="modal">SAVE</button>
+												<button  class="next" data-dismiss="modal" onclick="submitsecondary()">SUBMIT</button>
 											</div>
 
 										</div>
@@ -662,7 +660,7 @@
 							 						</div>	
 							 					</div>
 							 					<div class=" col btn-holder">
-					 									<button  class="next" data-dismiss="modal">SAVE</button>
+					 									<button  class="next" data-dismiss="modal" onclick="submitpostgrad()">SUBMIT</button>
 													</div>	
 											</div>
 											<div class="col padding"></div>
@@ -831,7 +829,7 @@
 							 						
 							 					</div>
 							 					<div class=" col btn-holder">
-					 								<button class="next" data-dismiss="modal">Save</button>
+					 								<button class="next" data-dismiss="modal" onclick="submitdiploma()">Submit</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>
@@ -1000,7 +998,7 @@
 							 						</div>	
 							 					</div>
 							 					<div class=" col btn-holder">
-					 								<button class="next" data-dismiss="modal">Save</button>
+					 								<button class="next" data-dismiss="modal" onclick="submitphd()">SUBMIT</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>
@@ -1015,7 +1013,7 @@
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/graduation-submit.js"></script>
+		<script src="js/education-submit.js"></script>
 
 	</body>
 </html>

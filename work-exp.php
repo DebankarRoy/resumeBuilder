@@ -7,7 +7,7 @@
   		rel="stylesheet">
       	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/home-2.css"/>
-		<link rel="stylesheet" href="css/modal.css"/>
+		<link rel="stylesheet" href="css/modal-2.css"/>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/jquery-ui.min.css"/>
 
@@ -55,7 +55,7 @@
 					</div>
 					<div class="button-container">
 						<a href="home.php" class="previous">PREVIOUS</a>
-						<a href="skills.php" class="next-container"><button class="next">Next</button></a>
+						<button  class="next" >NEXT</button>
 					</div>	
 				</div>
 				<div class="colp padding"></div>
@@ -70,51 +70,53 @@
 									<div class="modal-conts tra">
 										<div class="header-container exp">Training Details</div>
 										<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
-										<div class="row empty"></div>
-										<div class="col padding"></div>
-										<div class="col dataform">
-									 		<div class="row prof">Training Program*:
-									 			<div class="name-container">
-									 				<input type="text" id="intern-role" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Web Development" required="" aria-required="true" aria-invalid="true">
-									 			</div>
-									 		</div>
+										<form role="form" novalidate="novalidate" id="training_details" name="training" enctype="multipart/form-data">
+											<div class="row empty"></div>
+											<div class="col padding"></div>
+											<div class="col dataform">
+										 		<div class="row prof">Training Program*:
+										 			<div class="name-container">
+										 				<input type="text" id="intern-role" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="training_prog" placeholder="Ex: Web Development" required="" aria-required="true" aria-invalid="true">
+										 			</div>
+										 		</div>
 
-									 		<div class="row org">Organization*:
-									 			<div class="name-container">
-									 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Ungineering" required="" aria-required="true" aria-invalid="true">
-									 			</div>
-									 		</div>
+										 		<div class="row org">Organization*:
+										 			<div class="name-container">
+										 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="training_org" placeholder="Ex: Ungineering" required="" aria-required="true" aria-invalid="true">
+										 			</div>
+										 		</div>
 
-									 		<div class="row location">Location*:
-									 			<div class="name-container">
-									 				<input type="text" id="location" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Kolkata" required="" aria-required="true" aria-invalid="true">
-									 			</div>
-									 		</div>
-						 					<div class=" row start-end-date">
-						 						<div class="col date">Start Date
-						 							<div class="name-container">
-						 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
-					 								</div>
-						 						</div>
-						 						<div class="col date">End Date
-						 							<div class="name-container">
-						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
-					 								</div>
-					 								<div class="radio-btn">
-					 									<input type="checkbox" id="present">Currently Ongoing
-					 								</div>
-						 						</div>
-						 					</div>
-							 				<div class="row description">Description:
-							 					<div class="row desc-info">
-							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="experience_description" spellcheck="false" aria-invalid="false"></textarea>
+										 		<div class="row location">Location*:
+										 			<div class="name-container">
+										 				<input type="text" id="location" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="traning_loc" placeholder="Ex: Kolkata" required="" aria-required="true" aria-invalid="true">
+										 			</div>
+										 		</div>
+							 					<div class=" row start-end-date">
+							 						<div class="col date">Start Date
+							 							<div class="name-container">
+							 								<input type="text" id="start-date_training" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_tra" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
+						 								</div>
+							 						</div>
+							 						<div class="col date">End Date
+							 							<div class="name-container">
+							 								<input type="text" id="end-date_training" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_tra" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
+						 								</div>
+						 								<div class="radio-btn">
+						 									<input type="checkbox" id="present" >Currently Ongoing
+						 								</div>
+							 						</div>
 							 					</div>
-							 				</div>	
-						 					<div class=" col btn-holder">
-				 									<a href="" class="next-container"><button class="next" data-dismiss="modal">Save</button></a>
+								 				<div class="row description">Description:
+								 					<div class="row desc-info">
+								 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="training_description" spellcheck="false" aria-invalid="false"></textarea>
+								 					</div>
+								 				</div>	
+							 					<div class=" col btn-holder">
+				 									<button class="next" data-dismiss="modal" onclick="Submittraining()">SUBMIT</button>
 												</div>	
-										</div>
-										<div class="col padding"></div>
+											</div>
+											<div class="col padding"></div>
+										</form>
 									</div>
 
 							</div>
@@ -131,44 +133,46 @@
 									<div class="modal-conts pro">
 										<div class="header-container exp">Project Details</div>
 										<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
-										<div class="row empty"></div>
-										<div class="col padding"></div>
-										<div class="col dataform">
-									 		<div class="row prof">Title*:
-									 			<div class="name-container">
-									 				<input type="text" id="intern-role" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Web Development" required="" aria-required="true" aria-invalid="true">
-									 			</div>
-									 		</div>
-						 					<div class=" row start-end-date">
-						 						<div class="col date">Start Date
-						 							<div class="name-container">
-						 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
-					 								</div>
-						 						</div>
-						 						<div class="col date">End Date
-						 							<div class="name-container">
-						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
-					 								</div>
-					 								<div class="radio-btn">
-					 									<input type="checkbox" id="present">Currently working
-					 								</div>
-						 						</div>
-						 					</div>
-							 				<div class="row description">Description:
-							 					<div class="row desc-info">
-							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="experience_description" spellcheck="false" aria-invalid="false"></textarea>
+										<form role="form" novalidate="novalidate" id="peoject_details" name="project" enctype="multipart/form-data">
+											<div class="row empty"></div>
+											<div class="col padding"></div>
+											<div class="col dataform">
+										 		<div class="row prof">Title*:
+										 			<div class="name-container">
+										 				<input type="text" id="intern-role" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="project_name" placeholder="Ex: Web Development" required="" aria-required="true" aria-invalid="true">
+										 			</div>
+										 		</div>
+							 					<div class=" row start-end-date">
+							 						<div class="col date">Start Date
+							 							<div class="name-container">
+							 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_pro" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
+						 								</div>
+							 						</div>
+							 						<div class="col date">End Date
+							 							<div class="name-container">
+							 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_pro" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
+						 								</div>
+						 								<div class="radio-btn">
+						 									<input type="checkbox" id="present">Currently working
+						 								</div>
+							 						</div>
 							 					</div>
-							 				</div>
-							 				<div class="row org">Project Link:
-									 			<div class="name-container">
-									 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: http://myprojectlink.com" required="" aria-required="true" aria-invalid="true">
-									 			</div>
-									 		</div>	
-						 					<div class=" col btn-holder">
-				 									<a href="" class="next-container"><button class="next" data-dismiss="modal">Save</button></a>
-												</div>	
-										</div>
-										<div class="col padding"></div>
+								 				<div class="row description">Description:
+								 					<div class="row desc-info">
+								 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="project_description" spellcheck="false" aria-invalid="false"></textarea>
+								 					</div>
+								 				</div>
+								 				<div class="row org">Project Link:
+										 			<div class="name-container">
+										 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="project_link" placeholder="Ex: http://myprojectlink.com" required="" aria-required="true" aria-invalid="true">
+										 			</div>
+										 		</div>	
+							 					<div class=" col btn-holder">
+					 									<button class="next" data-dismiss="modal" onclick="Submitproject()">SUBMIT</button>
+													</div>	
+											</div>
+											<div class="col padding"></div>
+										</form>
 									</div>
 
 							</div>
@@ -190,30 +194,30 @@
 										<div class="col dataform">
 									 		<div class="row prof">Profile*:
 									 			<div class="name-container">
-									 				<input type="text" id="intern-role" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Sales & Marketing" required="" aria-required="true" aria-invalid="true">
+									 				<input type="text" id="intern-role" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="intern_profile" placeholder="Ex: Sales & Marketing" required="" aria-required="true" aria-invalid="true">
 									 			</div>
 									 		</div>
 
 									 		<div class="row org">Organization*:
 									 			<div class="name-container">
-									 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Ungineering" required="" aria-required="true" aria-invalid="true">
+									 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="intern_org" placeholder="Ex: Ungineering" required="" aria-required="true" aria-invalid="true">
 									 			</div>
 									 		</div>
 
 									 		<div class="row location">Location*:
 									 			<div class="name-container">
-									 				<input type="text" id="location" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Kolkata or Work from home" required="" aria-required="true" aria-invalid="true">
+									 				<input type="text" id="location" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="intern_loc" placeholder="Ex: Kolkata or Work from home" required="" aria-required="true" aria-invalid="true">
 									 			</div>
 									 		</div>
 						 					<div class=" row start-end-date">
 						 						<div class="col date">Start Date
 						 							<div class="name-container">
-						 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_int" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 						 						</div>
 						 						<div class="col date">End Date
 						 							<div class="name-container">
-						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_int" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
 					 									<input type="checkbox" id="present">Currently Ongoing
@@ -222,12 +226,12 @@
 						 					</div>
 							 				<div class="row description">Description:
 							 					<div class="row desc-info">
-							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="experience_description" spellcheck="false" aria-invalid="false"></textarea>
+							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="intern_description" spellcheck="false" aria-invalid="false"></textarea>
 							 					</div>
 							 				</div>	
 						 					<div class=" col btn-holder">
-				 									<a href="" class="next-container"><button class="next" data-dismiss="modal">Save</button></a>
-												</div>	
+			 									<button class="next" data-dismiss="modal" onclick="Submitintern()">SUBMIT</button>
+											</div>	
 										</div>
 										<div class="col padding"></div>
 									</div>
@@ -251,30 +255,30 @@
 										<div class="col dataform">
 									 		<div class="row prof">Profile*:
 									 			<div class="name-container">
-									 				<input type="text" id="intern-role" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Sales & Marketing" required="" aria-required="true" aria-invalid="true">
+									 				<input type="text" id="intern-role" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="job_profile" placeholder="Ex: Sales & Marketing" required="" aria-required="true" aria-invalid="true">
 									 			</div>
 									 		</div>
 
 									 		<div class="row org">Organization*:
 									 			<div class="name-container">
-									 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Ungineering" required="" aria-required="true" aria-invalid="true">
+									 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="job_org" placeholder="Ex: Ungineering" required="" aria-required="true" aria-invalid="true">
 									 			</div>
 									 		</div>
 
 									 		<div class="row location">Location*:
 									 			<div class="name-container">
-									 				<input type="text" id="location" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Kolkata or Work from home" required="" aria-required="true" aria-invalid="true">
+									 				<input type="text" id="location" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="job_loc" placeholder="Ex: Kolkata or Work from home" required="" aria-required="true" aria-invalid="true">
 									 			</div>
 									 		</div>
 						 					<div class=" row start-end-date">
 						 						<div class="col date">Start Date
 						 							<div class="name-container">
-						 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_job" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 						 						</div>
 						 						<div class="col date">End Date
 						 							<div class="name-container">
-						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_job" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
 					 									<input type="checkbox" id="present">Currently Ongoing 
@@ -283,11 +287,11 @@
 						 					</div>
 							 				<div class="row description">Description:
 							 					<div class="row desc-info">
-							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="experience_description" spellcheck="false" aria-invalid="false"></textarea>
+							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="job_description" spellcheck="false" aria-invalid="false"></textarea>
 							 					</div>
 							 				</div>	
 						 					<div class=" col btn-holder">
-				 									<a href="" class="next-container"><button class="next" data-dismiss="modal">Save</button></a>
+			 									<button class="next" data-dismiss="modal" onclick="Submitjob()">SUBMIT</button>
 											</div>	
 										</div>
 										<div class="col padding"></div>
@@ -319,11 +323,11 @@
 							                </div>
 							                <div class="row description">Description:
 							 					<div class="row desc-info">
-							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="experience_description" spellcheck="false" aria-invalid="false"></textarea>
+							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="achv_description" spellcheck="false" aria-invalid="false"></textarea>
 							 					</div>
 							 				</div>
 							 				<div class=" col btn-holder">
-				 									<a href="" class="next-container"><button class="next" data-dismiss="modal">Save</button></a>
+			 									<button class="next" data-dismiss="modal" onclick="Submitachv()">SUBMIT</button>
 											</div>
 										</div>
 										<div class="col padding"></div>
@@ -334,17 +338,15 @@
 					</div>
 				</div>	
 			</div>
-
-
-
 	<body>
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/work-exp.js"></script>
 		<script >
 
-			$(document).ready(function(){
+			/*$(document).ready(function(){
 				$("#start-date").datepicker();
 			});
 
@@ -354,16 +356,16 @@
 			/*if ("#present"===true) {
 				$("#end-date").datepicker()="false";
 			}*/
-			$(document).ready(function(){
+			/*$(document).ready(function(){
 				$('input[id="end-date"]').attr('disabled',false);
 				if($('input[id="present"]').prop('checked')==true){
 					$('input[id="end-date"]').attr('disabled', true);
 				}
-			})
+			})*/
 		</script>
 
-		<script type="text/javascript">
-			$(function(){
+		<script>
+			/*$(function(){
 				$("present").change(function(){
 					var st=this.checked;
 					if(!st){
@@ -374,7 +376,7 @@
 					}
 				})
 			})
-			//cursor: not-allowed;
+			//cursor: not-allowed;*/
 		</script>
 	</body>
 </html>

@@ -1,7 +1,7 @@
-function submitgrad(){
+function Submittraining(){
      $.ajax({
         type: "POST",
-        url: "graduation-submit.php",
+        url: "training-submit.php",
        
         //data: $('#senior-secondary'),
 
@@ -9,10 +9,10 @@ function submitgrad(){
     });
 }
 
-function submitss(){
+function Submitproject(){
      $.ajax({
         type: "POST",
-        url: "ss-submit.php",
+        url: "project-submit.php",
        
         //data: $('#senior-secondary'),
 
@@ -20,10 +20,10 @@ function submitss(){
     });
 }
 
-function submitsecondary(){
+function Submitintern(){
      $.ajax({
         type: "POST",
-        url: "secondary-submit.php",
+        url: "intern-submit.php",
        
         //data: $('#senior-secondary'),
 
@@ -31,10 +31,10 @@ function submitsecondary(){
     });
 }
 
-function submitpostgrad(){
+function Submitjob(){
      $.ajax({
         type: "POST",
-        url: "post-grad-submit.php",
+        url: "job-submit.php",
        
         //data: $('#senior-secondary'),
 
@@ -42,26 +42,13 @@ function submitpostgrad(){
     });
 }
 
-function submitdiploma(){
+function Submitachv(){
      $.ajax({
         type: "POST",
-        url: "diploma-submit.php",
+        url: "other-achv-submit.php",
        
         //data: $('#senior-secondary'),
 
         
     });
 }
-
-function submitphd(){
-     $.ajax({
-        type: "POST",
-        url: "phd-submit.php",
-       
-        //data: $('#senior-secondary'),
-
-        
-    });
-}
-
-

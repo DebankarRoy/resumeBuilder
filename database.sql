@@ -110,20 +110,68 @@ CREATE TABLE phd(
     FOREIGN KEY (profiles_id) REFERENCES profiles(id)
 );
 
-CREATE TABLE resume_work_exps(
+CREATE TABLE training_details(
    	id int(200) NOT NULL AUTO_INCREMENT,
-   	work_name varchar(40),
    	program_name VARCHAR(255),
    	organization VARCHAR(255),
    	location VARCHAR(255),
-   	start_year VARCHAR(20) ,
-    end_year VARCHAR(20) ,
+   	start_date VARCHAR(255) ,
+    end_date VARCHAR(255) ,
     description VARCHAR(255),
-   	link VARCHAR(255),
-    resume_education_id int,
+    profiles_id int,
     PRIMARY KEY (id),
-    FOREIGN KEY (resume_education_id) REFERENCES users(id)
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
 );
+
+CREATE TABLE project_details(
+    id int(200) NOT NULL AUTO_INCREMENT,
+    project_name VARCHAR(255),
+    start_date VARCHAR(255) ,
+    end_date VARCHAR(255) ,
+    description VARCHAR(255),
+    link varchar(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+
+CREATE TABLE intern_details(
+    id int(200) NOT NULL AUTO_INCREMENT,
+    intern_profile VARCHAR(255),
+    organization VARCHAR(255),
+    location VARCHAR(255),
+    start_date VARCHAR(255) ,
+    end_date VARCHAR(255) ,
+    description VARCHAR(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+
+CREATE TABLE job_details(
+    id int(200) NOT NULL AUTO_INCREMENT,
+    job_profile VARCHAR(255),
+    organization VARCHAR(255),
+    location VARCHAR(255),
+    start_date VARCHAR(255) ,
+    end_date VARCHAR(255) ,
+    description VARCHAR(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+
+CREATE TABLE other_details(
+    id int(200) NOT NULL AUTO_INCREMENT,
+    description VARCHAR(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
 
 CREATE TABLE skills(
    	id int(200) NOT NULL AUTO_INCREMENT,

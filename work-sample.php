@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/home-2.css"/>
-		<link rel="stylesheet" href="css/modal.css"/>
+		<link rel="stylesheet" href="css/modal-2.css"/>
 		<title>Work Samples</title>
 	</head>
 	<body>
@@ -20,9 +21,31 @@
 				<img src="img/mortarboard.png" class="attr edu">
 				<img src="img/test.png" class="attr work">
 				<img src="img/artificial-intelligence.png" class="attr skills">
-				<img src="img/folder1.png" class="attr worksample">
+				<img src="img/folder2.png" class="attr worksample">
 			</div>
-			<div class="col student-info bor-org">
+
+
+			<div id="up-arrow-container" class="row arrow-cont">
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow personal_details_element inactive filled"  >	
+		           	</div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow education_details_element inactive filled"></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow experiences_element inactive" ></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow skills_element inactive" ></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow work_samples_element " ></div>
+		        </div>
+		    </div>
+
+
+			<div class="col student-info bor-org colp">
 				<div class="row heading sample"><h3>Work Samples</h3>
 				</div>
 

@@ -21,9 +21,32 @@
 				<img src="img/user.png" class="attr prof-pic">
 				<img src="img/mortarboard.png" class="attr edu">
 				<img src="img/test.png" class="attr work">
-				<img src="img/artificial-intelligence.png" class="attr skills">
+				<img src="img/artificial-intelligence2.png" class="attr skills">
 				<img src="img/folder1.png" class="attr worksample">
 			</div>
+
+
+			<div id="up-arrow-container" class="row arrow-cont">
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow personal_details_element inactive filled"  >	
+		           	</div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow education_details_element inactive filled"></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow experiences_element inactive" ></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow skills_element " ></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow work_samples_element inactive" ></div>
+		        </div>
+		    </div>
+
+
+
 			<div class="col student-info bor-red">
 				<div class="row heading skill"><h3>Skills</h3>
 				</div>
@@ -33,18 +56,18 @@
 				<div class="col dataform tag">
 					<h4 class="font-weight-h4">What skills do you have?</h4>
 					<div class="row skill-input">
-						<form role="form" novalidate="novalidate" id="skills" name="skills" enctype="multipart/form-data" method="post" action="skills-submit.php">
+						<form role="form" novalidate="novalidate" id="skills" name="skills" enctype="multipart/form-data">
 							
-							<input class="form-control skills-in " id="skill"index="2" name="skill-input" placeholder="Ex: C Programming Language" value="" type="text">
+							<input class=" skills-in " id="skill"index="2" name="skill-input" placeholder="Ex: C Programming Language" value="" type="text">
 						
 							<div class="add-skills-rating-container" style="display: block;">
 							    <div id="rating_question">How would you rate yourself at this ?</div>
 							    <div class="skills_edit_cancel" style="display: none;">(×)Cancel
 							    </div>
 							    <div class="rating-container">
-							        <input class="btn btn-primary rating-value" value="Beginner" name="rating" readonly="readonly" type="submit">
-							        <input class="btn btn-primary rating-value" value="Intermediate" name="rating" readonly="readonly" type="submit">
-							        <input class="btn btn-primary rating-value" value="Advanced" name="rating" readonly="readonly" type="submit">
+							        <button class="btn btn-primary rating-value" value="Beginner" name="rating" readonly="readonly" onclick="Submitskill()">Beginner</button>
+							        <button class="btn btn-primary rating-value" value="Intermediate" name="rating" readonly="readonly" onclick="Submitskill()">Intermediate</button>
+							        <button class="btn btn-primary rating-value" value="Advanced" name="rating" readonly="readonly" onclick="Submitskill()">Advanced</button>
 							    </div>
 						    </div>
 
@@ -61,6 +84,6 @@
 				<div class="col padding"></div>
 		</div>
 
-		<script src="js/skill-selector.js" type="text/javascript" charset="utf-8" async defer></script>
+		<script src="js/skill-submit.js"></script>
 	</body>
 	</html>

@@ -29,8 +29,10 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     height: 70px;
     margin-right: 0px; 
-     margin-left: 0px;
-     display: block; 
+    margin-left: 0px;
+    display: block; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
    /* border: solid 2px black;*/
 }
 
@@ -74,14 +76,14 @@ input[type=number]::-webkit-outer-spin-button {
     padding-top: 10px;
     padding-bottom: 5px;
     height:45px;
+    display: flex;
+    justify-content: space-around;
     }
 
 @media (min-width: 600px){
 	.slide{
-    
-    padding-top: 30px;
-    padding-bottom: 10px;
-    height:85px;
+    padding-top: 20px; 
+    height:65px;
 	}
 }
 
@@ -193,7 +195,7 @@ a:hover{
 .attr {
     height: 30px;
     color: white;
-    border-radius: 50%;
+    
     padding-left: 15px;
     padding-right: 10px;
     cursor: pointer;
@@ -204,12 +206,61 @@ a:hover{
     
     height: 40px;
     color: white;
-    border-radius: 90%;
+    
     padding-left: 42px;
     padding-right: 29px;
     cursor: pointer;
 	}
 }
+
+.prof-pic{
+    border
+}
+
+.arrow-cont{
+    height: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.up-arrow {
+    text-align: center;
+}
+
+
+
+.up-arrow{
+    width: 1px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+.personal_details_element{
+   border-bottom: 10px solid #1195C9; 
+}
+
+.education_details_element{
+    border-bottom: 10px solid #8257a6;
+}
+
+.experiences_element{
+    border-bottom: 10px solid #FAD33A;
+}
+
+.skills_element{
+    border-bottom: 10px solid #EE605F;
+}
+
+.work_samples_element{
+    border-bottom: 10px solid #FC8D3F;  
+}
+
+.inactive{
+    display: none;
+}
+
 
 .profile{
     height: 40px;
@@ -262,20 +313,25 @@ a:hover{
     border-bottom-width: 3px;
 }
 
-.first_name,.last_name{
-    width: 100px;
+.name{
+    width: 80%;
 }
 
 @media (min-width: 600px){
-.first_name,.last_name{
-	width: 40%;
+.name{
+	width: 80%;
 	}
 }
 
 .wid{
-    width: 70%;
+    width: 100%;
 }
 
+@media (min-width: 600px){
+.wid{
+    width: 100%;
+    }
+}
 
 
 .new{
@@ -336,8 +392,15 @@ a:hover{
     background-color: #EE605F;
 }
 
+
+
 .sample{
-    background-color: #FC8D3F;
+    background-color: #FC8D3F; 
+}
+
+.colp{
+    padding-right: 0px; 
+     padding-left: 0px;
 }
 
 .bor-red{
@@ -374,9 +437,13 @@ a:hover{
 
 .skills-in{
     width: 100%;
-    height: 60px;
+    height: 30px;
     font-size: 16px;
-    padding-bottom: 30px;
+    
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin-top: 20px;
 }
 
 .link-in{

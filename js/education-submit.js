@@ -1,4 +1,4 @@
-function submitgrad(){
+function submitgr(){
      $.ajax({
         type: "POST",
         url: "graduation-submit.php",

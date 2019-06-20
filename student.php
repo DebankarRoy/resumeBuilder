@@ -16,12 +16,35 @@
 		<div class="row lower">
 			<div class="row slide">
 				
-				<img src="img/user.png" class="attr prof-pic">
+				<img src="img/user2.png" class="attr prof-pic">
 				<img src="img/mortarboard.png" class="attr edu">
 				<img src="img/test.png" class="attr work">
 				<img src="img/artificial-intelligence.png" class="attr skills">
 				<img src="img/folder1.png" class="attr worksample">
 			</div>
+
+
+			<div id="up-arrow-container" class="row arrow-cont">
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow personal_details_element filled" >	
+		           	</div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow education_details_element inactive"></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow experiences_element inactive"></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow skills_element inactive"></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow work_samples_element inactive"></div>
+		        </div>
+		    </div>
+
+
+
 			<div class="col student-info">
 				<div class="row heading"><h3>Personal details</h3>
 				</div>
@@ -33,16 +56,16 @@
 				<div class="col dataform">
 					<form role="form" novalidate="novalidate" id="personal_details" name="registration" enctype="multipart/form-data" method="POST" action = "student-submit.php">
 					    <div class="row form-group">
-					        <label for="name" class="control-label">Name*:</label>
+					        <label for="name" class="control-label" id="x">Name*:</label>
 					        <div class="input-group">
 					            <select class="form-control salutation" id="salutation" tabindex="1" name="salutation">
-					                <option value="" hidden="">Title</option>
+					                
 					                <option value="mr">Mr.</option>
 					                <option value="mrs">Mrs.</option>
 					                <option value="ms">Ms.</option>
 					            </select>
-					            <input class="form-control first_name" id="first_name" tabindex="2" name="first_name" placeholder="First Name" value="" type="text">
-					            <input class="form-control last_name" id="last_name" tabindex="3" name="last_name" placeholder="Last Name" value="" type="text">
+					            <input class="form-control name" id="name" tabindex="2" name="name" placeholder="Enter Your Name" value="" type="text">
+					     
         					</div>
     					</div>
 					    <div class="row form-group">
@@ -75,8 +98,10 @@
 				</div>
 
 				<div class="col padding"></div>
-
 			</div>
 		</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jQueryValidation.js"></script>
+	<script src="js/form-validations.js"></script>	
 	</body>
 	</html>

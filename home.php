@@ -15,6 +15,7 @@
 
 		<title>Education</title>
 	</head>
+	<body>
 		<div class="row upper">
 			<div class="col logo"></div>
 			<div class="col mid"></div>
@@ -23,12 +24,35 @@
 		<div class="row lower">
 			<div class="row slide">
 				<img src="img/user.png" class="attr prof-pic">
-				<img src="img/mortarboard.png" class="attr edu">
+				<img src="img/mortarboard2.png" class="attr edu">
 				<img src="img/test.png" class="attr work">
 				<img src="img/artificial-intelligence.png" class="attr skills">
 				<img src="img/folder1.png" class="attr worksample">
 
 			</div>
+
+
+			<div id="up-arrow-container" class="row arrow-cont">
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow personal_details_element inactive filled"  >	
+		           	</div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow education_details_element  filled"></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow experiences_element inactive" ></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow skills_element inactive" ></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow work_samples_element inactive" ></div>
+		        </div>
+		    </div>
+
+
+
 			<div class="row data">
 				<div class="row info">
 					<div class="datatitle">Education</div>
@@ -66,7 +90,6 @@
 				<div class="modal fade" id="graduation-modal">
 					<div class="modal-dialog">
 						<div class="modal-content">
-						
 							<div class="modal-body">
 									<div class="modal-conts">
 										<div class="header-container">Graduation Details</div>
@@ -1009,12 +1032,15 @@
 					</div>
 				</div>	
 			</div>
-	<body>
+	</body>
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/education-submit.js"></script>
+		<script src="js/jQueryValidation.js"></script>
+		<script src="js/form-validations.js"></script>
+		<script src="js/abc.js"></script>
 
-	</body>
+	
 </html>
 <!--<a href="https://www.flaticon.com">for icons</a> -->

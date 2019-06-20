@@ -14,8 +14,7 @@ create table users(
 CREATE TABLE profiles(
     id int(200) NOT NULL AUTO_INCREMENT,
     salutation VARCHAR(10),
-    first_name VARCHAR(255),
-    last_name VARCHAR(255),
+    name VARCHAR(255),
     email_student VARCHAR(255) NOT NULL,
     phone_number varchar(10),
     city VARCHAR(255) NOT NULL,

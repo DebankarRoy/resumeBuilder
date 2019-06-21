@@ -24,11 +24,11 @@
 		</div>
 		<div class="row lower">
 			<div class="row slide">
-				<img src="img/user.png" class="attr prof-pic">
-				<img src="img/mortarboard.png" class="attr edu">
-				<img src="img/test2.png" class="attr work">
-				<img src="img/artificial-intelligence.png" class="attr skills">
-				<img src="img/folder1.png" class="attr worksample">
+				<a href="student.php"><img src="img/user.png" class="attr prof-pic"></a>
+				<a href="home.php"><img src="img/mortarboard.png" class="attr edu"></a>
+				<a href="work-exp.php"><img src="img/test2.png" class="attr work"></a>
+				<a href="skills.php"><img src="img/artificial-intelligence.png" class="attr skills"></a>
+				<a href="work-sample.php"><img src="img/folder1.png" class="attr worksample"></a>
 
 			</div>
 
@@ -77,7 +77,7 @@
 					</div>
 					<div class="button-container">
 						<a href="home.php" class="previous">PREVIOUS</a>
-						<button  class="next" >NEXT</button>
+						<a href="skills.php"><button  class="next" >NEXT</button></a>
 					</div>	
 				</div>
 				<div class="colp padding"></div>

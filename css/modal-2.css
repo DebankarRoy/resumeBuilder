@@ -142,9 +142,9 @@
 	background-color: #1295C9
 }
 @media (min-width: 600px){
-.next {
+.pos {
     position: relative;
-    top: 0px;
+    top: 15px;
     padding-top: 5px;
 	}
 }

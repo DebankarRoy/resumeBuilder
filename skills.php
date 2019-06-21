@@ -18,11 +18,11 @@
 		<div class="row lower">
 			<div class="row slide">
 				
-				<img src="img/user.png" class="attr prof-pic">
-				<img src="img/mortarboard.png" class="attr edu">
-				<img src="img/test.png" class="attr work">
-				<img src="img/artificial-intelligence2.png" class="attr skills">
-				<img src="img/folder1.png" class="attr worksample">
+				<a href="student.php"><img src="img/user.png" class="attr prof-pic"></a>
+				<a href="home.php"><img src="img/mortarboard.png" class="attr edu"></a>
+				<a href="work-exp.php"><img src="img/test.png" class="attr work"></a>
+				<a href="skills.php"><img src="img/artificial-intelligence2.png" class="attr skills"></a>
+				<a href="work-sample.php"><img src="img/folder1.png" class="attr worksample"></a>
 			</div>
 
 
@@ -70,12 +70,11 @@
 							        <button class="btn btn-primary rating-value" value="Advanced" name="rating" readonly="readonly" onclick="Submitskill()">Advanced</button>
 							    </div>
 						    </div>
-
+					    </form>
 						    <div class="button-container btn-pos">
 								<a href="work-exp.php" class="previous">PREVIOUS</a>
-								<input type="submit" class="next-button_container" id="personal-detail-submit" tabindex="" value="Done" type="submit">
-							</div>
-					    </form>
+								<a href="work-sample.php"><button class="next">NEXT</button></a>
+							</div>  
 					</div>
 					
 				</div>

@@ -10,24 +10,67 @@
 		<link rel="stylesheet" href="css/modal-2.css"/>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 		
-
+		<?php
+			$flag=1;
+		?>	
 		
 
 		<title>Education</title>
 	</head>
 	<body>
 		<div class="row upper">
-			<div class="col logo"></div>
+			<div class="col logo">
+				<div class="col head-logo">
+					<img src="img/hiring2.png" class="header-logo">
+				</div>
+				<div class="col head-text">
+						<span class="re"><b>Re</b></span>
+						<span class="sumer"><b>sumer</b></span>	
+				</div>
+			</div>
 			<div class="col mid"></div>
-			<div class="col user"></div>
+			<div class="col user">
+				<?php
+                        if($flag==0)
+                        {
+                    ?>                 
+				<div class="not_loggedin">
+				  <span class="dropdown-toggle login-register" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <b>Login/Register</b>
+				  </span>
+				  <div class="dropdown-menu">
+				    <a class="dropdown-item" href="#">Login</a>
+				    <a class="dropdown-item" href="#">Register</a>
+				  </div>
+				</div>
+
+				<?php
+                        }
+                        else {
+                    ?>
+                    <div class="not_loggedin">
+					  <span class="dropdown-toggle login-register" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    <b>ukn<?php $user ?></b>
+					  </span>
+					  <div class="dropdown-menu">
+					    <a class="dropdown-item" href="#">Resumes</a>
+					    <a class="dropdown-item" href="#">Logout</a>
+					  </div>
+					</div>
+
+                    <?php
+                        }
+                    ?>
+
+			</div>
 		</div>
 		<div class="row lower">
 			<div class="row slide">
-				<img src="img/user.png" class="attr prof-pic">
-				<img src="img/mortarboard2.png" class="attr edu">
-				<img src="img/test.png" class="attr work">
-				<img src="img/artificial-intelligence.png" class="attr skills">
-				<img src="img/folder1.png" class="attr worksample">
+				<a href="student.php"><img src="img/user.png" class="attr prof-pic"></a>
+				<a href="home.php"><img src="img/mortarboard2.png" class="attr edu"></a>
+				<a href="work-exp.php"><img src="img/test.png" class="attr work"></a>
+				<a href="skills.php"><img src="img/artificial-intelligence.png" class="attr skills"></a>
+				<a href="work-sample.php"><img src="img/folder1.png" class="attr worksample"></a>
 
 			</div>
 
@@ -80,7 +123,7 @@
 					</div>
 					<div class="button-container">
 						<a href="student.php" class="previous">PREVIOUS</a>
-						<button  class="next" >NEXT</button>
+						<a href="work-exp.php"><button  class="next" >NEXT</button></a>
 					</div>	
 				</div>
 				<div class="colp padding"></div>
@@ -253,7 +296,7 @@
 							 						
 							 					</div>
 							 					<div class=" col btn-holder">
-					 									<button  class="next" data-dismiss="modal" onclick="submitgrad()">SUBMIT</button>
+					 									<button  class="next pos" data-dismiss="modal" onclick="submitgrad()">SUBMIT</button>
 
 													</div>	
 											</div>
@@ -386,7 +429,7 @@
 											</div>
 
 											<div class=" col btn-holder">
-			 									<button  class="next" data-dismiss="modal" onclick="submitss()">SUBMIT</button>
+			 									<button  class="next pos" data-dismiss="modal" onclick="submitss()">SUBMIT</button>
 											</div>	
 										</div>
 										<div class="col padding"></div>
@@ -505,7 +548,7 @@
 											</div>
 
 											<div class=" col btn-holder">
-												<button  class="next" data-dismiss="modal" onclick="submitsecondary()">SUBMIT</button>
+												<button  class="next pos" data-dismiss="modal" onclick="submitsecondary()">SUBMIT</button>
 											</div>
 
 										</div>
@@ -683,7 +726,7 @@
 							 						</div>	
 							 					</div>
 							 					<div class=" col btn-holder">
-					 									<button  class="next" data-dismiss="modal" onclick="submitpostgrad()">SUBMIT</button>
+					 									<button  class="next pos" data-dismiss="modal" onclick="submitpostgrad()">SUBMIT</button>
 													</div>	
 											</div>
 											<div class="col padding"></div>
@@ -852,7 +895,7 @@
 							 						
 							 					</div>
 							 					<div class=" col btn-holder">
-					 								<button class="next" data-dismiss="modal" onclick="submitdiploma()">Submit</button>
+					 								<button class="next pos" data-dismiss="modal" onclick="submitdiploma()">Submit</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>
@@ -1021,7 +1064,7 @@
 							 						</div>	
 							 					</div>
 							 					<div class=" col btn-holder">
-					 								<button class="next" data-dismiss="modal" onclick="submitphd()">SUBMIT</button>
+					 								<button class="next pos" data-dismiss="modal" onclick="submitphd()">SUBMIT</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>
@@ -1033,8 +1076,9 @@
 				</div>	
 			</div>
 	</body>
-
+	
 		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/education-submit.js"></script>
 		<script src="js/jQueryValidation.js"></script>

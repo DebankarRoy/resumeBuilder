@@ -6,7 +6,11 @@
     	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/home-2.css"/>
 		<link rel="stylesheet" href="css/modal-2.css"/>
-
+		<style>
+			.col{
+				padding-left: 0px;
+			}
+		</style>
 		<title>Skills</title>
 	</head>
 	<body>

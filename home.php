@@ -39,8 +39,8 @@
 				    <b>Login/Register</b>
 				  </span>
 				  <div class="dropdown-menu">
-				    <a class="dropdown-item" href="#">Login</a>
-				    <a class="dropdown-item" href="#">Register</a>
+				    <a class="dropdown-item" href="login.php">Login</a>
+				    <a class="dropdown-item" href="register.php">Register</a>
 				  </div>
 				</div>
 
@@ -54,7 +54,7 @@
 					  </span>
 					  <div class="dropdown-menu">
 					    <a class="dropdown-item" href="#">Resumes</a>
-					    <a class="dropdown-item" href="#">Logout</a>
+					    <a class="dropdown-item" href="logout.php">Logout</a>
 					  </div>
 					</div>
 
@@ -94,7 +94,17 @@
 		        </div>
 		    </div>
 
+		    <div id="mySidenav" class="sidenav">
 
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="">Manage Account</a>
+			  <a href="#">Resumes</a>
+			  <a href="#">Logout</a>
+			</div>
+
+			<div id="">
+			  <span class="menu-bar" onclick="openNav()">&#9776;</span>
+			</div>
 
 			<div class="row data">
 				<div class="row info">
@@ -1084,6 +1094,17 @@
 		<script src="js/jQueryValidation.js"></script>
 		<script src="js/form-validations.js"></script>
 		<script src="js/abc.js"></script>
+
+
+		<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 	
 </html>

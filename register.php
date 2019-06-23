@@ -62,6 +62,19 @@
                     </div>
                 </form>
             </div>
+
+            <div class="row login-via">  
+                    <div class="row sign-in">
+                        <span class="sign-in-login"><span class="or">or<br></span><b>Connect with</b></span>
+                    </div>
+                    <div class="col google">
+                        <a href=""><img src="img/search.png" class="img-size"></a>
+                    </div>
+                    <div class="col fb">
+                        <a href=""><img src="img/facebook.png" class="img-size"></a>
+                    </div>   
+            </div>
+            
         </div>
     </body>
 </html>

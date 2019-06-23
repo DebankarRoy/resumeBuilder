@@ -30,10 +30,11 @@
                 <b><label class="text">Log-in</label></b>
             </div>
             <div class="div5">
-                <a href="login.php"><span class="user-tag"> New User</span></a>
+                <a href="register.php"><span class="user-tag"> New User</span></a>
             </div>  
         </div>
         <div class="col right">
+
             <div class="create-ac">
                 <p>Log-in</p>
             </div>
@@ -53,6 +54,19 @@
                     </div>
                 </form>
             </div>
+
+            <div class="row login-via">  
+                    <div class="row sign-in">
+                        <span class="sign-in-login"><span class="or">or<br></span><b>Connect with</b></span>
+                    </div>
+                    <div class="col google">
+                        <a href=""><img src="img/search.png" class="img-size"></a>
+                    </div>
+                    <div class="col fb">
+                        <a href=""><img src="img/facebook.png" class="img-size"></a>
+                    </div>   
+            </div>
+
         </div>
     </body>
 </html>

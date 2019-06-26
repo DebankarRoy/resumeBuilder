@@ -18,9 +18,50 @@
 	<body>
 
 		<div class="row upper">
-			<div class="col logo"></div>
+			<div class="col logo">
+				<div class="col head-logo">
+					<img src="img/hiring2.png" class="header-logo">
+				</div>
+				<div class="col head-text">
+						<span class="re"><b>Re</b></span>
+						<span class="sumer"><b>sumer</b></span>	
+				</div>
+			</div>
 			<div class="col mid"></div>
-			<div class="col user"></div>
+			<div class="col user">
+				<?php
+                        if($flag==0)
+                        {
+                    ?>                 
+				<div class="not_loggedin">
+				  <span class="dropdown-toggle login-register" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <b>Login/Register</b>
+				  </span>
+				  <div class="dropdown-menu">
+				    <a class="dropdown-item" href="login.php">Login</a>
+				    <a class="dropdown-item" href="register.php">Register</a>
+				  </div>
+				</div>
+
+				<?php
+                        }
+                        else {
+                    ?>
+                    <div class="not_loggedin">
+					  <span class="dropdown-toggle login-register" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    <b>ukn<?php $user ?></b>
+					  </span>
+					  <div class="dropdown-menu">
+					    <a class="dropdown-item" href="#">Resumes</a>
+					    <a class="dropdown-item" href="logout.php">Logout</a>
+					  </div>
+					</div>
+
+                    <?php
+                        }
+                    ?>
+
+			</div>
 		</div>
 		<div class="row lower">
 			<div class="row slide">
@@ -52,6 +93,17 @@
 		        </div>
 		    </div>
 
+		    <div id="mySidenav" class="sidenav">
+
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="">Manage Account</a>
+			  <a href="#">Resumes</a>
+			  <a href="#">Logout</a>
+			</div>
+
+			<div id="menu-bar-open">
+			  <span class="menu-bar" onclick="openNav()">&#9776;</span>
+			</div>
 
 			<div class="row data bor">
 				<div class="row info exp heading">
@@ -76,7 +128,7 @@
 						<i class="fa fa-plus education-fa-plus fa-x" aria-hidden="true"></i>
 					</div>
 					<div class="button-container">
-						<a href="home.php" class="previous">PREVIOUS</a>
+						<a href="education.php" class="previous">PREVIOUS</a>
 						<a href="skills.php"><button  class="next" >NEXT</button></a>
 					</div>	
 				</div>
@@ -155,7 +207,7 @@
 									<div class="modal-conts pro">
 										<div class="header-container exp">Project Details</div>
 										<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
-										<form role="form" novalidate="novalidate" id="peoject_details" name="project" enctype="multipart/form-data">
+										<form role="form" novalidate="novalidate" id="project_details" name="project" enctype="multipart/form-data">
 											<div class="row empty"></div>
 											<div class="col padding"></div>
 											<div class="col dataform">
@@ -208,9 +260,10 @@
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-body">
-									<div class="modal-conts">
-										<div class="header-container exp">Internship</div>
-										<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
+								<div class="modal-conts">
+									<div class="header-container exp">Internship</div>
+									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
+									<form role="form" novalidate="novalidate" id="intern_details" name="intern" enctype="multipart/form-data"
 										<div class="row empty"></div>
 										<div class="col padding"></div>
 										<div class="col dataform">
@@ -256,8 +309,8 @@
 											</div>	
 										</div>
 										<div class="col padding"></div>
-									</div>
-
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -269,9 +322,10 @@
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-body">
-									<div class="modal-conts">
-										<div class="header-container exp">Job Details</div>
-										<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
+								<div class="modal-conts">
+									<div class="header-container exp">Job Details</div>
+									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
+									<form role="form" novalidate="novalidate" id="job_details" name="job" enctype="multipart/form-data"
 										<div class="row empty"></div>
 										<div class="col padding"></div>
 										<div class="col dataform">
@@ -317,8 +371,8 @@
 											</div>	
 										</div>
 										<div class="col padding"></div>
-									</div>
-
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -330,9 +384,10 @@
 					<div class="modal-dialog">
 						<div class="modal-content achv">
 							<div class="modal-body">
-									<div class="modal-conts achv">
-										<div class="header-container exp">Achivements</div>
-										<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
+								<div class="modal-conts achv">
+									<div class="header-container exp">Achivements</div>
+									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
+									<form role="form" novalidate="novalidate" id="Achivements_details" name="Achivements" enctype="multipart/form-data">
 										<div class="row empty"></div>
 										<div class="col padding"></div>
 										<div class="col dataform">
@@ -354,7 +409,7 @@
 										</div>
 										<div class="col padding"></div>
 									</div>
-
+								</form>
 							</div>
 						</div>
 					</div>
@@ -362,12 +417,23 @@
 			</div>
 	<body>
 
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
+		
 		<script src="js/work-exp.js"></script>
-		<script >
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
+		<script>
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
 
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+		</script>
+
+		<script>
 			/*$(document).ready(function(){
 				$("#start-date").datepicker();
 			});

@@ -1,4 +1,4 @@
-function submitgrad(){
+function submitgrada(){
     $('#registration_form').validate({
             
             rules: {

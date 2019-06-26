@@ -1,7 +1,7 @@
 function Submittraining(){
      $.ajax({
         type: "POST",
-        url: "training-submit.php",
+        url: "submit/training-submit.php",
        
         //data: $('#senior-secondary'),
 
@@ -12,7 +12,7 @@ function Submittraining(){
 function Submitproject(){
      $.ajax({
         type: "POST",
-        url: "project-submit.php",
+        url: "submit/project-submit.php",
        
         //data: $('#senior-secondary'),
 
@@ -23,7 +23,7 @@ function Submitproject(){
 function Submitintern(){
      $.ajax({
         type: "POST",
-        url: "intern-submit.php",
+        url: "submit/intern-submit.php",
        
         //data: $('#senior-secondary'),
 
@@ -34,7 +34,7 @@ function Submitintern(){
 function Submitjob(){
      $.ajax({
         type: "POST",
-        url: "job-submit.php",
+        url: "submit/job-submit.php",
        
         //data: $('#senior-secondary'),
 
@@ -45,7 +45,7 @@ function Submitjob(){
 function Submitachv(){
      $.ajax({
         type: "POST",
-        url: "other-achv-submit.php",
+        url: "submit/other-achv-submit.php",
        
         //data: $('#senior-secondary'),
 

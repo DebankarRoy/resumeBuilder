@@ -31,9 +31,7 @@
 	padding: 0px;
 }
 
-.padding,.dataform{
-	height: 470px;
-}
+
 
 .header-container{
 	position: relative;
@@ -228,6 +226,7 @@
 .bor{
 	border:solid 1px #FAD33A;
 	height: 550px;
+	border-radius: 9px;
 }
 
 .prof-pic{
@@ -272,3 +271,4 @@
 @media (min-width: 600px){
 
 }
+

@@ -4,7 +4,6 @@ function submitgrad(){
         url: "graduation-submit.php",
        
         //data: $('#senior-secondary'),
-
         
     });
 }

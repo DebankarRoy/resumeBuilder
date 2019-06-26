@@ -74,7 +74,7 @@ input[type=number]::-webkit-outer-spin-button {
 @media (max-width: 600px){
     .header-logo{
     position: absolute;
-    left: 300px;
+    left: 250px;
     }
 }
 
@@ -220,6 +220,7 @@ input[type=number]::-webkit-outer-spin-button {
 .data{
     border:solid 1px #8257A5;
     height:600px;
+    border-radius: 9px;
 }
 
 .info{
@@ -402,7 +403,10 @@ a:hover{
 .student-info{
     border:solid 1px #1195C9;
    width: 100%;
-   height: 550px;
+   height: 600px;
+   border-radius: 9px;
+   padding-left: 0px;
+   padding-right: 0px;
 }
 
 .heading{
@@ -438,10 +442,18 @@ a:hover{
     height:90px;
 }
 
-.salutation{
-    width: 18%;
-    border-bottom-color: #eeeeee;
-    border-bottom-width: 3px;
+.sal{
+    width: 75px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: white;
+    flex-grow: 0;
+    color: #495057;
+    position: relative;
+    top: 17px; 
 }
 
 .name{
@@ -536,16 +548,17 @@ a:hover{
 
 .bor-red{
     border:solid 1px #EE605F;
-    height: 400px;
+    height: auto;
     padding-right: 0px;
     padding-left: 0px;
+    border-radius: 9px;
 }
 
-@media (min-width: 600px){
+/*@media (min-width: 600px){
 .bor-red{
-    height: 360px;
+    height: auto;
     }
-}
+}*/
 
 .bor-org{
     border:solid 1px #FC8D3F;
@@ -553,7 +566,7 @@ a:hover{
 }
 
 .tag{
-    height: 55px;
+   
     padding-top: 15px;
     padding-bottom: 5px;
     margin-bottom: 0px;
@@ -693,4 +706,10 @@ a:hover{
     .menu-bar{
         display: none
     }
+}
+
+.btn-pos-skills{
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

@@ -6,18 +6,55 @@
     	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/home-2.css"/>
 		<link rel="stylesheet" href="css/modal-2.css"/>
-		<style>
-			.col{
-				padding-left: 0px;
-			}
-		</style>
+		
 		<title>Work Samples</title>
 	</head>
 	<body>
 		<div class="row upper">
-			<div class="col logo"></div>
+			<div class="col logo">
+				<div class="col head-logo">
+					<img src="img/hiring2.png" class="header-logo">
+				</div>
+				<div class="col head-text">
+						<span class="re"><b>Re</b></span>
+						<span class="sumer"><b>sumer</b></span>	
+				</div>
+			</div>
 			<div class="col mid"></div>
-			<div class="col user"></div>
+			<div class="col user">
+				<?php
+                        if($flag==0)
+                        {
+                    ?>                 
+				<div class="not_loggedin">
+				  <span class="dropdown-toggle login-register" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <b>Login/Register</b>
+				  </span>
+				  <div class="dropdown-menu">
+				    <a class="dropdown-item" href="login.php">Login</a>
+				    <a class="dropdown-item" href="register.php">Register</a>
+				  </div>
+				</div>
+
+				<?php
+                        }
+                        else {
+                    ?>
+                    <div class="not_loggedin">
+					  <span class="dropdown-toggle login-register" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    <b>ukn<?php $user ?></b>
+					  </span>
+					  <div class="dropdown-menu">
+					    <a class="dropdown-item" href="#">Resumes</a>
+					    <a class="dropdown-item" href="logout.php">Logout</a>
+					  </div>
+					</div>
+
+                    <?php
+                        }
+                    ?>
+
+			</div>
 		</div>
 		<div class="row lower">
 			<div class="row slide">
@@ -49,13 +86,24 @@
 		        </div>
 		    </div>
 
+		    <div id="mySidenav" class="sidenav">
+
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="">Manage Account</a>
+			  <a href="#">Resumes</a>
+			  <a href="#">Logout</a>
+			</div>
+
+			<div id="menu-bar-open">
+			  <span class="menu-bar" onclick="openNav()">&#9776;</span>
+			</div>
 
 			<div class="col student-info bor-org colp">
 				<div class="row heading sample"><h3>Work Samples</h3>
 				</div>
 
 				<div class="col padding"></div>
-
+				<div class="row empty"></div>
 				<div class="col dataform ">
 					<h4 class="font-weight-h4 padding-h4">Add your work sample links here (if any):</h4>
 					<form role="form" novalidate="novalidate" id="work-samples" name="work-samples" enctype="multipart/form-data" method="POST" action = "work-sample-submit.php">
@@ -91,5 +139,21 @@
 
 			</div>
 		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/education-submit.js"></script>
+		<script src="js/jQueryValidation.js"></script>
+		<script src="js/form-validations.js"></script>
+		<script src="js/abc.js"></script>
+		<script>
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+		</script>
 	</body>
 	</html>

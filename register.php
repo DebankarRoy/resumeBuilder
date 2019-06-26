@@ -39,7 +39,7 @@
                 <p>Create Account</p>
             </div>
             <div class="form-box">
-                <form action="register_submit.php" method="POST">
+                <form action="submit/register-submit.php" enctype="multipart/form-data" id="register-form" method="GET">
                     <div class="name">
                         <div class="col3"><label for="name">Name</label></div>
                         <div class="col4"><input type="text" name="name" required id="name"></div>
@@ -53,8 +53,8 @@
                         <div class="col4"><input type="password" name="password" required id="password1"></div>
                     </div>
                     <div class="password">
-                        <div class="col3"><label for="password2">Password</label></div>
-                        <div class="col4"><input type="password" name="password" required id="password2"></div>
+                        <div class="col3"><label for="password2">Confirm Password</label></div>
+                        <div class="col4"><input type="password" name="confirmpassword" required id="password2"></div>
                     </div>
                     <div class="submit">
                        <div class="col3"><label></label></div>
@@ -74,7 +74,10 @@
                         <a href=""><img src="img/facebook.png" class="img-size"></a>
                     </div>   
             </div>
-            
         </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jQueryValidation.js"></script>
+        <script src="js/form-validations.js"></script>
+        <script src="js/unique-email-checker.js"></script>
     </body>
 </html>

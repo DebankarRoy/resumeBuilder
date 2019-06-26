@@ -39,7 +39,7 @@
                 <p>Log-in</p>
             </div>
             <div class="form-box">
-                <form action="register_submit.php" method="POST">
+                <form action="login-submit.php" id="login-form" enctype="multipart/form-data" method="POST">
                     <div class="email">
                         <div class="col3"><label for="email">Email</label></div>
                         <div class="col4"><input type="text" name="email" required id="email"></div>
@@ -63,10 +63,12 @@
                         <a href=""><img src="img/search.png" class="img-size"></a>
                     </div>
                     <div class="col fb">
-                        <a href=""><img src="img/facebook.png" class="img-size"></a>
+                        <a href=""><img src="img/facebook.png" class="img-size fb-left-padding"></a>
                     </div>   
             </div>
-
         </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jQueryValidation.js"></script>
+        <script src="js/form-validations.js"></script>
     </body>
 </html>

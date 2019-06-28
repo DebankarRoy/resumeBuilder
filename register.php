@@ -39,7 +39,7 @@
                 <p>Create Account</p>
             </div>
             <div class="form-box">
-                <form action="submit/register-submit.php" enctype="multipart/form-data" id="register-form" method="GET">
+                <form action="register-submit.php" enctype="multipart/form-data" id="register-form" method="GET">
                     <div class="name">
                         <div class="col3"><label for="name">Name</label></div>
                         <div class="col4"><input type="text" name="name" required id="name"></div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="submit">
                        <div class="col3"><label></label></div>
-                        <div class="col4"><input type="submit" name="submit" value="Create Account"></div>
+                        <div class="col4"><input type="submit" class="submit-btn" name="submit" value="Create Account"></div>
                     </div>
                 </form>
             </div>

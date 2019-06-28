@@ -9,8 +9,8 @@
         die("connection failed : ".mysqli_connect_error());
     }
 
-  
   	$email = $_GET['email'];
+  
   	$sql = "SELECT * FROM users WHERE email='$email'";
   	$results = mysqli_query($conn, $sql);
   	if (mysqli_num_rows($results) > 0) {

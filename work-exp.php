@@ -29,6 +29,21 @@
 			</div>
 			<div class="col mid"></div>
 			<div class="col user">
+
+
+			<?php
+                session_start();
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                    $flag=1;
+                    $userid_loggedin=$_SESSION['id'];
+                    echo $userid_loggedin;
+                    $user_loggedin=$_SESSION['name'];             
+                }
+                else
+                    $flag=0;
+            ?>
+
+
 				<?php
                         if($flag==0)
                         {
@@ -49,7 +64,7 @@
                     ?>
                     <div class="not_loggedin">
 					  <span class="dropdown-toggle login-register" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    <b>ukn<?php $user ?></b>
+					    <b><?php echo "$user_loggedin";?></b>
 					  </span>
 					  <div class="dropdown-menu">
 					    <a class="dropdown-item" href="#">Resumes</a>
@@ -66,7 +81,7 @@
 		<div class="row lower">
 			<div class="row slide">
 				<a href="student.php"><img src="img/user.png" class="attr prof-pic"></a>
-				<a href="home.php"><img src="img/mortarboard.png" class="attr edu"></a>
+				<a href="education.php"><img src="img/mortarboard.png" class="attr edu"></a>
 				<a href="work-exp.php"><img src="img/test2.png" class="attr work"></a>
 				<a href="skills.php"><img src="img/artificial-intelligence.png" class="attr skills"></a>
 				<a href="work-sample.php"><img src="img/folder1.png" class="attr worksample"></a>

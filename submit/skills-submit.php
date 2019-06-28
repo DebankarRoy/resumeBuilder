@@ -17,8 +17,8 @@
     if(!mysqli_query($conn,$sql)){
         die("Error : ".$sql."<br>".mysqli_error($conn));
     }
-    //echo "Registration Successful";
-    header('Location: home.php');
+    echo "Registration Successful";
+
     exit;
     mysqli_close($conn);
 ?> 

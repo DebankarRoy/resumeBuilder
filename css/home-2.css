@@ -74,7 +74,7 @@ input[type=number]::-webkit-outer-spin-button {
 @media (max-width: 600px){
     .header-logo{
     position: absolute;
-    left: 250px;
+    left: 260px;
     }
 }
 
@@ -185,14 +185,14 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 
-.not_loggedin{
+.not_loggedin,.loggedin{
     position: relative;
     top: 40px;
     left: 130px; 
 }
 
 @media (max-width: 600px){
-    .not_loggedin{
+    .not_loggedin,.loggedin{
     display: none; 
 }
 }

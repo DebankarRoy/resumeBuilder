@@ -78,7 +78,7 @@
 			<div class="row slide">
 				
 				<a href="student.php"><img src="img/user2.png" class="attr prof-pic"></a>
-				<a href="home.php"><img src="img/mortarboard.png" class="attr edu"></a>
+				<a href="education.php"><img src="img/mortarboard.png" class="attr edu"></a>
 				<a href="work-exp.php"><img src="img/test.png" class="attr work"></a>
 				<a href="skills.php"><img src="img/artificial-intelligence.png" class="attr skills"></a>
 				<a href="work-sample.php"><img src="img/folder1.png" class="attr worksample"></a>

@@ -43,7 +43,7 @@
 				<?php
                         if($flag==0)
                         {
-                    ?>                 
+                ?>                 
 				<div class="not_loggedin">
 				  <span class="dropdown-toggle login-register" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    <b>Login/Register</b>
@@ -120,8 +120,16 @@
 				<div class="row info">
 					<div class="datatitle">Education</div>
 				</div>
+				
+				<div class="row grad-fetch grad-fetch">
+					<?php
+						include 'grad-fetch.php';
+					?>
+				</div>
+
+
 				<div class="row dialouge"><h4>Tell us bit about your education</h4></div>
-				<div class="colp padding"></div>
+				
 				<div class="col userinfo">
 					<div class="row discipline" data-toggle="modal" data-target="#graduation-modal" id="grad">Graduation
 						<i class="fa fa-plus education-fa-plus fa-x" aria-hidden="true"></i>
@@ -143,10 +151,10 @@
 					</div>
 					<div class="button-container">
 						<a href="student.php" class="previous">PREVIOUS</a>
-						<a href="work-exp.php"><button  class="next" >NEXT</button></a>
+						<a href="work-exp.php"><button  class="next edu-pg" >NEXT</button></a>
 					</div>	
 				</div>
-				<div class="colp padding"></div>
+				
 			</div>
 		</div>
 			<div class="container modal-education" >	
@@ -183,6 +191,10 @@
 										 				<div class="start-year-container">
 										 					<select data-placeholder="Choose year..." id="start_year" name="start_year_clg" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+										 						<option value="2020">2024</option>
+											 					<option value="2019">2023</option>
+										 						<option value="2020">2022</option>
+											 					<option value="2019">2021</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
 											 					<option value="2018">2018</option>
@@ -774,22 +786,22 @@
 												<div class="row grad-stat">Diploma status*:
 													<div class="row deg-container">
 														<div class="deg degree_completion_status_container_pursuing">
-															<input type="radio" id="degree_completion_status_pursuing" name="degree_completion_status" value="pursuing" aria-required="true">Pursuing
+															<input type="radio" id="degree_completion_status_pursuing" name="degree_completion_status_dp" value="pursuing" aria-required="true">Pursuing
 														</div>
 														<div class="deg degree_completion_status_container_completed">
-													 		<input type="radio" id="degree_completion_status_completed" name="degree_completion_status" value="completed">Completed
+													 		<input type="radio" id="degree_completion_status_completed" name="degree_completion_status_dp" value="completed">Completed
 												 		</div>
 											 		</div>
 										 		</div>
 										 		<div class="row collegename">College*:
 										 			<div class="name-container">
-										 				<input type="text" id="college" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: IGNOU " required="" aria-required="true" aria-invalid="true">
+										 				<input type="text" id="college" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college_dp" placeholder="Ex: IGNOU " required="" aria-required="true" aria-invalid="true">
 										 			</div>
 										 		</div>
 										 		<div class="row course-duration">
 										 			<div class="col start-year">Start year*:
 										 				<div class="start-year-container">
-										 					<select data-placeholder="Choose year..." id="start_year" name="start_year" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
+										 					<select data-placeholder="Choose year..." id="start_year" name="start_year_dp" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
@@ -837,7 +849,7 @@
 										 			</div>
 									 				<div class="col end-year">End Year*:
 									 					<div class="end-year-container">
-									 						<select data-placeholder="Choose year..." id="end_year input-type" name="end_year" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
+									 						<select data-placeholder="Choose year..." id="end_year input-type" name="end_year_dp" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
@@ -887,7 +899,7 @@
 							 					<div class="row dip-degree-stream">
 							 						<div class=" col dip-stream-name" id="input-type">Stream:
 							 							<div class="stream-container">
-							 								<input type="text" id="stream" tabindex="5" class="stream-input" autocomplete="off" isautocomplete="" name="stream" placeholder="Ex: Creative Writing ">
+							 								<input type="text" id="stream" tabindex="5" class="stream-input" autocomplete="off" isautocomplete="" name="stream_dp" placeholder="Ex: Creative Writing ">
 							 							</div>
 							 						</div>
 							 					</div>
@@ -908,7 +920,7 @@
 							 						</div>
 							 						<div class="col per-num">Performence
 							 							<div class="per-container">
-							 								<input type="number" class="per-marks" id="performance-college" tabindex="7" name="performance" placeholder="0.00" aria-invalid="false">
+							 								<input type="number" class="per-marks" id="performance-college" tabindex="7" name="performance_dp" placeholder="0.00" aria-invalid="false">
 							 							</div>
 							 						</div>
 							 						

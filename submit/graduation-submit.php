@@ -26,6 +26,8 @@
         die("Error : ".$sql."<br>".mysqli_error($conn));
     }
     echo "Registration Successful";
+    echo "$deg_stat";
+    echo "$college";
     
     exit;
     mysqli_close($conn);

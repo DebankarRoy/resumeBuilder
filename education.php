@@ -109,7 +109,7 @@
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			  <a href="">Manage Account</a>
 			  <a href="#">Resumes</a>
-			  <a href="#">Logout</a>
+			  <a href="#">Logout </a>
 			</div>
 
 			<div id="menu-bar-open">
@@ -120,10 +120,40 @@
 				<div class="row info">
 					<div class="datatitle">Education</div>
 				</div>
+
+				<div class="row fetch phd-fetch">
+					<?php
+						include 'phd-fetch.php';
+					?>
+				</div>
+
+				<div class="row fetch pg-fetch">
+					<?php
+						include 'pg-fetch.php';
+					?>
+				</div>
 				
-				<div class="row grad-fetch grad-fetch">
+				<div class="row fetch">
 					<?php
 						include 'grad-fetch.php';
+					?>
+				</div>
+
+				<div class="row fetch diploma-fetch">
+					<?php
+						include 'diploma-fetch.php';
+					?>
+				</div>
+
+				<div class="row fetch ss-fetch">
+					<?php
+						include 'ss_fetch.php';
+					?>
+				</div>
+
+				<div class="row fetch secon-fetch">
+					<?php
+						include 'secondary-fetch.php';
 					?>
 				</div>
 

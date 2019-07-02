@@ -11,7 +11,7 @@
         die("connection failed : ".mysqli_connect_error());
     }   
         
-    $sql = "SELECT * FROM graduation ";
+    $sql = "SELECT * FROM phd ";
 
     $result = mysqli_query($conn, $sql);
     if (!$result) {
@@ -19,34 +19,36 @@
     } 
 
     while ($row=mysqli_fetch_array($result)) {
-        $deg= $row['degree'];
-        $str= $row['stream'];
-        $str_yr= $row['start_year'];
-        $end_yr= $row['end_year'];
-        $clg= $row['college'];
-        $prf_scl= $row['performence_scale'];
-        $prf_mrk= $row['performence_marks'];
+        $str_phd= $row['stream'];
+        $str_yr_phd=$row['start_year'];
+        $end_yr_phd= $row['end_year'];
+        $clg_phd= $row['college'];
+        $prf_scl_phd= $row['performence_scale'];
+        $prf_mrk_phd= $row['performence_marks'];
     }
 ?>
     <div class="row data-fetch">
-        <div class="col col1"><h5 class="fetched-head"> <?php
-                echo $deg.",";
-                echo $str;
-                echo "(".$str_yr."-";
-                echo $end_yr.")";
-            ?></h5>
+        <div class="col col1">
+            <div>
+                <h5 class="fetched-head"> <?php
+                    echo "PhD, ".$str_phd;
+                    echo "(".$str_yr_phd."-".$end_yr_phd.")";
+                ?>
+                </h5>
+            </div>
             <div>
                 <?php
-                    echo $clg;
+                    echo $clg_phd;
                 ?>
             </div>
             <div>
                 <?php
-                    echo "SGPA: ".$prf_scl."/";
-                    echo $prf_mrk;
+                    echo "SGPA: ".$prf_scl_phd."/";
+                    echo $prf_mrk_phd;
                 ?>
             </div>
         </div>
+
         <div class="col col2">
             <a href="#"><img class="edit-img" src="img/pencil-edit-button.png"></a>
             <a href="#"><img class="rmv-img" src="img/bin-with-lid.png"></a>

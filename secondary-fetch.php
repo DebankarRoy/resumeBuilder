@@ -11,39 +11,37 @@
         die("connection failed : ".mysqli_connect_error());
     }   
         
-    $sql = "SELECT * FROM graduation ";
+    $sql = "SELECT * FROM secondary ";
 
     $result = mysqli_query($conn, $sql);
     if (!$result) {
         die("Error: " . $sql . "<br>" . mysqli_error($conn));
     } 
-
+    
     while ($row=mysqli_fetch_array($result)) {
-        $deg= $row['degree'];
-        $str= $row['stream'];
-        $str_yr= $row['start_year'];
-        $end_yr= $row['end_year'];
-        $clg= $row['college'];
-        $prf_scl= $row['performence_scale'];
-        $prf_mrk= $row['performence_marks'];
+        $end_yr_s= $row['end_year'];
+        $scl_s= $row['school'];
+        $board_s= $row['board'];
+        $prf_scl_s= $row['performence_scale'];
+        $prf_mrk_s= $row['performence_marks'];
     }
 ?>
     <div class="row data-fetch">
         <div class="col col1"><h5 class="fetched-head"> <?php
-                echo $deg.",";
-                echo $str;
-                echo "(".$str_yr."-";
-                echo $end_yr.")";
-            ?></h5>
+                echo "X (Secondary)</h5>";
+                echo "Year of Completion: ";
+                echo $end_yr_s;
+            ?>
             <div>
                 <?php
-                    echo $clg;
+                    echo $board_s." Board(";
+                    echo $scl_s.")";
                 ?>
             </div>
             <div>
                 <?php
-                    echo "SGPA: ".$prf_scl."/";
-                    echo $prf_mrk;
+                    echo "SGPA: ".$prf_scl_s."/";
+                    echo $prf_mrk_s;
                 ?>
             </div>
         </div>

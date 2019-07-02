@@ -52,7 +52,7 @@ CREATE TABLE senior_secondary(
 );
 
 
-CREATE TABLE secondary_details(
+CREATE TABLE secondary(
     id int(200) NOT NULL AUTO_INCREMENT,
     degree_status VARCHAR(20),
     school VARCHAR(100) ,

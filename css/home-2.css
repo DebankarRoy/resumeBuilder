@@ -168,14 +168,14 @@ input[type=number]::-webkit-outer-spin-button {
 .lower{
     padding-left: 2%;
     padding-right: 2%;
-    height: 580px;
+    height: auto;
     }
 
 @media (min-width: 600px){
 	.lower{
     padding-left: 28%;
     padding-right: 28%;
-    height: 580px;
+    height: auto;
 	}
 }
 @media (min-width: 600px){
@@ -728,8 +728,9 @@ a:hover{
    /* display: flex;*/
 }
 
-.grad-fetch{
-    margin-top: 30px;
+.fetch{
+    margin-top: 25px;
+    height: auto
 
 }
 
@@ -741,19 +742,29 @@ a:hover{
 }
 
 .data-fetch > div {
+    padding-left: 10px;
     font-size: 14px;
     display: block;
     color:#767676; 
 }
 
 .rmv-img,.edit-img{
-    height: 22px;
-    width: 17px;
+    height: 16px;
+    width: 16px;
 }
 
 .col1{
     width: 80%;
+    height: auto;
 }
 .col2{
     width: 20%;
+    height: auto;
+}
+
+.fa-plus:before {
+    content: "\f067";
+    
+    position: relative;
+    top: 10px;
 }

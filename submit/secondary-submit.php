@@ -14,10 +14,10 @@
     $school_s = $_POST['school_s'];
     $end_year_s=$_POST['end_year_s'];
     $board_s=$_POST['board_s'];    
-    $performance_scale_ss=$_POST['performance_scale_s'];
-    $performance_marks_ss=$_POST['performance_s'];
+    $performance_scale_s=$_POST['performance_scale_s'];
+    $performance_marks_s=$_POST['performance_s'];
 
-    $sql = "INSERT INTO secondary_details (degree_status ,school ,end_year ,board ,performence_scale ,performence_marks)
+    $sql = "INSERT INTO secondary(degree_status ,school ,end_year ,board ,performence_scale ,performence_marks)
         VALUES ('$deg_stat_s' ,'$school_s' ,'$end_year_s' ,'$board_s' ,'$performance_scale_s' ,'$performance_marks_s')";
         
     if(!mysqli_query($conn,$sql)){

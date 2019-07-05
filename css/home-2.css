@@ -240,8 +240,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .dialouge{
-    height: 130px;
-    padding-top: 40px;
+    height: 80px;
+    padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 10%;
     padding-right: 10%; 
@@ -249,7 +249,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 @media (min-width: 600px){
 .dialouge {
-    padding-top: 60px;
+    padding-top: 10px;
     }
 
 }

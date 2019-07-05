@@ -158,16 +158,19 @@
 				</div>
 
 
-				<div class="row dialouge"><h4>Tell us bit about your education</h4></div>
+				<div class="row dialouge">
+					<h4 class="tell-us">Tell us bit about your education:</h4>
+					<h4 class="add-little">Add a little bit more:</h4>
+				</div>
 				
 				<div class="col userinfo">
 					<div class="row discipline" data-toggle="modal" data-target="#graduation-modal" id="grad">Graduation
 						<i class="fa fa-plus education-fa-plus fa-x" aria-hidden="true"></i>
 					</div>
-					<div class="row discipline" data-toggle="modal" data-target="#hs-modal">XII(Higer Secondary)
+					<div class="row discipline" id="seniorsecondary" data-toggle="modal" data-target="#hs-modal">XII(Higer Secondary)
 						<i class="fa fa-plus education-fa-plus fa-x" aria-hidden="true"></i>
 					</div>
-					<div class="row discipline" data-toggle="modal" data-target="#secon-modal">X(Secondary)
+					<div class="row discipline" id="secondary" data-toggle="modal" data-target="#secon-modal">X(Secondary)
 						<i class="fa fa-plus education-fa-plus fa-x" aria-hidden="true"></i>
 					</div>
 					<div class="row discipline" data-toggle="modal" data-target="#post-graduation-modal">Post Graduation
@@ -1156,7 +1159,32 @@
 			  document.getElementById("mySidenav").style.width = "0";
 			}
 		</script>
+		<script>
+			console.log(edu);
+			$('document').ready(function(){
+				if(edu=='1'){
+                        $('.tell-us').hide();
+                        $('.add-little').show();
+                    }else{
+                	$('.add-little').hide();
+                }
+			 });			
+		</script>
+		<script>
+			$('document').ready(function(){
+				if(secondary=='1'){
+                        $('#secondary').hide();
+                    }
+			 });			
+		</script>
 
+		<script>
+			$('document').ready(function(){
+				if(seniorsecondary=='1'){
+                        $('#seniorsecondary').hide();
+                    }
+			 });			
+		</script>	
 	
 </html>
 <!--<a href="https://www.flaticon.com">for icons</a> -->

@@ -4,6 +4,9 @@ function submitgrad(){
         type: "POST",
         url: "submit/graduation-submit.php",
         data: frm.serialize(),
+        success: function() {
+          window.location.reload(); // This is not jQuery but simple plain ol' JS
+        }
     });
      frm.reset();
 }
@@ -14,6 +17,9 @@ function submitss(){
         type: "POST",
         url: "submit/ss-submit.php",
         data: frm.serialize(),
+        success: function() {
+          window.location.reload(); // This is not jQuery but simple plain ol' JS
+        }
         
     });
 }
@@ -24,6 +30,9 @@ function submitsecondary(){
         type: "POST",
         url: "submit/secondary-submit.php",
        data: frm.serialize(),
+       success: function() {
+          window.location.reload(); // This is not jQuery but simple plain ol' JS
+        }
         
     });
 }
@@ -44,6 +53,9 @@ function submitdiploma(){
         type: "POST",
         url: "submit/diploma-submit.php",
        data: frm.serialize(),
+       success: function() {
+          window.location.reload(); // This is not jQuery but simple plain ol' JS
+        }
      
     });
 }
@@ -54,6 +66,9 @@ function submitphd(){
         type: "POST",
         url: "submit/phd-submit.php",
        data: frm.serialize(),
+       success: function() {
+          window.location.reload(); // This is not jQuery but simple plain ol' JS
+        }
      
     });
 }

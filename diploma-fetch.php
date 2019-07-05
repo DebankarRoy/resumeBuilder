@@ -1,4 +1,6 @@
-
+<script>
+        var edu=0;
+    </script>
 <?php
     session_start();
     $hostname = "127.0.0.1";
@@ -19,13 +21,18 @@
     } 
 
     while ($row=mysqli_fetch_array($result)) {
+        if(empty($row['stream'])) {
+                //$row['describe'] is empty                  
+                   mysqli_close($conn);
+            } 
+            else {
         $str_dp= $row['stream'];
         $str_yr_dp=$row['start_year'];
         $end_yr_dp= $row['end_year'];
         $clg_dp= $row['college'];
         $prf_scl_dp= $row['performence_scale'];
         $prf_mrk_dp= $row['performence_marks'];
-    }
+            }
 ?>
     <div class="row data-fetch">
         <div class="col col1">
@@ -54,8 +61,10 @@
             <a href="#"><img class="rmv-img" src="img/bin-with-lid.png"></a>
         </div>
     </div> 
-
+    <script>
+        var edu=1;
+    </script>
  <?php   
-    
+    }
     mysqli_close($conn);
 ?> 

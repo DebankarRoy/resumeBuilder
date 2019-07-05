@@ -1,4 +1,6 @@
-
+<script>
+        var edu=0;
+    </script>
 <?php
     session_start();
     $hostname = "127.0.0.1";
@@ -19,6 +21,14 @@
     } 
     
     while ($row=mysqli_fetch_array($result)) {
+        if(empty($row['end_year'])) {
+                //$row['describe'] is empty
+
+                  
+                   mysqli_close($conn);
+            
+
+            } else {
         $end_yr_s= $row['end_year'];
         $scl_s= $row['school'];
         $board_s= $row['board'];
@@ -50,8 +60,13 @@
             <a href="#"><img class="rmv-img" src="img/bin-with-lid.png"></a>
         </div>
     </div> 
+    <script>
+        var secondary=1;
+        var edu=1;
+        //console.log('secondary'+secondary);
+    </script>
 
  <?php   
-    
+    }
     mysqli_close($conn);
 ?> 

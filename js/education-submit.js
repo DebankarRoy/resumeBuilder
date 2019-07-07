@@ -4,8 +4,8 @@ function submitgrad(){
         type: "POST",
         url: "submit/graduation-submit.php",
         data: frm.serialize(),
-        success: function() {
-          window.location.reload(); // This is not jQuery but simple plain ol' JS
+        success: function(data,status) {
+          readRecordsGrad();
         }
     });
      frm.reset();
@@ -17,11 +17,11 @@ function submitss(){
         type: "POST",
         url: "submit/ss-submit.php",
         data: frm.serialize(),
-        success: function() {
-          window.location.reload(); // This is not jQuery but simple plain ol' JS
-        }
-        
+        success: function(data,status) {
+            readRecordss();
+        }       
     });
+     frm.reset();
 }
 
 function submitsecondary(){
@@ -29,12 +29,12 @@ function submitsecondary(){
      $.ajax({
         type: "POST",
         url: "submit/secondary-submit.php",
-       data: frm.serialize(),
-       success: function() {
-          window.location.reload(); // This is not jQuery but simple plain ol' JS
-        }
-        
+        data: frm.serialize(),
+        success: function(data,status) {
+          readRecordsecondary();
+        }        
     });
+     frm.reset();
 }
 
 function submitpostgrad(){
@@ -42,9 +42,12 @@ function submitpostgrad(){
      $.ajax({
         type: "POST",
         url: "submit/post-grad-submit.php",
-       data: frm.serialize(),
-       
+        data: frm.serialize(),
+        success: function(data,status) {
+          readRecordspostgrad();
+        }
     });
+     frm.reset();
 }
 
 function submitdiploma(){
@@ -53,11 +56,11 @@ function submitdiploma(){
         type: "POST",
         url: "submit/diploma-submit.php",
        data: frm.serialize(),
-       success: function() {
-          window.location.reload(); // This is not jQuery but simple plain ol' JS
+       success: function(data,status) {
+          readRecordsdiploma();
         }
-     
     });
+     frm.reset();
 }
 
 function submitphd(){
@@ -67,10 +70,10 @@ function submitphd(){
         url: "submit/phd-submit.php",
        data: frm.serialize(),
        success: function() {
-          window.location.reload(); // This is not jQuery but simple plain ol' JS
-        }
-     
+          readRecordsphd();
+        } 
     });
+      frm.reset();
 }
 
 

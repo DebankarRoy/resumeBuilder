@@ -121,46 +121,29 @@
 					<div class="datatitle">Education</div>
 				</div>
 
-				<div class="row fetch phd-fetch">
-					<?php
-						include 'phd-fetch.php';
-					?>
+				<div class="row fetch phd-fetch" id="phd-fetching">
 				</div>
 
-				<div class="row fetch pg-fetch">
-					<?php
-						include 'pg-fetch.php';
-					?>
+				<div class="row fetch pg-fetch" id="postgrad-fetching">
 				</div>
 				
-				<div class="row fetch">
-					<?php
-						include 'grad-fetch.php';
-					?>
+				<div class="row fetch" id="grad-fetching">
+					
 				</div>
 
-				<div class="row fetch diploma-fetch">
-					<?php
-						include 'diploma-fetch.php';
-					?>
+				<div class="row fetch diploma-fetch" id="diploma-fetching">
 				</div>
 
-				<div class="row fetch ss-fetch">
-					<?php
-						include 'ss_fetch.php';
-					?>
+				<div class="row fetch ss-fetch" id="ss-fetching">
 				</div>
 
-				<div class="row fetch secon-fetch">
-					<?php
-						include 'secondary-fetch.php';
-					?>
+				<div class="row fetch secon-fetch" id="secondary-fetching">
 				</div>
 
 
 				<div class="row dialouge">
 					<h4 class="tell-us">Tell us bit about your education:</h4>
-					<h4 class="add-little">Add a little bit more:</h4>
+					<h4 class="add-little">Add a bit more:</h4>
 				</div>
 				
 				<div class="col userinfo">
@@ -455,7 +438,7 @@
 											</div>
 											<div class="row boardname">Board*:
 										 			<div class="name-container">
-										 				<input type="text" id="board" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="board_ss" placeholder="Ex: WBBSE " required="" aria-required="true" aria-invalid="true">
+										 				<input type="text" id="board" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="board_ss" placeholder="Ex: WBCHSE " required="" aria-required="true" aria-invalid="true">
 										 			</div>
 									 		</div>
 
@@ -1151,6 +1134,109 @@
 
 
 		<script>
+			function readRecordsGrad(){
+				var readRecordGrad = 'readRecordGrad';
+				$.ajax({
+					url: 'submit/graduation-submit.php',
+					type: 'POST',
+					data: { readRecordGrad:readRecordGrad },
+					success:function(data,status){
+  			 			$('#grad-fetching').html(data);
+  					 }
+				})
+			}
+
+			function readRecordss(){
+				var readRecordss = 'readRecordss';
+				$.ajax({
+					url: 'submit/ss-submit.php',
+					type: 'POST',
+					data: { readRecordss:readRecordss },
+					success:function(data,status){
+  			 			$('#ss-fetching').html(data);
+  					 }
+				})
+			}
+
+
+			function readRecordsecondary(){
+				var readRecordsecondary = 'readRecordsecondary';
+				$.ajax({
+					url: 'submit/secondary-submit.php',
+					type: 'POST',
+					data: { readRecordsecondary:readRecordsecondary },
+					success:function(data,status){
+  			 			$('#secondary-fetching').html(data);
+  					 }
+				})
+			}
+
+
+			function readRecordspostgrad(){
+				var readRecordspostgrad = 'readRecordspostgrad';
+				$.ajax({
+					url: 'submit/post-grad-submit.php',
+					type: 'POST',
+					data: { readRecordspostgrad:readRecordspostgrad },
+					success:function(data,status){
+						console.log('read sucessfull');
+  			 			$('#postgrad-fetching').html(data);
+  					 }
+				})
+			}
+
+			function readRecordsdiploma(){
+				var readRecorddiploma = 'readRecorddiploma';
+				$.ajax({
+					url: 'submit/diploma-submit.php',
+					type: 'POST',
+					data: { readRecorddiploma:readRecorddiploma },
+					success:function(data,status){
+  			 			$('#diploma-fetching').html(data);
+  					 }
+				})
+			}
+
+			function readRecordsphd(){
+				var readRecordphd = 'readRecordphd';
+				$.ajax({
+					url: 'submit/phd-submit.php',
+					type: 'POST',
+					data: { readRecordphd:readRecordphd },
+					success:function(data,status){
+  			 			$('#phd-fetching').html(data);
+  					 }
+				})
+			}
+
+
+			$('document').ready(function() {
+				readRecordsGrad();
+				readRecordss();
+				readRecordsecondary();
+				readRecordspostgrad();
+				readRecordsdiploma();
+				readRecordsphd();
+			});
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script>
 			function openNav() {
 			  document.getElementById("mySidenav").style.width = "250px";
 			}
@@ -1177,7 +1263,6 @@
                     }
 			 });			
 		</script>
-
 		<script>
 			$('document').ready(function(){
 				if(seniorsecondary=='1'){

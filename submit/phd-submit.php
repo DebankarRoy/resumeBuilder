@@ -20,6 +20,7 @@
 
             while ($row = mysqli_fetch_array($result)) {
 
+            $id=$row['id'];    
             $str_phd= $row['stream'];
             $str_yr_phd=$row['start_year'];
             $end_yr_phd= $row['end_year'];
@@ -46,14 +47,22 @@
                         echo '</div>';
 
                         echo '<div class="col col2">';
-                            echo '<a href="#"><img class="edit-img" src="img/pencil-edit-button.png"></a
-                                <a href="#"><img class="rmv-img" src="img/bin-with-lid.png"></a>
+                            echo '<a href="#" onclick="DeleteRecordphd('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                             </div>
                             </div>';
             }
         } 
     }
 
+    if(isset($_POST['deleteidphd'])){
+
+        $user_id_phd = $_POST['deleteidphd']; 
+        $deletequery = " delete from phd where id ='$user_id_phd' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessful");
+    }
 
     if(isset($_POST['degree_completion_status_ph'])){
 

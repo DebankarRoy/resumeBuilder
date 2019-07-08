@@ -1131,110 +1131,9 @@
 		<script src="js/jQueryValidation.js"></script>
 		<script src="js/form-validations.js"></script>
 		<script src="js/abc.js"></script>
+		<script src="js/education-fetch.js"></script>
 
-
-		<script>
-			function readRecordsGrad(){
-				var readRecordGrad = 'readRecordGrad';
-				$.ajax({
-					url: 'submit/graduation-submit.php',
-					type: 'POST',
-					data: { readRecordGrad:readRecordGrad },
-					success:function(data,status){
-  			 			$('#grad-fetching').html(data);
-  					 }
-				})
-			}
-
-			function readRecordss(){
-				var readRecordss = 'readRecordss';
-				$.ajax({
-					url: 'submit/ss-submit.php',
-					type: 'POST',
-					data: { readRecordss:readRecordss },
-					success:function(data,status){
-  			 			$('#ss-fetching').html(data);
-  					 }
-				})
-			}
-
-
-			function readRecordsecondary(){
-				var readRecordsecondary = 'readRecordsecondary';
-				$.ajax({
-					url: 'submit/secondary-submit.php',
-					type: 'POST',
-					data: { readRecordsecondary:readRecordsecondary },
-					success:function(data,status){
-  			 			$('#secondary-fetching').html(data);
-  					 }
-				})
-			}
-
-
-			function readRecordspostgrad(){
-				var readRecordspostgrad = 'readRecordspostgrad';
-				$.ajax({
-					url: 'submit/post-grad-submit.php',
-					type: 'POST',
-					data: { readRecordspostgrad:readRecordspostgrad },
-					success:function(data,status){
-						console.log('read sucessfull');
-  			 			$('#postgrad-fetching').html(data);
-  					 }
-				})
-			}
-
-			function readRecordsdiploma(){
-				var readRecorddiploma = 'readRecorddiploma';
-				$.ajax({
-					url: 'submit/diploma-submit.php',
-					type: 'POST',
-					data: { readRecorddiploma:readRecorddiploma },
-					success:function(data,status){
-  			 			$('#diploma-fetching').html(data);
-  					 }
-				})
-			}
-
-			function readRecordsphd(){
-				var readRecordphd = 'readRecordphd';
-				$.ajax({
-					url: 'submit/phd-submit.php',
-					type: 'POST',
-					data: { readRecordphd:readRecordphd },
-					success:function(data,status){
-  			 			$('#phd-fetching').html(data);
-  					 }
-				})
-			}
-
-
-			$('document').ready(function() {
-				readRecordsGrad();
-				readRecordss();
-				readRecordsecondary();
-				readRecordspostgrad();
-				readRecordsdiploma();
-				readRecordsphd();
-			});
-		</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		
 
 		<script>
 			function openNav() {
@@ -1245,17 +1144,7 @@
 			  document.getElementById("mySidenav").style.width = "0";
 			}
 		</script>
-		<script>
-			console.log(edu);
-			$('document').ready(function(){
-				if(edu=='1'){
-                        $('.tell-us').hide();
-                        $('.add-little').show();
-                    }else{
-                	$('.add-little').hide();
-                }
-			 });			
-		</script>
+		
 		<script>
 			$('document').ready(function(){
 				if(secondary=='1'){

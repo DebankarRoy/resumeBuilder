@@ -18,7 +18,7 @@
         if(mysqli_num_rows($result) > 0){
 
             while ($row = mysqli_fetch_array($result)) {
-
+                $id=$row['id'];
                 $str_pg= $row['stream'];
                 $deg_pg=$row['degree'];
                 $str_yr_pg=$row['start_year'];
@@ -47,12 +47,21 @@
                         echo '</div>';
 
                         echo '<div class="col col2">';
-                            echo '<a href="#"><img class="edit-img" src="img/pencil-edit-button.png"></a
-                                <a href="#"><img class="rmv-img" src="img/bin-with-lid.png"></a>
+                            echo '<a href="#" onclick="DeleteRecordpostgrad('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                             </div>
                             </div>';
             }
         } 
+    }
+
+    if(isset($_POST['deleteidpg'])){
+
+        $user_id_pg = $_POST['deleteidpg']; 
+        $deletequery = " delete from post_graduation where id ='$user_id_pg' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessfull");
     }
 
 

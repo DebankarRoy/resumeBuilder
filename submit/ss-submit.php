@@ -19,6 +19,7 @@
 
             while ($row = mysqli_fetch_array($result)) {
 
+                $id=$row['id'];
                 $str_ss= $row['stream'];
                 $end_yr_ss= $row['end_year'];
                 $scl_ss= $row['school'];
@@ -49,14 +50,22 @@
                     echo'</div>
                 </div>
 
-                <div class="col col2">
-                    <a href="#"><img class="edit-img" src="img/pencil-edit-button.png"></a>
-                    <a href="#"><img class="rmv-img" src="img/bin-with-lid.png"></a>
+                <div class="col col2"><a href="#" onclick="DeleteRecordss('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                 </div>
             </div> ';
 
             }
         }        
+    }
+
+    if(isset($_POST['deleteidss'])){
+
+        $user_id_ss = $_POST['deleteidss']; 
+        $deletequery = " delete from senior_secondary where id ='$user_id_ss' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessful");
     }
 
 

@@ -19,7 +19,7 @@
         if(mysqli_num_rows($result) > 0){
 
             while ($row = mysqli_fetch_array($result)) {
-
+                $id=$row['id'];
                 $str_dp= $row['stream'];
                 $str_yr_dp=$row['start_year'];
                 $end_yr_dp= $row['end_year'];
@@ -46,12 +46,21 @@
                         echo '</div>';
 
                         echo '<div class="col col2">';
-                            echo '<a href="#"><img class="edit-img" src="img/pencil-edit-button.png"></a
-                                <a href="#"><img class="rmv-img" src="img/bin-with-lid.png"></a>
+                            echo '<a href="#" onclick="DeleteRecorddiploma('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                             </div>
                             </div>';
             }
         } 
+    }
+
+    if(isset($_POST['deleteiddp'])){
+
+        $user_id_dp = $_POST['deleteiddp']; 
+        $deletequery = " delete from diploma where id ='$user_id_dp' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessfull");
     }
 
 

@@ -17,9 +17,8 @@
 
         if(mysqli_num_rows($result) > 0){
 
-            $number = 1;
             while ($row = mysqli_fetch_array($result)) {
-
+                $id=$row['id'];
                 $deg= $row['degree'];
                 $str= $row['stream'];
                 $str_yr= $row['start_year'];
@@ -27,7 +26,6 @@
                 $clg= $row['college'];
                 $prf_scl= $row['performence_scale'];
                 $prf_mrk= $row['performence_marks'];
-
                 
                  echo '<div class="row data-fetch">
                         <div class="col col1"><h5 class="fetched-head">'; 
@@ -49,12 +47,21 @@
                         echo '</div>';
 
                         echo '<div class="col col2">';
-                            echo '<a href="#"><img class="edit-img" src="img/pencil-edit-button.png"></a
-                                <a href="#"><img class="rmv-img" src="img/bin-with-lid.png"></a>
+                            echo '<a href="#" onclick="DeleteRecordgrad('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                             </div>
                             </div>';
             }
         } 
+    }
+
+    if(isset($_POST['deleteid'])){
+
+        $user_id = $_POST['deleteid']; 
+        $deletequery = " delete from graduation where id ='$user_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessful");
     }
 
 

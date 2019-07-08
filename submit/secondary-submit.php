@@ -18,7 +18,7 @@
         if(mysqli_num_rows($result) > 0){
 
             while ($row = mysqli_fetch_array($result)) {
-      
+                $id=$row['id'];
                 $end_yr_s= $row['end_year'];
                 $scl_s= $row['school'];
                 $board_s= $row['board'];
@@ -48,14 +48,22 @@
                     echo'</div>
                 </div>
 
-                <div class="col col2">
-                    <a href="#"><img class="edit-img" src="img/pencil-edit-button.png"></a>
-                    <a href="#"><img class="rmv-img" src="img/bin-with-lid.png"></a>
+                <div class="col col2"><a href="#" onclick="DeleteRecordsecondary('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                 </div>
             </div> ';
 
             }
         }        
+    }
+
+    if(isset($_POST['deleteids'])){
+
+        $user_id_s = $_POST['deleteids']; 
+        $deletequery = " delete from secondary where id ='$user_id_s' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessful");
     }
 
     if(isset($_POST['degree_completion_status_s'])){

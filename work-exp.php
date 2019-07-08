@@ -123,8 +123,25 @@
 				<div class="row info exp heading">
 					<div class="datatitle">Experience</div>
 				</div>
+
+				<div class="row fetch phd-fetch" id="job-fetching">
+				</div>
+
+				<div class="row fetch pg-fetch" id="internship-fetching">
+				</div>
+				
+				<div class="row fetch" id="training-fetching">	
+				</div>
+
+				<div class="row fetch diploma-fetch" id="project-fetching">
+				</div>
+
+				<div class="row fetch ss-fetch" id="others-fetching">
+				</div>
+
+
 				<div class="row dialouge"><h4>Tell us bit about your education</h4></div>
-				<div class="colp padding"></div>
+				
 				<div class="col userinfo">
 					<div class="row discipline" data-toggle="modal" data-target="#training-modal" >Training
 						<i class="fa fa-plus education-fa-plus fa-x" aria-hidden="true"></i>
@@ -146,7 +163,7 @@
 						<a href="skills.php"><button  class="next" >NEXT</button></a>
 					</div>	
 				</div>
-				<div class="colp padding"></div>
+				
 			</div>
 		</div>
 
@@ -301,12 +318,12 @@
 						 					<div class=" row start-end-date">
 						 						<div class="col date">Start Date
 						 							<div class="name-container">
-						 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_int" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="start-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_int" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 						 						</div>
 						 						<div class="col date">End Date
 						 							<div class="name-container">
-						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_int" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="end-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_int" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
 					 									<input type="checkbox" id="present">Currently Ongoing
@@ -363,12 +380,12 @@
 						 					<div class=" row start-end-date">
 						 						<div class="col date">Start Date
 						 							<div class="name-container">
-						 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_job" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="start-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_job" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 						 						</div>
 						 						<div class="col date">End Date
 						 							<div class="name-container">
-						 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_job" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="end-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_job" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
 					 									<input type="checkbox" id="present">Currently Ongoing 
@@ -430,13 +447,56 @@
 				</div>	
 			</div>
 	<body>
-
-		
 		<script src="js/work-exp.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/picker.date.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
 		
+		<script>
+			function readRecordjob(){
+				var readRecordjob = 'readRecordjob';
+				$.ajax({
+					url: 'submit/job-submit.php',
+					type: 'POST',
+					data: { readRecordjob:readRecordjob },
+					success:function(data,status){
+				 			$('#job-fetching').html(data);
+				 			counter++;
+						 }
+				})
+			}
+
+
+			function DeleteRecordjob(deleteid){
+				var conf = confirm("Are you sure?");
+				if(conf == true) {
+				$.ajax({
+					url:"submit/job-submit.php",
+					type:'POST',
+					data: {  deleteid : deleteid },
+					success:function(data, status){
+						readRecordjob ();
+						counter--;
+					}
+				});
+				}
+			}
+
+
+			$('document').ready(function() {
+				readRecordjob();
+				readRecordss();
+				readRecordsecondary();
+				readRecordspostgrad();
+				readRecordsdiploma();
+				readRecordsphd();
+				
+			});
+		</script>
+
+
 		<script>
 			function openNav() {
 			  document.getElementById("mySidenav").style.width = "250px";
@@ -446,6 +506,37 @@
 			  document.getElementById("mySidenav").style.width = "0";
 			}
 		</script>
+
+		<script >
+			$(document).ready(function(){
+				$("#start-date").datepicker();
+			});
+			$(document).ready(function(){
+				$("#end-date").datepicker();
+			});
+			
+			$(document).ready(function(){
+				$("#start-date_training").datepicker();
+			});
+			$(document).ready(function(){
+				$("#end-date_training").datepicker();
+			});
+
+			$(document).ready(function(){
+				$("#start-date_intern").datepicker();
+			});
+			$(document).ready(function(){
+				$("#end-date_intern").datepicker();
+			});
+
+			$(document).ready(function(){
+				$("#start-date_job").datepicker();
+			});
+			$(document).ready(function(){
+				$("#end-date_job").datepicker();
+			});
+		</script>
+
 
 		<script>
 			/*$(document).ready(function(){

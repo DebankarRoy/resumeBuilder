@@ -138,6 +138,7 @@
 	/*position: relative;
 	top: 15px;*/
 	background-color: #1295C9;
+	margin-bottom: 10px;
 }
 
 .edu-pg{
@@ -230,7 +231,7 @@
 }
 .bor{
 	border:solid 1px #FAD33A;
-	height: 550px;
+	height: auto;
 	border-radius: 9px;
 }
 

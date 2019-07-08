@@ -37,6 +37,9 @@ function Submitjob(){
         type: "POST",
         url: "submit/job-submit.php",
        data: frm.serialize(),
+       success: function(data,status) {
+          readRecordjob();
+        }
 
         
     });

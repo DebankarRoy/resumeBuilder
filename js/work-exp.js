@@ -1,9 +1,13 @@
 function Submittraining(){
      var frm = $('#training_details');
+     console.log(frm.serialize());
      $.ajax({
         type: "POST",
         url: "submit/training-submit.php",
        data: frm.serialize(),
+       success: function(data,status) {
+          readRecordtraining();
+        }
 
         
     });
@@ -15,6 +19,9 @@ function Submitproject(){
         type: "POST",
         url: "submit/project-submit.php",
        data: frm.serialize(),
+       success: function(data,status) {
+          readRecordproject();
+        }
 
         
     });
@@ -26,8 +33,10 @@ function Submitintern(){
         type: "POST",
         url: "submit/intern-submit.php",
        data: frm.serialize(),
-
-        
+       success: function(data,status) {
+          readRecordintern();
+        }
+  
     });
 }
 
@@ -51,7 +60,9 @@ function Submitachv(){
         type: "POST",
         url: "submit/other-achv-submit.php",
        data: frm.serialize(),
-
+       success: function(data,status) {
+          readRecordother();
+        }
         
     });
 }

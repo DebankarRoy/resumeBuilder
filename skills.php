@@ -127,6 +127,11 @@
 
 				<div class="col dataform tag">
 					<h4 class="font-weight-h4">What skills do you have?</h4>
+					<div class="skills-container" id="skills-fetching">
+						<div class="row">
+							
+						</div>
+					</div>
 					<div class="row skill-input">
 						<form role="form" novalidate="novalidate" id="skills" name="skills" enctype="multipart/form-data">
 							
@@ -137,9 +142,9 @@
 							    <div class="skills_edit_cancel" style="display: none;">(×)Cancel
 							    </div>
 							    <div class="rating-container">
-							        <button class="btn btn-primary rating-value" value="Beginner" name="rating" readonly="readonly" onclick="Submitskill()">Beginner</button>
-							        <button class="btn btn-primary rating-value" value="Intermediate" name="rating" readonly="readonly" onclick="Submitskill()">Intermediate</button>
-							        <button class="btn btn-primary rating-value" value="Advanced" name="rating" readonly="readonly" onclick="Submitskill()">Advanced</button>
+							        <button class="btn btn-primary rating-value" id="beginner" value="Beginner" name="rating" readonly="readonly" onclick="Submitskillbeginner()">Beginner</button>
+							        <button class="btn btn-primary rating-value" id="intermediate" value="Intermediate" name="rating" readonly="readonly" onclick="Submitskillintermediate()">Intermediate</button>
+							        <button class="btn btn-primary rating-value" id="advanced" value="Advanced" name="rating" readonly="readonly" onclick="Submitskilladvanced()">Advanced</button>
 							    </div>
 						    </div>
 					    </form>
@@ -158,7 +163,7 @@
 				
 		</div>
 
-		<script src="js/skill-submit.js"></script>
+		<script src="js/skill-selector.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -173,7 +178,38 @@
 		</script>
 
 		<script>
+			function readRecordskill(){
+				var readRecordskill = 'readRecordskill';
+				$.ajax({
+					url: 'submit/skills-submit.php',
+					type: 'POST',
+					data: { readRecordskill:readRecordskill},
+					success:function(data,status){
+				 			$('#skills-fetching').html(data);
+				 			
+						 }
+				})
+			}
+
+
+			function DeleteRecordskill(deleteidskill){
+				var conf = confirm("Are you sure?");
+				if(conf == true) {
+				$.ajax({
+					url:"submit/skills-submit.php",
+					type:'POST',
+					data: {  deleteidskill: deleteidskill },
+					success:function(data, status){
+						readRecordskill();	
+					}
+				});
+				}
+			}
+		</script>
+
+		<script>
 			$('document').ready(function(){
+				readRecordskill();
 			  $('.skills-in').on('keyup',function(){
 				var val =$('.skills-in').val();
 				if(val!=''){

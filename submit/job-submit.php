@@ -16,18 +16,20 @@
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
-
+            echo'<div class="row data-fetch heads"><h3>Jobs:</h3></div>';
             while ($row = mysqli_fetch_array($result)) {
                 $id=$row['id'];
                 $profile=$row['job_profile'];
-                $org = $row['job_org'];
-                $loc= $row['job_loc'];
-                $start_job=$row['startdate_job'];
-                $end_job=$row['enddate_job'];
+                $org = $row['organization'];
+                $loc= $row['location'];
+                $start_job=$row['start_date'];
+                $end_job=$row['end_date'];
                 $description=$row['description'];
-                
+                $start=date('M Y',strtotime($start_job));
+                $end=date('M Y',strtotime($end_job));
+
                 echo '<div class="row data-fetch">
-                        <div class="col col1"><h3>Jobs:</h3><h5 class="fetched-head">'; 
+                        <div class="col col1"><h5 class="fetched-head">'; 
                                 echo $profile.'</h5>';
 
                             echo '<div>';
@@ -35,7 +37,7 @@
                             echo'</div>';
 
                             echo'<div>';
-                                    echo $start_job."-".$end_job;         
+                                    echo $start."-".$end;         
                             echo '</div>';
 
                             echo'<div>';
@@ -52,6 +54,16 @@
         } 
     }
 
+    if(isset($_POST['deleteidjob'])){
+
+        $user_id = $_POST['deleteidjob']; 
+        $deletequery = " delete from job_details where id ='$user_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessful");
+    }
+
 
     if(isset($_POST['job_profile']) && $_POST['job_org'] && isset($_POST['job_loc']) && isset($_POST['startdate_job']) && isset($_POST['enddate_job']) && isset($_POST['job_description']))
         {
@@ -62,7 +74,8 @@
         $start_job=$_POST['startdate_job'];
         $end_job=$_POST['enddate_job'];
         $description_job=$_POST['job_description'];
-        
+        $start_job=date('Y/m/d',strtotime($start_job));
+        $end_job=date('Y/m/d',strtotime($end_job));
 
         $sql = "INSERT INTO job_details(job_profile ,organization ,location ,start_date ,end_date ,description)
             VALUES('$job_profile' ,'$job_org' ,'$job_loc' ,'$start_job', '$end_job' ,'$description_job')";

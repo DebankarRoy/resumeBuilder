@@ -768,3 +768,56 @@ a:hover{
     position: relative;
     top: 10px;
 }
+
+.heads{
+    height: auto;
+    /*padding-left: 12%;*/
+}
+
+.skill-holder{
+    display: flex;
+    justify-content: center;
+    flex: 0 0 48%;
+    background: #F8F8F8;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,.1);
+    padding: 10px 12px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+@media (min-width: 600px){
+    .skill-holder{
+    width: 45%;
+    }
+}
+
+.rating{
+    font-size: 15px;
+}
+
+.rating-col1{
+    justify-content: center;
+    width: 90%;
+    padding: 0px;
+}
+.rating-col2{
+    width: 10%;
+    padding: 0px;
+    float: right;
+}
+
+@media (min-width: 600px){
+    .rating_part{
+    position: relative;
+    left: 90px;
+    top: 10px;
+    }
+}
+.rating_part{
+    position: relative;
+    left: 75px;
+    top: 10px;
+}

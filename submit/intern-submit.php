@@ -16,7 +16,7 @@
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
-            echo'<div class="row data-fetch heads"><h3>Jobs:</h3></div>';
+            echo'<div class="row data-fetch heads"><h3>Internships:</h3></div>';
             while ($row = mysqli_fetch_array($result)) {
                 $id=$row['id'];
                 $profile=$row['intern_profile'];
@@ -29,7 +29,7 @@
                 $end=date('M Y',strtotime($end_int));
 
                 echo '<div class="row data-fetch">
-                        <div class="col col1"><h3>Internships:</h3><h5 class="fetched-head">'; 
+                        <div class="col col1"><h5 class="fetched-head">'; 
                                 echo $profile.'</h5>';
 
                             echo '<div>';

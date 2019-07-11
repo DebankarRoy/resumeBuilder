@@ -217,7 +217,7 @@
 								 					</div>
 								 				</div>	
 							 					<div class=" col btn-holder">
-				 									<button class="next" data-dismiss="modal" onclick="Submittraining()">SUBMIT</button>
+				 									<button class="next" onclick="Submittraining()">SUBMIT</button>
 												</div>	
 											</div>
 											<div class="col padding mbl-view"></div>
@@ -250,12 +250,12 @@
 							 					<div class=" row start-end-date">
 							 						<div class="col date">Start Date
 							 							<div class="name-container">
-							 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_pro" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
+							 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_pro" placeholder="Ex: starting date">
 						 								</div>
 							 						</div>
 							 						<div class="col date">End Date
 							 							<div class="name-container">
-							 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_pro" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
+							 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_pro" placeholder="Ex: ending date">
 						 								</div>
 						 								<div class="radio-btn">
 						 									<input type="checkbox" id="present">Currently working
@@ -264,16 +264,16 @@
 							 					</div>
 								 				<div class="row description">Description:
 								 					<div class="row desc-info">
-								 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="project_description" spellcheck="false" aria-invalid="false"></textarea>
+								 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="project_description" spellcheck="false" ></textarea>
 								 					</div>
 								 				</div>
 								 				<div class="row org">Project Link:
 										 			<div class="name-container">
-										 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="project_link" placeholder="Ex: http://myprojectlink.com" required="" aria-required="true" aria-invalid="true">
+										 				<input type="text" id="organization" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="project_link" placeholder="Ex: http://myprojectlink.com" >
 										 			</div>
 										 		</div>	
 							 					<div class=" col btn-holder">
-					 									<button class="next" data-dismiss="modal" onclick="Submitproject()">SUBMIT</button>
+					 									<button class="next" onclick="Submitproject()">SUBMIT</button>
 													</div>	
 											</div>
 											<div class="col padding mbl-view"></div>
@@ -336,7 +336,7 @@
 							 					</div>
 							 				</div>	
 						 					<div class=" col btn-holder">
-			 									<button class="next" data-dismiss="modal" onclick="Submitintern()">SUBMIT</button>
+			 									<button class="next" onclick="Submitintern()">SUBMIT</button>
 											</div>	
 										</div>
 										<div class="col padding mbl-view"></div>
@@ -398,7 +398,7 @@
 							 					</div>
 							 				</div>	
 						 					<div class=" col btn-holder">
-			 									<button class="next" data-dismiss="modal" onclick="Submitjob()">SUBMIT</button>
+			 									<button class="next" onclick="Submitjob()">SUBMIT</button>
 											</div>	
 										</div>
 										<div class="col padding mbl-view"></div>
@@ -447,169 +447,16 @@
 				</div>	
 			</div>
 	<body>
-		<script src="js/work-exp.js"></script>
+		<script src="js/work-exp-submit.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/picker.date.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jQueryValidation.js"></script>
+		<script src="js/work-exp-fetch.js"></script>
 		
-		<script>
-			function readRecordjob(){
-				var readRecordjob = 'readRecordjob';
-				$.ajax({
-					url: 'submit/job-submit.php',
-					type: 'POST',
-					data: { readRecordjob:readRecordjob },
-					success:function(data,status){
-				 			$('#job-fetching').html(data);
-				 			counter++;
-						 }
-				})
-			}
-
-
-			function DeleteRecordjob(deleteidjob){
-				var conf = confirm("Are you sure?");
-				if(conf == true) {
-				$.ajax({
-					url:"submit/job-submit.php",
-					type:'POST',
-					data: {  deleteidjob : deleteidjob },
-					success:function(data, status){
-						readRecordjob ();
-						counter--;
-					}
-				});
-				}
-			}
-
-			function readRecordintern(){
-				var readRecordintern = 'readRecordintern';
-				$.ajax({
-					url: 'submit/intern-submit.php',
-					type: 'POST',
-					data: { readRecordintern:readRecordintern },
-					success:function(data,status){
-				 			$('#intern-fetching').html(data);
-				 			
-						 }
-				})
-			}
-
-
-			function DeleteRecordintern(deleteidintern){
-				var conf = confirm("Are you sure?");
-				if(conf == true) {
-				$.ajax({
-					url:"submit/intern-submit.php",
-					type:'POST',
-					data: {  deleteidintern : deleteidintern },
-					success:function(data, status){
-						readRecordintern ();
-						
-					}
-				});
-				}
-			}
-
-			function readRecordtraining(){
-				var readRecordtraining = 'readRecordtraining';
-				$.ajax({
-					url: 'submit/training-submit.php',
-					type: 'POST',
-					data: { readRecordtraining:readRecordtraining },
-					success:function(data,status){
-				 			$('#training-fetching').html(data);
-				 			
-						 }
-				})
-			}
-
-
-			function DeleteRecordtraining(deleteidtraining){
-				var conf = confirm("Are you sure?");
-				if(conf == true) {
-				$.ajax({
-					url:"submit/training-submit.php",
-					type:'POST',
-					data: {  deleteidtraining: deleteidtraining },
-					success:function(data, status){
-						readRecordtraining ();
-						
-					}
-				});
-				}
-			}
-
-			function readRecordproject(){
-				var readRecordproject = 'readRecordproject';
-				$.ajax({
-					url: 'submit/project-submit.php',
-					type: 'POST',
-					data: { readRecordproject:readRecordproject },
-					success:function(data,status){
-				 			$('#project-fetching').html(data);
-				 			
-						 }
-				})
-			}
-
-
-			function DeleteRecordproject(deleteidproject){
-				var conf = confirm("Are you sure?");
-				if(conf == true) {
-				$.ajax({
-					url:"submit/project-submit.php",
-					type:'POST',
-					data: {  deleteidproject: deleteidproject },
-					success:function(data, status){
-						readRecordproject();
-						
-					}
-				});
-				}
-			}
-
-			function readRecordother(){
-				var readRecordother = 'readRecordother';
-				$.ajax({
-					url: 'submit/other-achv-submit.php',
-					type: 'POST',
-					data: { readRecordother:readRecordother },
-					success:function(data,status){
-				 			$('#others-fetching').html(data);
-				 			
-						 }
-				})
-			}
-
-
-			function DeleteRecordother(deleteidother){
-				var conf = confirm("Are you sure?");
-				if(conf == true) {
-				$.ajax({
-					url:"submit/other-achv-submit.php",
-					type:'POST',
-					data: {  deleteidother: deleteidother },
-					success:function(data, status){
-						readRecordother();
-						
-					}
-				});
-				}
-			}
-
-
-			$('document').ready(function() {
-				readRecordjob();
-				readRecordintern();
-				readRecordtraining();
-				readRecordproject();
-				readRecordother();
-				
-			});
-		</script>
+		
 
 
 		<script>

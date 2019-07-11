@@ -1,4 +1,4 @@
-var counter=0;
+
 
 function readRecordsGrad(){
 	var readRecordGrad = 'readRecordGrad';
@@ -8,7 +8,7 @@ function readRecordsGrad(){
 		data: { readRecordGrad:readRecordGrad },
 		success:function(data,status){
 	 			$('#grad-fetching').html(data);
-	 			counter++;
+	 			
 			 }
 	})
 }
@@ -24,7 +24,7 @@ function DeleteRecordgrad(deleteid){
 		data: {  deleteid : deleteid },
 		success:function(data, status){
 			readRecordsGrad ();
-			counter--;
+			
 		}
 	});
 	}
@@ -37,8 +37,11 @@ function readRecordss(){
 		type: 'POST',
 		data: { readRecordss:readRecordss },
 		success:function(data,status){
+				if(data!=''){
+					$('#seniorsecondary').hide();
+				}
 	 			$('#ss-fetching').html(data);
-	 			counter++;
+	 			
 			 }
 	})
 }
@@ -52,8 +55,11 @@ function DeleteRecordss(deleteidss){
 		type:'POST',
 		data: {  deleteidss : deleteidss },
 		success:function(data, status){
+			if(data!=''){
+				$('#seniorsecondary').show();
+			}
 			readRecordss ();
-			counter--;
+			
 		}
 	});
 	}
@@ -67,8 +73,11 @@ function readRecordsecondary(){
 		type: 'POST',
 		data: { readRecordsecondary:readRecordsecondary },
 		success:function(data,status){
+				if(data!=''){
+					$('#secondary').hide();
+				}
 	 			$('#secondary-fetching').html(data);
-	 			counter++;
+	 			
 			 }
 	})
 }
@@ -82,8 +91,11 @@ function DeleteRecordsecondary(deleteids){
 		type:'POST',
 		data: {  deleteids : deleteids },
 		success:function(data, status){
+			if(data!=''){
+				$('#secondary').show();
+			}
 			readRecordsecondary ();
-			counter--;
+			
 		}
 	});
 	}
@@ -98,7 +110,7 @@ function readRecordspostgrad(){
 		data: { readRecordspostgrad:readRecordspostgrad },
 		success:function(data,status){
 	 			$('#postgrad-fetching').html(data);
-	 			counter++;
+	 			
 			 }
 	})
 }
@@ -112,7 +124,7 @@ function DeleteRecordpostgrad(deleteidpg){
 		data: {  deleteidpg : deleteidpg },
 		success:function(data, status){
 			readRecordspostgrad ();
-			counter--;
+			
 		}
 	});
 	}
@@ -126,7 +138,7 @@ function readRecordsdiploma(){
 		data: { readRecorddiploma:readRecorddiploma },
 		success:function(data,status){
 	 			$('#diploma-fetching').html(data);
-	 			counter++;
+	 			
 			 }
 	})
 }
@@ -140,7 +152,7 @@ function DeleteRecorddiploma(deleteiddp){
 		data: {  deleteiddp : deleteiddp },
 		success:function(data, status){
 			readRecordsdiploma ();
-			counter--;
+			
 		}
 	});
 	}
@@ -154,7 +166,7 @@ function readRecordsphd(){
 		data: { readRecordphd:readRecordphd },
 		success:function(data,status){
 	 			$('#phd-fetching').html(data);
-	 			counter++;
+	 			
 			 }
 	})
 }
@@ -168,7 +180,7 @@ function DeleteRecordphd(deleteidphd){
 		data: {  deleteidphd : deleteidphd },
 		success:function(data, status){
 			readRecordsphd ();
-			counter--;
+			
 		}
 	});
 	}
@@ -180,13 +192,7 @@ $('document').ready(function() {
 	readRecordspostgrad();
 	readRecordsdiploma();
 	readRecordsphd();
-	/*if(counter>=1){
-	    $('.tell-us').hide();
-	    $('.add-little').show();
-	}else{
-	$('.add-little').hide();
-    }
-    console.log("val"+counter);*/
+	
     $('.add-little').hide();
 
 });

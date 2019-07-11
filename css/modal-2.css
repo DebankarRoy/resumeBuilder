@@ -85,8 +85,7 @@
 .collegename,.schoolname,.prof,.loc,.org{
 	height: 70px;
 	padding-bottom: : 10px;
-	padding-top: 10px;
-
+	
 }
 
 .degree_completion_status_container_completed{
@@ -132,8 +131,8 @@
 	top: 25px;
 	border:solid 1px #1295C9;
 	padding-bottom: : 10px;
-	
-	padding-right: 15px;	
+	padding-right: 15px;
+	margin-top: 10px;	
 }
 .performence-scale{
 	position: relative;
@@ -305,4 +304,17 @@
 	.mt{
 		margin-top: 20px;
 	}
+}
+
+.error{
+	color: #a94442;
+	
+    font-size: 15px;
+    /*margin-top: 5px;
+    margin-bottom: 5px;*/
+}
+
+.chosen-select{
+	color: #949899;
+	
 }

@@ -190,7 +190,8 @@
 												<div class="row grad-stat">Graduation status*:
 													<div class="row deg-container">
 														<div class="deg degree_completion_status_container_pursuing">
-															<input type="radio" id="degree_completion_status" name="degree_completion_status_grad" value="pursuing" aria-required="true">Pursuing
+															<input type="radio" id="degree_completion_status" name="degree_completion_status_grad" value="pursuing" ><span class="spcl" required="true">Pursuing</span>
+															<br>
 														</div>
 														<div class="deg degree_completion_status_container_completed">
 													 		<input type="radio" id="degree_completion_status" name="degree_completion_status_grad" value="completed">Completed
@@ -199,7 +200,7 @@
 										 		</div>
 										 		<div class="row collegename">College*:
 										 			<div class="name-container">
-										 				<input type="text" id="college" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Hindu College " required="" aria-required="true" aria-invalid="true">
+										 				<input type="text" id="college" tabindex="1" class="input-name" autocomplete="off" isautocomplete="" name="college" placeholder="Ex: Hindu College " required=""  aria-invalid="true">
 										 			</div>
 										 		</div>
 										 		<div class="row course-duration">
@@ -344,7 +345,7 @@
 							 						
 							 					</div>
 							 					<div class=" col btn-holder">
-					 									<button  class="next pos mt mb-5" data-dismiss="modal" onclick="submitgrad()">SUBMIT</button>
+					 									<button  class="next pos mt mb-5"  onclick="submitgrad()">SUBMIT</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>
@@ -476,7 +477,7 @@
 											</div>
 
 											<div class=" col btn-holder">
-			 									<button  class="next pos mt mb-5" data-dismiss="modal" onclick="submitss()">SUBMIT</button>
+			 									<button  class="next pos mt mb-5" onclick="submitss()">SUBMIT</button>
 											</div>	
 										</div>
 										<div class="col padding"></div>
@@ -595,7 +596,7 @@
 											</div>
 
 											<div class=" col btn-holder">
-												<button  class="next pos mt mb-4" data-dismiss="modal" onclick="submitsecondary()">SUBMIT</button>
+												<button  class="next pos mt mb-4" onclick="submitsecondary()">SUBMIT</button>
 											</div>
 
 										</div>
@@ -773,7 +774,7 @@
 							 						</div>	
 							 					</div>
 							 					<div class=" col btn-holder">
-					 									<button  class="next pos mt mb-5" data-dismiss="modal" onclick="submitpostgrad()">SUBMIT</button>
+					 									<button  class="next pos mt mb-5" onclick="submitpostgrad()">SUBMIT</button>
 													</div>	
 											</div>
 											<div class="col padding"></div>
@@ -942,7 +943,7 @@
 							 						
 							 					</div>
 							 					<div class=" col btn-holder">
-					 								<button class="next pos mt mb-5" data-dismiss="modal" onclick="submitdiploma()">Submit</button>
+					 								<button class="next pos mt mb-5" onclick="submitdiploma()">Submit</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>
@@ -1111,7 +1112,7 @@
 							 						</div>	
 							 					</div>
 							 					<div class=" col btn-holder">
-					 								<button class="next pos mt mb-5" data-dismiss="modal" onclick="submitphd()">SUBMIT</button>
+					 								<button class="next pos mt mb-5" onclick="submitphd()">SUBMIT</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>
@@ -1127,10 +1128,8 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/education-submit.js"></script>
 		<script src="js/jQueryValidation.js"></script>
-		<script src="js/form-validations.js"></script>
-		<script src="js/abc.js"></script>
+		<script src="js/education-submit.js"></script>
 		<script src="js/education-fetch.js"></script>
 
 		

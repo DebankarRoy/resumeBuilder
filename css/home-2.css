@@ -3,6 +3,12 @@ button, input, optgroup, select, textarea {
     outline: none;
 }
 
+@media (max-width: 600px){
+    button, input, optgroup, select, textarea {
+    font-size: 13px;
+}
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -436,9 +442,9 @@ a:hover{
 	}
 }
 
-.empty{
+/*.empty{
     height: 50px;
-}
+}*/
 
 .form-control{
     border-left: none;

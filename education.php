@@ -344,7 +344,7 @@
 							 						
 							 					</div>
 							 					<div class=" col btn-holder">
-					 									<button  class="next pos" data-dismiss="modal" onclick="submitgrad()">SUBMIT</button>
+					 									<button  class="next pos mt mb-5" data-dismiss="modal" onclick="submitgrad()">SUBMIT</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>
@@ -364,7 +364,7 @@
 						<div class="modal-content">
 							<div class="modal-body">
 								<div class="modal-conts">
-									<div class="header-container mbl-view">XII (Senior Secondary or Equivalent) details</div>
+									<div class="header-container">XII (Senior Secondary or Equivalent)</div>
 									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
 									<form role="form" novalidate="novalidate" id="senior-secondary_details" name="senior-secondary" enctype="multipart/form-data">
 										<div class="row empty"></div>
@@ -476,7 +476,7 @@
 											</div>
 
 											<div class=" col btn-holder">
-			 									<button  class="next pos" data-dismiss="modal" onclick="submitss()">SUBMIT</button>
+			 									<button  class="next pos mt mb-5" data-dismiss="modal" onclick="submitss()">SUBMIT</button>
 											</div>	
 										</div>
 										<div class="col padding"></div>
@@ -595,7 +595,7 @@
 											</div>
 
 											<div class=" col btn-holder">
-												<button  class="next pos" data-dismiss="modal" onclick="submitsecondary()">SUBMIT</button>
+												<button  class="next pos mt mb-4" data-dismiss="modal" onclick="submitsecondary()">SUBMIT</button>
 											</div>
 
 										</div>
@@ -773,7 +773,7 @@
 							 						</div>	
 							 					</div>
 							 					<div class=" col btn-holder">
-					 									<button  class="next pos" data-dismiss="modal" onclick="submitpostgrad()">SUBMIT</button>
+					 									<button  class="next pos mt mb-5" data-dismiss="modal" onclick="submitpostgrad()">SUBMIT</button>
 													</div>	
 											</div>
 											<div class="col padding"></div>
@@ -942,7 +942,7 @@
 							 						
 							 					</div>
 							 					<div class=" col btn-holder">
-					 								<button class="next pos" data-dismiss="modal" onclick="submitdiploma()">Submit</button>
+					 								<button class="next pos mt mb-5" data-dismiss="modal" onclick="submitdiploma()">Submit</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>
@@ -1111,7 +1111,7 @@
 							 						</div>	
 							 					</div>
 							 					<div class=" col btn-holder">
-					 								<button class="next pos" data-dismiss="modal" onclick="submitphd()">SUBMIT</button>
+					 								<button class="next pos mt mb-5" data-dismiss="modal" onclick="submitphd()">SUBMIT</button>
 												</div>	
 											</div>
 											<div class="col padding"></div>

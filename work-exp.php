@@ -177,7 +177,7 @@
 										<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
 										<form role="form" novalidate="novalidate" id="training_details" name="training" enctype="multipart/form-data">
 											<div class="row empty"></div>
-											<div class="col padding"></div>
+											<div class="col padding mbl-view"></div>
 											<div class="col dataform">
 										 		<div class="row prof">Training Program*:
 										 			<div class="name-container">
@@ -207,7 +207,7 @@
 							 								<input type="text" id="end-date_training" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_tra" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 						 								</div>
 						 								<div class="radio-btn">
-						 									<input type="checkbox" id="present" >Currently Ongoing
+						 									<input type="checkbox" id="present"><span class="ongoing">Currently Ongoing</span>
 						 								</div>
 							 						</div>
 							 					</div>
@@ -220,7 +220,7 @@
 				 									<button class="next" data-dismiss="modal" onclick="Submittraining()">SUBMIT</button>
 												</div>	
 											</div>
-											<div class="col padding"></div>
+											<div class="col padding mbl-view"></div>
 										</form>
 									</div>
 
@@ -240,7 +240,7 @@
 										<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
 										<form role="form" novalidate="novalidate" id="project_details" name="project" enctype="multipart/form-data">
 											<div class="row empty"></div>
-											<div class="col padding"></div>
+											<div class="col padding mbl-view"></div>
 											<div class="col dataform">
 										 		<div class="row prof">Title*:
 										 			<div class="name-container">
@@ -276,7 +276,7 @@
 					 									<button class="next" data-dismiss="modal" onclick="Submitproject()">SUBMIT</button>
 													</div>	
 											</div>
-											<div class="col padding"></div>
+											<div class="col padding mbl-view"></div>
 										</form>
 									</div>
 
@@ -296,7 +296,7 @@
 									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
 									<form role="form" novalidate="novalidate" id="intern_details" name="intern" enctype="multipart/form-data"
 										<div class="row empty"></div>
-										<div class="col padding"></div>
+										<div class="col padding mbl-view"></div>
 										<div class="col dataform">
 									 		<div class="row prof">Profile*:
 									 			<div class="name-container">
@@ -339,7 +339,7 @@
 			 									<button class="next" data-dismiss="modal" onclick="Submitintern()">SUBMIT</button>
 											</div>	
 										</div>
-										<div class="col padding"></div>
+										<div class="col padding mbl-view"></div>
 									</form>
 								</div>
 							</div>
@@ -358,7 +358,7 @@
 									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
 									<form role="form" novalidate="novalidate" id="job_details" name="job" enctype="multipart/form-data"
 										<div class="row empty"></div>
-										<div class="col padding"></div>
+										<div class="col padding mbl-view"></div>
 										<div class="col dataform">
 									 		<div class="row prof">Profile*:
 									 			<div class="name-container">
@@ -401,7 +401,7 @@
 			 									<button class="next" data-dismiss="modal" onclick="Submitjob()">SUBMIT</button>
 											</div>	
 										</div>
-										<div class="col padding"></div>
+										<div class="col padding mbl-view"></div>
 									</form>
 								</div>
 							</div>
@@ -419,7 +419,7 @@
 									<div class="header-container exp">Achivements</div>
 									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
 									<form role="form" novalidate="novalidate" id="Achivements_details" name="Achivements" enctype="multipart/form-data">
-										<div class="row empty"></div>
+										<div class="row empty mbl-view"></div>
 										<div class="col padding"></div>
 										<div class="col dataform">
 											<div class="example">
@@ -435,10 +435,10 @@
 							 					</div>
 							 				</div>
 							 				<div class=" col btn-holder">
-			 									<button class="next" data-dismiss="modal" onclick="Submitachv()">SUBMIT</button>
+			 									<button class="next achv-submit" data-dismiss="modal" onclick="Submitachv()">SUBMIT</button>
 											</div>
 										</div>
-										<div class="col padding"></div>
+										<div class="col padding mbl-view"></div>
 									</div>
 								</form>
 							</div>

@@ -16,16 +16,16 @@
 .modal-conts{
 	justify-content: center;
 	align-items: center;
-	height: 630px;
+	/*height: 630px;*/
 	width: auto;
 	background-color: white;
 	position: relative;
 }
 
 
-.secon-conts{
+/*.secon-conts{
 	height: 570px;
-}
+}*/
 
 .modal-body{
 	padding: 0px;
@@ -59,7 +59,7 @@
 	width: 80%;
 }
 .empty{
-	height: 50px;
+	height: 25px;
 }
 
 .deg{
@@ -90,7 +90,13 @@
 }
 
 .degree_completion_status_container_completed{
+	padding-left: 80px;
+}
+
+@media (min-width: 600px){
+	.degree_completion_status_container_completed{
 	padding-left: 150px;
+	}
 }
 
 
@@ -245,24 +251,24 @@
 	}
 }
 
-.tra{
+/*.tra{
 	height: 600px;
-}
+}*/
 
-.achv{
+/*.achv{
 	height: 400px;
-}
+}*/
 
 .start-end-date{
-    height 90px;
+    height:90px;
 }
 
-.degree_completion_status_container_completed{
+/*.degree_completion_status_container_completed{
 	 	position: relative;
 	    top: -21px;
-}
+}*/
 
-.mbl-view{
+.view{
 	height: 80px;
 	font-size: 22px;
 }
@@ -275,6 +281,28 @@
 }
 
 @media (min-width: 600px){
-
+	.achv-submit{
+	margin-top: 10px;
+	}
 }
 
+@media (max-width: 600px){
+	.ongoing{
+		font-size: 14px
+	}
+}
+
+@media (max-width: 600px){
+	.mbl-view{
+		display: none;
+	}
+	.dataform{
+		width: unset;
+	}
+}
+
+@media (max-width: 600px){
+	.mt{
+		margin-top: 20px;
+	}
+}

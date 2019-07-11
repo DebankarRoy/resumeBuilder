@@ -116,7 +116,7 @@
 				<div class="row heading sample"><h3>Work Samples</h3>
 				</div>
 
-				<div class="col padding"></div>
+				<div class="col padding mbl-view"></div>
 				<div class="row empty"></div>
 				<div class="col dataform ">
 					<h4 class="font-weight-h4 padding-h4">Add your work sample links here (if any):</h4>
@@ -149,7 +149,7 @@
 					</form>
 				</div>
 
-				<div class="col padding"></div>
+				<div class="col padding mbl-view"></div>
 
 			</div>
 		</div>

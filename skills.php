@@ -163,63 +163,14 @@
 				
 		</div>
 
-		<script src="js/skill-selector.js"></script>
+		
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script>
-			function openNav() {
-			  document.getElementById("mySidenav").style.width = "250px";
-			}
+		<script src="js/navbar.js"></script>
+		<script src="js/skill-submit.js"></script>
+		<script src="js/skills-fetch.js"></script>
 
-			function closeNav() {
-			  document.getElementById("mySidenav").style.width = "0";
-			}
-		</script>
-
-		<script>
-			function readRecordskill(){
-				var readRecordskill = 'readRecordskill';
-				$.ajax({
-					url: 'submit/skills-submit.php',
-					type: 'POST',
-					data: { readRecordskill:readRecordskill},
-					success:function(data,status){
-				 			$('#skills-fetching').html(data);
-				 			
-						 }
-				})
-			}
-
-
-			function DeleteRecordskill(deleteidskill){
-				var conf = confirm("Are you sure?");
-				if(conf == true) {
-				$.ajax({
-					url:"submit/skills-submit.php",
-					type:'POST',
-					data: {  deleteidskill: deleteidskill },
-					success:function(data, status){
-						readRecordskill();	
-					}
-				});
-				}
-			}
-		</script>
-
-		<script>
-			$('document').ready(function(){
-				readRecordskill();
-			  $('.skills-in').on('keyup',function(){
-				var val =$('.skills-in').val();
-				if(val!=''){
-                        $('.add-skills-rating-container').show();
-                    }else{
-                        $('.add-skills-rating-container').hide();
-                    }
-			 });
-			});
-		</script>
 
 	</body>
 	</html>

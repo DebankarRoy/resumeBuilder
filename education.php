@@ -1131,18 +1131,7 @@
 		<script src="js/jQueryValidation.js"></script>
 		<script src="js/education-submit.js"></script>
 		<script src="js/education-fetch.js"></script>
-
-		
-
-		<script>
-			function openNav() {
-			  document.getElementById("mySidenav").style.width = "250px";
-			}
-
-			function closeNav() {
-			  document.getElementById("mySidenav").style.width = "0";
-			}
-		</script>
+		<script src="js/navbar.js"></script>
 		
 		<script>
 			$('document').ready(function(){

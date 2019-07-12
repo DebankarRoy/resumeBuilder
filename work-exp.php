@@ -318,12 +318,12 @@
 						 					<div class=" row start-end-date">
 						 						<div class="col date">Start Date
 						 							<div class="name-container">
-						 								<input type="text" id="start-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_int" placeholder="Ex: starting date" aria-invalid="true">
+						 								<input type="text" id="start-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_int" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 						 						</div>
 						 						<div class="col date">End Date
 						 							<div class="name-container">
-						 								<input type="text" id="end-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_int" placeholder="Ex: ending date" aria-invalid="true">
+						 								<input type="text" id="end-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_int" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
 					 									<input type="checkbox" id="present">Currently Ongoing
@@ -380,12 +380,12 @@
 						 					<div class=" row start-end-date">
 						 						<div class="col date">Start Date
 						 							<div class="name-container">
-						 								<input type="text" id="start-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_job" placeholder="Ex: starting date"  aria-invalid="true">
+						 								<input type="text" id="start-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_job" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 						 						</div>
 						 						<div class="col date">End Date
 						 							<div class="name-container">
-						 								<input type="text" id="end-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_job" placeholder="Ex: ending date"  aria-invalid="true">
+						 								<input type="text" id="end-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_job" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
 					 									<input type="checkbox" id="present">Currently Ongoing 
@@ -447,27 +447,15 @@
 				</div>	
 			</div>
 	<body>
-		<script src="js/work-exp-submit.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/picker.date.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/jQueryValidation.js"></script>
+		<script src="js/work-exp-submit.js"></script>
 		<script src="js/work-exp-fetch.js"></script>
-		
-		
-
-
-		<script>
-			function openNav() {
-			  document.getElementById("mySidenav").style.width = "250px";
-			}
-
-			function closeNav() {
-			  document.getElementById("mySidenav").style.width = "0";
-			}
-		</script>
+		<script src="js/navbar.js"></script>
 
 		<script >
 			$(document).ready(function(){

@@ -99,6 +99,15 @@ function Submitjob(){
 
 function Submitachv(){
      var frm = $('#Achivements_details');
+
+     $('#Achivements_details').validate({
+      rules: {
+        achv_description: 'required'
+        }
+      });
+
+     if($('#Achivements_details').valid())
+    {
      $.ajax({
         type: "POST",
         url: "submit/other-achv-submit.php",
@@ -106,7 +115,7 @@ function Submitachv(){
        success: function(data,status) {
           readRecordother();
           document.getElementById('Achivements_details').reset();
-        }
-        
-    });
+          }   
+      });
+    }
 }

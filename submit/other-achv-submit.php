@@ -35,6 +35,16 @@
         } 
     }
 
+    if(isset($_POST['deleteidother'])){
+
+        $user_id_oth = $_POST['deleteidother']; 
+        $deletequery = " delete from other_details where id ='$user_id_oth' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessful");
+    }
+
     if(isset($_POST['achv_description']))
         {
 

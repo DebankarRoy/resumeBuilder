@@ -294,7 +294,7 @@
 								<div class="modal-conts">
 									<div class="header-container exp">Internship</div>
 									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
-									<form role="form" novalidate="novalidate" id="intern_details" name="intern" enctype="multipart/form-data"
+									<form role="form" novalidate="novalidate" id="intern_details" name="intern" enctype="multipart/form-data">
 										<div class="row empty"></div>
 										<div class="col padding mbl-view"></div>
 										<div class="col dataform">
@@ -318,12 +318,12 @@
 						 					<div class=" row start-end-date">
 						 						<div class="col date">Start Date
 						 							<div class="name-container">
-						 								<input type="text" id="start-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_int" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="start-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_int" placeholder="Ex: starting date" aria-invalid="true">
 					 								</div>
 						 						</div>
 						 						<div class="col date">End Date
 						 							<div class="name-container">
-						 								<input type="text" id="end-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_int" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="end-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_int" placeholder="Ex: ending date" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
 					 									<input type="checkbox" id="present">Currently Ongoing
@@ -356,7 +356,7 @@
 								<div class="modal-conts">
 									<div class="header-container exp">Job Details</div>
 									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
-									<form role="form" novalidate="novalidate" id="job_details" name="job" enctype="multipart/form-data"
+									<form role="form" novalidate="novalidate" id="job_details" name="job" enctype="multipart/form-data">
 										<div class="row empty"></div>
 										<div class="col padding mbl-view"></div>
 										<div class="col dataform">
@@ -380,12 +380,12 @@
 						 					<div class=" row start-end-date">
 						 						<div class="col date">Start Date
 						 							<div class="name-container">
-						 								<input type="text" id="start-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_job" placeholder="Ex: starting date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="start-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_job" placeholder="Ex: starting date"  aria-invalid="true">
 					 								</div>
 						 						</div>
 						 						<div class="col date">End Date
 						 							<div class="name-container">
-						 								<input type="text" id="end-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_job" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
+						 								<input type="text" id="end-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_job" placeholder="Ex: ending date"  aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
 					 									<input type="checkbox" id="present">Currently Ongoing 
@@ -394,7 +394,7 @@
 						 					</div>
 							 				<div class="row description">Description:
 							 					<div class="row desc-info">
-							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="job_description" spellcheck="false" aria-invalid="false"></textarea>
+							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="job_description" spellcheck="false" required="" aria-required="true" aria-invalid="false"></textarea>
 							 					</div>
 							 				</div>	
 						 					<div class=" col btn-holder">
@@ -429,13 +429,13 @@
 							                        </li>
 							                    </ul>
 							                </div>
-							                <div class="row description">Description:
+							                <div class="row description">Description*:
 							 					<div class="row desc-info">
-							 						<textarea type="text" class="input-info " tabindex="8" id="experience_description" placeholder="Short description of work done (Max 250 char) " name="achv_description" spellcheck="false" aria-invalid="false"></textarea>
+							 						<textarea type="text" class="input-info " tabindex="8" id="achv_description" placeholder="Short description of work done (Max 250 char) " name="achv_description" spellcheck="false" required="" aria-required="true" aria-invalid="false"></textarea>
 							 					</div>
 							 				</div>
 							 				<div class=" col btn-holder">
-			 									<button class="next achv-submit" data-dismiss="modal" onclick="Submitachv()">SUBMIT</button>
+			 									<button class="next achv-submit" onclick="Submitachv()">SUBMIT</button>
 											</div>
 										</div>
 										<div class="col padding mbl-view"></div>

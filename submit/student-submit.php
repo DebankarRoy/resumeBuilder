@@ -9,18 +9,46 @@
     if(!$conn){
         die("connection failed : ".mysqli_connect_error());
     }
-    $sal=$_POST['salutation'];
-    $name = $_POST['name'];
-    $phone_no=$_POST['phone_no'];
-    $email = $_POST['email'];
-    $current_city=$_POST['current_city'];
-    $sql = "INSERT INTO profiles (salutation,name,email_student,phone_number,city)
-            VALUES('$sal','$name','$email','$phone_no','$current_city')";
-    if(!mysqli_query($conn,$sql)){
-        die("Error : ".$sql."<br>".mysqli_error($conn));
+
+    if(isset($_POST['readRecordstudent'])) {
+
+        $sql = "SELECT * FROM profiles"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+
+                $id=$row['id'];
+                $name= $row['name'];
+                $email= $row['email_student'];
+                $phone= $row['phone_number'];
+                $place= $row['city'];
+                
+                echo'<h2>'.$name.'</h2>
+                <span class="grey">'.$email.'<br></span>
+                <span class="grey">'.$phone.'<br></span>
+                <span class="grey">'.$place.'</span>';
+                
+            }
+        }
     }
-    //echo "Registration Successful";
-    header('Location: home.php');
+    
+    if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['email']) && isset($_POST['phone_no'])){
+
+        $sal=$_POST['salutation'];
+        $name = $_POST['name'];
+        $phone_no=$_POST['phone_no'];
+        $email = $_POST['email'];
+        $current_city=$_POST['current_city'];
+        $sql = "INSERT INTO profiles (salutation,name,email_student,phone_number,city)
+                VALUES('$sal','$name','$email','$phone_no','$current_city')";
+        if(!mysqli_query($conn,$sql)){
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        //echo "Registration Successful";
+        //header('Location: home.php');
+    }
     exit;
     mysqli_close($conn);
 ?> 

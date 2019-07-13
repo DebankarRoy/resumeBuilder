@@ -129,7 +129,7 @@
 
 
 				<div class="col dataform">
-					<form role="form" novalidate="novalidate" id="personal_details" name="registration" enctype="multipart/form-data" method="POST" action = "student-submit.php">
+					<form role="form" novalidate="novalidate" id="personal_details" name="registration" enctype="multipart/form-data" method="POST" action = "submit/student-submit.php">
 					    <div class="row form-group">
 					        <label for="name" class="control-label" id="x">Name*:</label>
 					        <div class="input-group salutation">

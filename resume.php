@@ -123,11 +123,8 @@
 		    </div>
 			<div class="col resume-col"></div>
 			<div class="col resume-content">
-				<div class="row personal-table">
-					<h2>name</h2>
-					<span>email</span>
-					<span>phone no<br></span>
-					<span>place</span>
+				<div class="row personal-table" id="student-fetching">
+					
 				</div>
 				<div class="row education-table">
 					<div class="col details-left"><h4>Education</h4></div>
@@ -196,7 +193,7 @@
 				<div class="row samples-table">
 					<div class="col details-left"><h4>Work Samples</h4></div>
 					<div class="col details-right">
-						<div class="row add-more">
+						<div class="row add-more" id="work-sample-fetching">
 							<a href="work-sample.php"><span class="clr-blue">+ Add more info:</span></a>
 						</div>
 					</div>
@@ -212,11 +209,19 @@
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jQueryValidation.js"></script>
+	<script src="js/student-fetch.js"></script>
 	<script src="js/education-submit.js"></script>
 	<script src="js/education-fetch.js"></script>
 	<script src="js/work-exp-submit.js"></script>
 	<script src="js/work-exp-fetch.js"></script>
 	<script src="js/skill-submit.js"></script>
 	<script src="js/skills-fetch.js"></script>
+	<script src="js/work-sample-fetch.js"></script>
 	<script src="js/navbar.js"></script>
+
+	<script>
+		$('document').ready(function(){
+			$('.rmv-img').hide();
+		})	
+	</script>
 </html>

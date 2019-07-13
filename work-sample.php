@@ -124,7 +124,7 @@
 				<div class="row empty"></div>
 				<div class="col dataform ">
 					<h4 class="font-weight-h4 padding-h4">Add your work sample links here (if any):</h4>
-					<form role="form" novalidate="novalidate" id="work-samples" name="work-samples" enctype="multipart/form-data" method="POST" action = "work-sample-submit.php">
+					<form role="form" novalidate="novalidate" id="work-samples" name="work-samples" enctype="multipart/form-data" method="POST" action = "submit/work-sample-submit.php">
 						<div class="row link-in">Blog Link:
 							<input class="form-control link-input " id="skill"index="2" name="blog" placeholder="http://myblog.com" value="" type="text">
 						</div>
@@ -138,7 +138,7 @@
 						</div>
 
 						<div class="row link-in">Behance Portfolio Link:
-							<input class="form-control link-input " id="skill"index="2" name="behnace" placeholder="http://behance.net/my_profile" value="" type="text">
+							<input class="form-control link-input " id="skill"index="2" name="behance" placeholder="http://behance.net/my_profile" value="" type="text">
 						</div>
 
 						<div class="row link-in">Other Portfolio Link:

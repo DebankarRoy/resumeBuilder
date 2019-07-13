@@ -937,3 +937,18 @@ a:hover{
 .mrg-one{
     padding-left: 1%;
 }
+
+.grey{
+    color: #898989;
+    
+}
+
+.title-style{
+    color: #000000;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.link-clr{
+    color: #1295C9;
+}

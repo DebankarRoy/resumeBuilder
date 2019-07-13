@@ -82,6 +82,7 @@
 				<a href="work-exp.php"><img src="img/test.png" class="attr work"></a>
 				<a href="skills.php"><img src="img/artificial-intelligence.png" class="attr skills"></a>
 				<a href="work-sample.php"><img src="img/folder1.png" class="attr worksample"></a>
+				<a href="resume.php"><img src="img/resume.png" class="attr resume"></a>
 			</div>
 
 
@@ -101,6 +102,9 @@
 		        </div>
 		        <div class="col arr awesome_nav_element_container">
 		            <div class="up-arrow work_samples_element inactive"></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow resume_element inactive" ></div>
 		        </div>
 		    </div>
 

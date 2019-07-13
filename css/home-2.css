@@ -353,8 +353,7 @@ a:hover{
     
     height: 40px;
     color: white;
-    
-    padding-left: 42px;
+    padding-left: 30px;
     padding-right: 29px;
     cursor: pointer;
 	}
@@ -406,6 +405,10 @@ a:hover{
 
 .inactive{
     display: none;
+}
+.resume_element{
+    border-bottom: 10px solid #F8B750;
+    margin-left: 10px;
 }
 
 
@@ -467,8 +470,8 @@ a:hover{
     background-color: white;
     flex-grow: 0;
     color: #495057;
-    position: relative;
-    top: 17px; 
+   /* position: relative;
+    top: 17px; */
 }
 
 .name{
@@ -829,13 +832,27 @@ a:hover{
 }
 
 .lower-content{
-    background-color: #e8f0fe;
+    /*background-color: #e8f0fe;*/
     height: 100%;
 }
 
 .resume-content{
     width: 80%;
     background-color: white;
+    border: 2px solid #F8B750;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px){
+    .resume-content{
+        width: 97%;
+        margin-left: 6px;
+        margin-right: 5px;
+    }
+    .resume-col{
+        display: none;
+    }
+
 }
 
 .resume-col{
@@ -860,6 +877,21 @@ a:hover{
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
+
+@media (max-width: 600px){
+    .education-table,.experience-table,.skills-table,.samples-table{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-top: 1px solid #e6e6e6;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: inline-grid;
+        height: auto;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+}
 .details-left{
     width: 30%;
     justify-content: center;
@@ -867,4 +899,41 @@ a:hover{
 }
 .details-right{
     width: 70%;
+}
+
+@media (max-width: 600px){
+    .details-left{
+        width: auto;
+        text-align: center;
+    }
+    .details-right{
+        width: auto;
+    }
+}
+
+
+
+.resume-slide,.arrow-cont-resume{
+    
+    padding-left: 18%;
+    padding-right: 18%;
+}
+@media (max-width: 600px){
+    .resume-slide,.arrow-cont-resume{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+.add-more{
+    height: auto;
+    display: inline-block;
+    padding-left: 11%;
+    padding-top: 10px;
+}
+
+.clr-blue{
+    color: #1F96C9;
+}
+.mrg-one{
+    padding-left: 1%;
 }

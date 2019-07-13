@@ -10,9 +10,6 @@
 			.colp{
 				height: none;
 				}
-			/*html{
-				background-color:  #F3F7F7;
-			}*/
 		</style>
 		
 		<title>Resume</title>
@@ -93,7 +90,37 @@
 		  <span class="menu-bar" onclick="openNav()">&#9776;</span>
 		</div>
 		<div class="row lower-content">
-			<div class="row resume-download"></div>
+			<div class="row slide resume-slide">
+				<a href="student.php"><img src="img/user.png" class="attr prof-pic"></a>
+				<a href="education.php"><img src="img/mortarboard.png" class="attr edu"></a>
+				<a href="work-exp.php"><img src="img/test.png" class="attr work"></a>
+				<a href="skills.php"><img src="img/artificial-intelligence.png" class="attr skills"></a>
+				<a href="work-sample.php"><img src="img/folder1.png" class="attr worksample"></a>
+				<a href="resume.php"><img src="img/resume2.png" class="attr resume"></a>
+			</div>
+
+
+			<div id="up-arrow-container" class="row arrow-cont arrow-cont-resume">
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow personal_details_element inactive filled"  >	
+		           	</div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow education_details_element inactive filled"></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow experiences_element inactive filled" ></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow skills_element inactive" ></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow work_samples_element inactive" ></div>
+		        </div>
+		        <div class="col arr awesome_nav_element_container">
+		            <div class="up-arrow resume_element " ></div>
+		        </div>
+		    </div>
 			<div class="col resume-col"></div>
 			<div class="col resume-content">
 				<div class="row personal-table">
@@ -124,6 +151,9 @@
 
 						<div class="row fetch secon-fetch" id="secondary-fetching">
 						</div>
+						<div class="row add-more">
+						<a href="education.php"><span class="clr-blue">+ Add more info:</span></a>
+					</div>
 					</div>
 				</div>
 				<div class="row experience-table">
@@ -143,7 +173,12 @@
 
 						<div class="row fetch ss-fetch" id="others-fetching">
 						</div>
+
+						<div class="row add-more">
+							<a href="work-exp.php"><span class="clr-blue">+ Add more info:</span></a>
+						</div>
 					</div>
+					
 				</div>
 				<div class="row skills-table">
 					<div class="col details-left"><h4>Skills</h4></div>
@@ -151,14 +186,23 @@
 						<div class="skills-container" id="skills-fetching">
 						<div class="row">
 						</div>
+						</div>
+						<div class="row add-more mrg-one">
+						<a href="skills.php"><span class="clr-blue ">+ Add more info:</span></a>
 					</div>
 					</div>
+					
 				</div>
 				<div class="row samples-table">
 					<div class="col details-left"><h4>Work Samples</h4></div>
-					<div class="col details-right"></div>
-				</div></div>
+					<div class="col details-right">
+						<div class="row add-more">
+							<a href="work-sample.php"><span class="clr-blue">+ Add more info:</span></a>
+						</div>
+					</div>
+				</div>
 			<div class="col resume-col"></div>
+			<div class="row resume-download"></div>
 		</div>
 
 	</body>

@@ -65,7 +65,7 @@
     }
 
     if(isset($_POST['degree_completion_status_ph'])){
-
+        $userid_loggedin=$_SESSION['userid'];
         $deg_stat_ph=$_POST['degree_completion_status_ph'];
         $college_ph = $_POST['college_ph'];
         $start_year_ph=$_POST['start_year_ph'];
@@ -74,8 +74,8 @@
         $performance_scale_ph=$_POST['performance_scale_ph'];
         $performance_marks_ph=$_POST['performance_ph'];
 
-        $sql = "INSERT INTO phd(degree_status ,college ,start_year ,end_year ,stream ,performence_scale ,performence_marks)
-            VALUES('$deg_stat_ph' ,'$college_ph' ,'$start_year_ph' ,'$end_year_ph' ,'$stream_name_ph' ,'$performance_scale_ph' ,'$performance_marks_ph')";
+        $sql = "INSERT INTO phd(degree_status ,college ,start_year ,end_year ,stream ,performence_scale ,performence_marks,profiles_id)
+            VALUES('$deg_stat_ph' ,'$college_ph' ,'$start_year_ph' ,'$end_year_ph' ,'$stream_name_ph' ,'$performance_scale_ph' ,'$performance_marks_ph' ,'$userid_loggedin')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

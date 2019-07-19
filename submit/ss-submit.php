@@ -70,7 +70,7 @@
 
 
     if(isset($_POST['degree_completion_status_ss'])){
-
+        $userid_loggedin=$_SESSION['userid'];
         $deg_stat_ss=$_POST['degree_completion_status_ss'];
         $school_ss= $_POST['school'];
         $end_year=$_POST['end_year_ss'];
@@ -79,8 +79,8 @@
         $performance_scale_ss=$_POST['performance_scale_ss'];
         $performance_marks_ss=$_POST['performance_marks_ss'];
 
-        $sql = "INSERT INTO senior_secondary(degree_status ,school ,end_year ,board ,stream ,performence_scale ,performence_marks)
-            VALUES('$deg_stat_ss' ,'$school_ss' ,'$end_year' ,'$board_ss' ,'$stream_name_ss' ,'$performance_scale_ss' ,'$performance_marks_ss')";
+        $sql = "INSERT INTO senior_secondary(degree_status ,school ,end_year ,board ,stream ,performence_scale ,performence_marks,profiles_id)
+            VALUES('$deg_stat_ss' ,'$school_ss' ,'$end_year' ,'$board_ss' ,'$stream_name_ss' ,'$performance_scale_ss' ,'$performance_marks_ss' ,'$userid_loggedin')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

@@ -66,7 +66,7 @@
 
 
     if(isset($_POST['degree_completion_status_pg']) && $_POST['college_pg'] && isset($_POST['start_year_pg']) && isset($_POST['end_year_pg']) && isset($_POST['degree_pg']) && isset($_POST['stream_pg']) && isset($_POST['performance_scale_pg']) && isset($_POST['performance_pg'])){
-
+        $userid_loggedin=$_SESSION['userid'];
         $deg_stat_pg=$_POST['degree_completion_status_pg'];
         $college_pg = $_POST['college_pg'];
         $start_year_pg=$_POST['start_year_pg'];
@@ -76,8 +76,8 @@
         $performance_scale_pg=$_POST['performance_scale_pg'];
         $performance_marks_pg=$_POST['performance_pg'];
 
-        $sql = "INSERT INTO post_graduation(degree_status ,degree ,college ,start_year ,end_year ,stream ,performence_scale ,performence_marks)
-            VALUES('$deg_stat_pg' ,'$degree_pg' ,'$college_pg' ,'$start_year_pg' ,'$end_year_pg' ,'$stream_name_pg' ,'$performance_scale_pg' ,'$performance_marks_pg')";
+        $sql = "INSERT INTO post_graduation(degree_status ,degree ,college ,start_year ,end_year ,stream ,performence_scale ,performence_marks,profiles_id)
+            VALUES('$deg_stat_pg' ,'$degree_pg' ,'$college_pg' ,'$start_year_pg' ,'$end_year_pg' ,'$stream_name_pg' ,'$performance_scale_pg' ,'$performance_marks_pg' ,'$userid_loggedin')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

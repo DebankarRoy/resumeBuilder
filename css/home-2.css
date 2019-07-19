@@ -952,3 +952,14 @@ a:hover{
 .link-clr{
     color: #1295C9;
 }
+.pos-resume{
+    position: relative;
+    top: -70px;
+    left: -100px;
+}
+
+@media (min-width: 600px){
+    .pos-resume{
+        left: -300px;
+    }
+}

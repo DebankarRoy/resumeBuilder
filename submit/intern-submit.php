@@ -18,6 +18,7 @@
         if(mysqli_num_rows($result) > 0){
             echo'<div class="row data-fetch heads"><h3>Internships:</h3></div>';
             while ($row = mysqli_fetch_array($result)) {
+
                 $id=$row['id'];
                 $profile=$row['intern_profile'];
                 $org = $row['organization'];
@@ -65,9 +66,8 @@
         echo("deletion sucessful");
     }
 
-     if(isset($_POST['intern_profile']) && $_POST['intern_org'] && isset($_POST['intern_loc']))
-        {
-
+     if(isset($_POST['intern_profile']) && $_POST['intern_org'] && isset($_POST['intern_loc'])){
+        $userid_loggedin=$_SESSION['userid'];
         $intern_profile=$_POST['intern_profile'];
         $intern_org = $_POST['intern_org'];
         $intern_loc= $_POST['intern_loc'];
@@ -77,8 +77,8 @@
         $start_int=date('Y/m/d',strtotime($start_int));
         $end_int=date('Y/m/d',strtotime($end_int));
 
-        $sql = "INSERT INTO intern_details(intern_profile ,organization ,location ,start_date ,end_date ,description)
-            VALUES('$intern_profile' ,'$intern_org' ,'$intern_loc' ,'$start_int', '$end_int' ,'$description_int')";
+        $sql = "INSERT INTO intern_details(intern_profile ,organization ,location ,start_date ,end_date ,description ,profiles_id)
+            VALUES('$intern_profile' ,'$intern_org' ,'$intern_loc' ,'$start_int', '$end_int' ,'$description_int' ,'$userid_loggedin')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

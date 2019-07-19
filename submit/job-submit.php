@@ -65,9 +65,8 @@
     }
 
 
-    if(isset($_POST['job_profile']) && $_POST['job_org'] && isset($_POST['job_loc']) && isset($_POST['startdate_job']) && isset($_POST['enddate_job']) && isset($_POST['job_description']))
-        {
-
+    if(isset($_POST['job_profile']) && $_POST['job_org'] && isset($_POST['job_loc']) && isset($_POST['startdate_job']) && isset($_POST['enddate_job']) && isset($_POST['job_description'])){
+        $userid_loggedin=$_SESSION['userid'];
         $job_profile=$_POST['job_profile'];
         $job_org = $_POST['job_org'];
         $job_loc= $_POST['job_loc'];
@@ -77,8 +76,8 @@
         $start_job=date('Y/m/d',strtotime($start_job));
         $end_job=date('Y/m/d',strtotime($end_job));
 
-        $sql = "INSERT INTO job_details(job_profile ,organization ,location ,start_date ,end_date ,description)
-            VALUES('$job_profile' ,'$job_org' ,'$job_loc' ,'$start_job', '$end_job' ,'$description_job')";
+        $sql = "INSERT INTO job_details(job_profile ,organization ,location ,start_date ,end_date ,description ,profiles_id)
+            VALUES('$job_profile' ,'$job_org' ,'$job_loc' ,'$start_job', '$end_job' ,'$description_job', '$userid_loggedin')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

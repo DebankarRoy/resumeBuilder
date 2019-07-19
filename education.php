@@ -31,9 +31,9 @@
                 session_start();
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                     $flag=1;
-                    $userid_loggedin=$_SESSION['id'];
+                    $userid_loggedin=$_SESSION['userid'];
                     //echo $userid_loggedin;
-                    $user_loggedin=$_SESSION['name'];             
+                    $user_loggedin=$_SESSION['username'];             
                 }
                 else
                     $flag=0;

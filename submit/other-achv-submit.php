@@ -36,7 +36,7 @@
     }
 
     if(isset($_POST['deleteidother'])){
-
+        $userid_loggedin=$_SESSION['userid'];
         $user_id_oth = $_POST['deleteidother']; 
         $deletequery = " delete from other_details where id ='$user_id_oth' ";
         if (!mysqli_query($conn,$deletequery)) {
@@ -47,11 +47,11 @@
 
     if(isset($_POST['achv_description']))
         {
-
+        $userid_loggedin=$_SESSION['userid'];
         $description_achv=$_POST['achv_description'];
         
-        $sql = "INSERT INTO other_details(description)
-            VALUES('$description_achv')";
+        $sql = "INSERT INTO other_details(description ,profiles_id)
+            VALUES('$description_achv' ,'$userid_loggedin')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

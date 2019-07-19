@@ -65,8 +65,8 @@
     }
 
 
-    if(isset($_POST['training_loc']) && isset($_POST['training_prog']))
-        {
+    if(isset($_POST['training_loc']) && isset($_POST['training_prog'])){
+        $userid_loggedin=$_SESSION['userid'];
         $training_prog=$_POST['training_prog'];
         $training_org = $_POST['training_org'];
         $training_loc= $_POST['training_loc'];
@@ -79,8 +79,8 @@
         echo $training_org;
         echo $training_prog.$training_loc ;
 
-        $sql = "INSERT INTO training_details(program_name ,organization ,location ,start_date ,end_date ,description)
-            VALUES('$training_prog' ,'$training_org' ,'$training_loc' ,'$start', '$end' ,'$description_tra')";
+        $sql = "INSERT INTO training_details(program_name ,organization ,location ,start_date ,end_date ,description ,profiles_id)
+            VALUES('$training_prog' ,'$training_org' ,'$training_loc' ,'$start', '$end' ,'$description_tra' ,'$userid_loggedin')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

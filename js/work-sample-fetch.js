@@ -12,6 +12,21 @@ function readRecordworksample(){
 				})
 			}
 
+
+function DeleteRecordworksample(deleteidworksample){
+				var conf = confirm("Are you sure?");
+				if(conf == true) {
+				$.ajax({
+					url:"submit/work-sample-submit.php",
+					type:'POST',
+					data: {  deleteidworksample: deleteidworksample },
+					success:function(data, status){
+						readRecordworksample();	
+					}
+				});
+				}
+			}
+
 $('document').ready(function(){
 	readRecordworksample();
 })

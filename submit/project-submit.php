@@ -64,8 +64,8 @@
     }
 
 
-    if(isset($_POST['project_name']))
-        {
+    if(isset($_POST['project_name'])){
+        $userid_loggedin=$_SESSION['userid'];
         $project=$_POST['project_name'];
         $start_pro=$_POST['startdate_pro'];
         $end_pro=$_POST['enddate_pro'];
@@ -74,8 +74,8 @@
         $start=date('Y/m/d',strtotime($start_pro));
         $end=date('Y/m/d',strtotime($end_pro));
 
-        $sql = "INSERT INTO project_details (project_name ,start_date ,end_date ,description ,link)
-            VALUES('$project' ,'$start', '$end' ,'$description_pro' ,'$project_link')";
+        $sql = "INSERT INTO project_details (project_name ,start_date ,end_date ,description ,link ,profiles_id)
+            VALUES('$project' ,'$start', '$end' ,'$description_pro' ,'$project_link' ,'$userid_loggedin')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

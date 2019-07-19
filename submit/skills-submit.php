@@ -45,12 +45,12 @@
     }
 
     if(isset($_POST['skillinput']) && isset($_POST['rating'])){
-
+        $userid_loggedin=$_SESSION['userid'];
         $skill=$_POST['skillinput'];
         $rating =$_POST['rating'];
        
-        $sql = "INSERT INTO skills (skill ,rating)
-                VALUES('$skill' ,'$rating')";
+        $sql = "INSERT INTO skills (skill ,rating ,profiles_id)
+                VALUES('$skill' ,'$rating' ,'$userid_loggedin')";
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));
         }

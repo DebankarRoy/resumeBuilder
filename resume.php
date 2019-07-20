@@ -123,8 +123,7 @@
 		    </div>
 			<div class="col resume-col"></div>
 			<div class="col resume-content">
-				<div class="row personal-table" id="student-fetching">
-					
+				<div class="row personal-table" id="student-fetching">	
 				</div>
 				<div class="row education-table">
 					<div class="col details-left"><h4>Education</h4></div>

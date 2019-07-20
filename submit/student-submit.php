@@ -25,11 +25,14 @@
                 $phone= $row['phone_number'];
                 $place= $row['city'];
                 
-                echo'<h2>'.$name.'</h2>
-                <span class="grey">'.$email.'<br></span>
-                <span class="grey">'.$phone.'<br></span>
-                <span class="grey">'.$place.'</span>';
-                
+                ?>
+                <div class="paddingleft">
+                    <h2><?php echo$name; ?></h2>
+                    <span class="grey"><?php echo$email; ?><br></span>
+                    <span class="grey"><?php echo$phone; ?><br></span>
+                    <span class="grey"><?php echo$place; ?></span>
+                </div>
+             <?php   
             }
         }
     }

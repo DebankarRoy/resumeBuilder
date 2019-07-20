@@ -180,12 +180,40 @@ CREATE TABLE skills(
     FOREIGN KEY (profiles_id) REFERENCES profiles(id)
 );
 
-CREATE TABLE work_samples(
+CREATE TABLE blog(
     id int(200) NOT NULL AUTO_INCREMENT,
     blog varchar(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+CREATE TABLE github(
+    id int(200) NOT NULL AUTO_INCREMENT,
     github VARCHAR(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+CREATE TABLE playstore(
+    id int(200) NOT NULL AUTO_INCREMENT,
     playstore VARCHAR(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+CREATE TABLE behance(
+    id int(200) NOT NULL AUTO_INCREMENT,
     behance VARCHAR(255),
+    profiles_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (profiles_id) REFERENCES profiles(id)
+);
+
+CREATE TABLE other_samples(
+    id int(200) NOT NULL AUTO_INCREMENT,
     other varchar(255),
     profiles_id int,
     PRIMARY KEY (id),

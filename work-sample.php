@@ -124,7 +124,7 @@
 				<div class="row empty"></div>
 				<div class="col dataform ">
 					<h4 class="font-weight-h4 padding-h4">Add your work sample links here (if any):</h4>
-					<form role="form" novalidate="novalidate" id="work-samples" name="work-samples" enctype="multipart/form-data" method="POST" action = "submit/work-sample-submit.php">
+					<form role="form" novalidate="novalidate" id="work-samples" name="work-samples" enctype="multipart/form-data" method="POST" action = "submit/work-sample-submit2.php">
 						<div class="row link-in">Blog Link:
 							<input class="form-control link-input " id="skill"index="2" name="blog" placeholder="http://myblog.com" value="" type="text">
 						</div>

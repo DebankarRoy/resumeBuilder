@@ -962,4 +962,8 @@ a:hover{
     .pos-resume{
         left: -300px;
     }
+
+
+.paddingleft{
+    padding-left: 40px;
 }

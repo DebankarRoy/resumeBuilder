@@ -38,7 +38,10 @@
                     $user_loggedin=$_SESSION['name'];             
                 }
                 else
-                    $flag=0;
+                    {
+                    	$flag=0;
+                    	header('Location:/Resume/login.php');
+               		}
             ?>
 
 
@@ -80,7 +83,6 @@
 		<div class="row lower">
 			<div class="row slide">
 				
-				<a href="student.php"><img src="img/user.png" class="attr prof-pic"></a>
 				<a href="education.php"><img src="img/mortarboard.png" class="attr edu"></a>
 				<a href="work-exp.php"><img src="img/test.png" class="attr work"></a>
 				<a href="skills.php"><img src="img/artificial-intelligence2.png" class="attr skills"></a>
@@ -90,10 +92,7 @@
 
 
 			<div id="up-arrow-container" class="row arrow-cont">
-		        <div class="col arr awesome_nav_element_container">
-		            <div class="up-arrow personal_details_element inactive filled"  >	
-		           	</div>
-		        </div>
+		        
 		        <div class="col arr awesome_nav_element_container">
 		            <div class="up-arrow education_details_element inactive filled"></div>
 		        </div>
@@ -101,7 +100,7 @@
 		            <div class="up-arrow experiences_element inactive" ></div>
 		        </div>
 		        <div class="col arr awesome_nav_element_container">
-		            <div class="up-arrow skills_element " ></div>
+		            <div class="up-arrow skills_element ml30" ></div>
 		        </div>
 		        <div class="col arr awesome_nav_element_container">
 		            <div class="up-arrow work_samples_element inactive" ></div>
@@ -132,8 +131,7 @@
 				<div class="col dataform tag">
 					<h4 class="font-weight-h4">What skills do you have?</h4>
 					<div class="skills-container" id="skills-fetching">
-						<div class="row">
-							
+						<div class="row">			
 						</div>
 					</div>
 					<div class="row skill-input">

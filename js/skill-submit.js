@@ -1,7 +1,7 @@
 function Submitskillbeginner(){
      var skill=$('#skill').val();
      var rating=$('#beginner').val();
-
+      alert("skill="+skill+rating);
      $.ajax({
         type: "POST",
         url: "submit/skills-submit.php",

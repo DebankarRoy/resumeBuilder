@@ -33,7 +33,10 @@
 
                 }
                 else
-                    $flag=0;
+                    {
+                    	$flag=0;
+                    	header('Location:/Resume/login.php');
+               		}
             ?>
 
 				<?php
@@ -73,7 +76,6 @@
 		<div class="row lower">
 			<div class="row slide">
 				
-				<a href="student.php"><img src="img/user.png" class="attr prof-pic"></a>
 				<a href="education.php"><img src="img/mortarboard.png" class="attr edu"></a>
 				<a href="work-exp.php"><img src="img/test.png" class="attr work"></a>
 				<a href="skills.php"><img src="img/artificial-intelligence.png" class="attr skills"></a>
@@ -83,10 +85,7 @@
 
 
 			<div id="up-arrow-container" class="row arrow-cont">
-		        <div class="col arr awesome_nav_element_container">
-		            <div class="up-arrow personal_details_element inactive filled"  >	
-		           	</div>
-		        </div>
+		        
 		        <div class="col arr awesome_nav_element_container">
 		            <div class="up-arrow education_details_element inactive filled"></div>
 		        </div>
@@ -97,7 +96,7 @@
 		            <div class="up-arrow skills_element inactive" ></div>
 		        </div>
 		        <div class="col arr awesome_nav_element_container">
-		            <div class="up-arrow work_samples_element " ></div>
+		            <div class="up-arrow work_samples_element ml30" ></div>
 		        </div>
 		        <div class="col arr awesome_nav_element_container">
 		            <div class="up-arrow resume_element inactive" ></div>

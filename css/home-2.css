@@ -962,8 +962,13 @@ a:hover{
     .pos-resume{
         left: -300px;
     }
-
+}
 
 .paddingleft{
     padding-left: 40px;
+}
+
+
+.update-edit-pos{
+    margin-top: 10px;
 }

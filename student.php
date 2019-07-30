@@ -38,7 +38,10 @@
                               
                 }
                 else
-                    $flag=0;
+               		{
+                    	$flag=0;
+                    	header('Location:/Resume/login.php');
+               		}
             ?>
 
 				<?php
@@ -78,12 +81,12 @@
 		<div class="row lower">
 			<div class="row slide">
 				
-				<a href="student.php"><img src="img/user2.png" class="attr prof-pic"></a>
-				<a href="education.php"><img src="img/mortarboard.png" class="attr edu"></a>
-				<a href="work-exp.php"><img src="img/test.png" class="attr work"></a>
-				<a href="skills.php"><img src="img/artificial-intelligence.png" class="attr skills"></a>
-				<a href="work-sample.php"><img src="img/folder1.png" class="attr worksample"></a>
-				<a href="resume.php"><img src="img/resume.png" class="attr resume"></a>
+				<a href="#"><img src="img/user2.png" class="attr prof-pic"></a>
+				<a href="#"><img src="img/mortarboard.png" class="attr edu"></a>
+				<a href="#"><img src="img/test.png" class="attr work"></a>
+				<a href="#"><img src="img/artificial-intelligence.png" class="attr skills"></a>
+				<a href="#"><img src="img/folder1.png" class="attr worksample"></a>
+				
 			</div>
 
 
@@ -104,9 +107,7 @@
 		        <div class="col arr awesome_nav_element_container">
 		            <div class="up-arrow work_samples_element inactive"></div>
 		        </div>
-		        <div class="col arr awesome_nav_element_container">
-		            <div class="up-arrow resume_element inactive" ></div>
-		        </div>
+		        
 		    </div>
 
 		    <div id="mySidenav" class="sidenav">

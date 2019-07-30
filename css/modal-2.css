@@ -318,3 +318,33 @@
 	color: #949899;
 	
 }
+
+.update-height{
+    height: 550px;
+    left: 35px;
+    border-radius: .5em;
+    border: none;
+}
+
+@media (min-width: 600px){
+    .ml30{
+        margin-left: 30px;
+    }
+}
+
+
+.update-padding{
+    padding-top: 10px;
+}
+
+.update-btn-pos{
+    width: auto;
+    float: right;
+    margin-right: 10px;
+}
+
+.update-clr{
+	background-color: #1F96C9;
+	border-top-right-radius: .2em;
+	border-top-left-radius: .2em;
+}

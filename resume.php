@@ -40,7 +40,10 @@
                     $user_loggedin=$_SESSION['name'];             
                 }
                 else
-                    $flag=0;
+                    {
+                    	$flag=0;
+                    	header('Location:/Resume/login.php');
+               		}
             ?>
 
 
@@ -91,7 +94,7 @@
 		</div>
 		<div class="row lower-content">
 			<div class="row slide resume-slide">
-				<a href="student.php"><img src="img/user.png" class="attr prof-pic"></a>
+				
 				<a href="education.php"><img src="img/mortarboard.png" class="attr edu"></a>
 				<a href="work-exp.php"><img src="img/test.png" class="attr work"></a>
 				<a href="skills.php"><img src="img/artificial-intelligence.png" class="attr skills"></a>
@@ -101,10 +104,7 @@
 
 
 			<div id="up-arrow-container" class="row arrow-cont arrow-cont-resume">
-		        <div class="col arr awesome_nav_element_container">
-		            <div class="up-arrow personal_details_element inactive filled"  >	
-		           	</div>
-		        </div>
+		        
 		        <div class="col arr awesome_nav_element_container">
 		            <div class="up-arrow education_details_element inactive filled"></div>
 		        </div>
@@ -180,8 +180,8 @@
 					<div class="col details-left"><h4>Skills</h4></div>
 					<div class="col details-right">
 						<div class="skills-container" id="skills-fetching">
-						<div class="row">
-						</div>
+							<div class="row">
+							</div>
 						</div>
 						<div class="row add-more mrg-one">
 						<a href="skills.php"><span class="clr-blue ">+ Add more info:</span></a>

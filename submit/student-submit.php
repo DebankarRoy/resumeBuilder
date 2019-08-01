@@ -20,6 +20,7 @@
             while ($row = mysqli_fetch_array($result)) {
 
                 $id=$row['id'];
+                $profileid=$id;
                 $name= $row['name'];
                 $email= $row['email_student'];
                 $phone= $row['phone_number'];
@@ -33,7 +34,7 @@
                     <span class="grey"><?php echo$place; ?></span>
                 </div>
                 <div class="col col2 update-edit-pos">
-                        <a href="#" onclick="editprofile('<?php echo$name; ?>')"data-toggle='modal' data-target='#studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>
+                        <a href="#" onclick="editprofile('<?php echo$id; ?>')"data-toggle='modal' data-target='#update_studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>
                 </div>
              <?php   
             }
@@ -69,53 +70,32 @@
         header('Location:/Resume/education.php');
     }
 
-?>
-                <!-- Modal -->
-    <div class="modal fade" id="studentprofile" tabindex="-1" role="dialog" aria-labelledby="studentprofileTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content update-height">
+    if(isset($_POST['id']) && isset($_POST['id']) != "")
+    {
+        $user_id = $_POST['id'];
+        $query = "SELECT * FROM profiles WHERE id = '$user_id'";
+        if (!$result = mysqli_query($conn,$query)) {
+            exit(mysqli_error());
+        }
         
-            <div class="header-container update-clr">Student Details</div>
-            <span class="close" aria-hidden="true" data-dismiss="modal">+</span>
+        $response = array();
 
-            <div class="col data-update update-padding">
-                <div class="row form-group">
-                    <label for="name" class="control-label" id="x">Name:</label>
-                    <div class="input-group salutation">
-                        <input class="form-control name" id="name" tabindex="2" name="name" placeholder="Update your name" value="" type="text">
-                 
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <label for="number" class="control-label">Mobile Number:</label>
-                    <div class="input-group">
-                        <input type="number"  class="wid form-control mobile-number" tabindex="4" id="phone_primary" name="phone_no" placeholder="Update mobile number " value="">
-                    </div>
-                </div>
+        if(mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+           
+                $response = $row;
+            }
+        } 
 
-                <div class="row form-group">
-                    <label for="email" class="control-label">Email:</label>
-                    <div class="input-group">
-                        <input type="text" class="wid form-control" id="email" tabindex="5" name="email" placeholder="Update your email" value="" autocomplete="off">   
-                    </div>
-                </div>
+        echo json_encode($response);
+    }
 
-                <div class="row form-group">
-                    <label for="current_city" class="control-label">Current City:</label>
-                    <div class="input-group">
-                        <input type="text" class="wid form-control" id="current_city" tabindex="6" name="current_city" placeholder="Update your city" value="" autocomplete="off">    
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <button type="button" class="btn btn-secondary update-btn-pos" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-info update-btn-pos">Save changes</button>
-            </div>
-        </div>
-      </div>
-    </div>
+    if(isset($_POST['updateid']))
+    {
+        $id=$_POST['updateid'];
+        
 
-<?php
+    }
 
     exit;
     mysqli_close($conn);

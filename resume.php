@@ -201,6 +201,53 @@
 			<div class="row resume-download"></div>
 		</div>
 
+	           <!-- Modal -->
+    <div class="modal fade" id="update_studentprofile" tabindex="-1" role="dialog" aria-labelledby="studentprofileTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content update-height">
+        
+            <div class="header-container update-clr">Student Details</div>
+            <span class="close" aria-hidden="true" data-dismiss="modal">+</span>
+
+            <div class="col data-update update-padding">
+            	<form role="form" novalidate="novalidate" id="update_profile" name="profile_update" enctype="multipart/form-data">
+	                <div class="row form-group">
+	                    <label for="name" class="control-label" id="x">Name:</label>
+	                    <div class="input-group salutation">
+	                        <input class="form-control name" id="update_name" tabindex="2" name="name" placeholder="Update your name" value="" type="text">
+	                 
+	                    </div>
+	                </div>
+	                <div class="row form-group">
+	                    <label for="number" class="control-label">Mobile Number:</label>
+	                    <div class="input-group">
+	                        <input type="number"  class="wid form-control mobile-number" tabindex="4" id="update_mobile" name="phone_no" placeholder="Update mobile number " value="">
+	                    </div>
+	                </div>
+
+	                <div class="row form-group">
+	                    <label for="email" class="control-label">Email:</label>
+	                    <div class="input-group">
+	                        <input type="text" class="wid form-control" id="update_email" tabindex="5" name="email" placeholder="Update your email" value="" autocomplete="off">   
+	                    </div>
+	                </div>
+
+	                <div class="row form-group">
+	                    <label for="current_city" class="control-label">Current City:</label>
+	                    <div class="input-group">
+	                        <input type="text" class="wid form-control" id="update_city" tabindex="6" name="current_city" placeholder="Update your city" value="" autocomplete="off">    
+	                    </div>
+	                </div>
+                </form>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-secondary update-btn-pos" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info update-btn-pos" id="update_stu" onclick="updatestudent()">Save changes</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
 	</body>
 
 
@@ -222,5 +269,55 @@
 		$('document').ready(function(){
 			$('.rmv-img').hide();
 		})	
+	</script>
+
+	<script>
+		function editprofile(id){
+		  $("#hidden_user_id").val(id);
+		  $.post("submit/student-submit.php", {
+	            id: id
+	        },
+	        function (data, status) {
+	            //alert(data);
+	            //JSON.parse() parses a string, written in JSON format, and returns a JavaScript object.
+	            var user = JSON.parse(data);
+	           
+	            //alert(user);
+	            
+	            $("#update_name").val(user.name);
+	            $("#update_email").val(user.email_student);
+	            $("#update_mobile").val(user.phone_number);
+	            $("#update_city").val(user.city);
+	            var a=user.id;
+	            document.getElementById('update_stu').setAttribute( "onClick", 'updatestudent('+a+')'); 
+    		}
+    		);	 
+		//$("#update_studentprofile").modal("show"); 
+		}
+
+		function updatestudent(updateid){
+		    var frm = $('#update_studentprofile');
+		    $('#update_studentprofile').validate({
+		    rules: {
+		      name: 'required', 
+		      phone_no: 'required',
+		      email: 'required',
+		      current_city: 'required'
+		    }
+		  });
+
+		    if($('#update_studentprofile').valid())
+		    {
+		     $.ajax({
+		        type: "POST",
+		        url: "submit/student-submit.php",
+		        data: {updateid:updateid,frm.serialize(),}
+		        success: function(data,status) {
+		          //readRecordsstudent();
+		            }
+		        });
+		    }
+		     
+		}
 	</script>
 </html>

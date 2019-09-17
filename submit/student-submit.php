@@ -12,7 +12,7 @@
 
     if(isset($_POST['readRecordstudent'])) {
         $userid_loggedin=$_SESSION['id'];
-        $sql = "SELECT * FROM profiles where user_id=$userid_loggedin"; 
+        $sql = "SELECT * FROM profiles where user_id=$userid_loggedin and id=2"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
@@ -43,7 +43,7 @@
     
     if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['email']) && isset($_POST['phone_no'])){
         $userid_loggedin=$_SESSION['id'];
-        $_SESSION['profileid'] = $var_value;
+        //$_SESSION['profileid'] = $last_id;
         $sal=$_POST['salutation'];
         $name = $_POST['name'];
         $phone_no=$_POST['phone_no'];
@@ -58,10 +58,10 @@
         $sql = "SELECT * FROM profiles ORDER BY id desc LIMIT 1"; 
         $result = mysqli_query($conn,$sql);
         while ($row=mysqli_fetch_array($result)) {   
-        $_SESSION['userid'] = $row['id'];
+        $_SESSION['profileid'] = $row['id'];
         $_SESSION['profilename'] = $row['name'];
 
-        echo $_SESSION['userid'];
+        echo $_SESSION['profileid'];
         echo $_SESSION['profilename'];
         
         }

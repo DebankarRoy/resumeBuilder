@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $hostname = "127.0.0.1";
     $username = "root";
     $db_password = "ralphubuntu";
@@ -9,8 +9,15 @@
     if(!$conn){
         die("connection failed : ".mysqli_connect_error());
     }
+   
 
     if(isset($_POST['readRecordtraining'])) {
+
+        /*echo"jbkgkjblljj";
+        $prfl=$_SESSION['profileid'];
+        echo $prfl;
+        $abc=$_SESSION['userid'];
+        echo $abc;*/
 
         $sql = "SELECT * FROM training_details "; 
         $result = mysqli_query($conn,$sql);
@@ -67,6 +74,7 @@
 
     if(isset($_POST['training_loc']) && isset($_POST['training_prog'])){
         $userid_loggedin=$_SESSION['userid'];
+
         $training_prog=$_POST['training_prog'];
         $training_org = $_POST['training_org'];
         $training_loc= $_POST['training_loc'];
@@ -75,12 +83,13 @@
         $description_tra=$_POST['training_description'];
         $start=date('Y/m/d',strtotime($start_year_tra));
         $end=date('Y/m/d',strtotime($end_year_tra));
+        $prfl=$_SESSION['profileid'];
 
         echo $training_org;
         echo $training_prog.$training_loc ;
 
         $sql = "INSERT INTO training_details(program_name ,organization ,location ,start_date ,end_date ,description ,profiles_id)
-            VALUES('$training_prog' ,'$training_org' ,'$training_loc' ,'$start', '$end' ,'$description_tra' ,'$userid_loggedin')";
+            VALUES('$training_prog' ,'$training_org' ,'$training_loc' ,'$start', '$end' ,'$description_tra' ,'$prfl')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

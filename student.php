@@ -35,7 +35,9 @@
                     $userid_loggedin=$_SESSION['id'];
                     //echo $userid_loggedin;
                     $user_loggedin=$_SESSION['name'];
-                              
+                  	
+                  	echo $userid_loggedin;
+                  	echo $user_loggedin;
                 }
                 else
                		{

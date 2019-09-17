@@ -49,8 +49,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .upper{
-    border: solid 1px black;
+    //border: solid 1px black;
     height: 50px;
+    background-color: #F8F8F8;
+    border-bottom: solid 1px #D8D8D8;
 }
 @media (min-width: 600px){
     .upper{
@@ -169,6 +171,51 @@ input[type=number]::-webkit-outer-spin-button {
         top: 9px;
         left: 43px;
     }
+}
+
+.footer{
+    margin-top: 50px;
+    border: solid 1px black;
+    background-color: #303030;
+    border-radius: 0px;
+}
+.flaticon_text{
+    color: #FFFFFF;
+    position: relative;
+    //top: 10px;
+}
+
+.flaticon_img{
+    width: 75px;
+    height: 60px;
+    position: relative;
+    //top: 10px;
+}
+
+.social_ids{
+    color: #FFFFFF;
+    position: relative;
+    top: 0px;
+    left: 450px;
+}
+
+.social_id_img{
+    position: relative;
+    left: 450px;
+}
+.insta_img,.linkedin_img{
+    width: 40px;
+    height: 40px;
+    /*padding-left: 5px;
+    padding-right: 5px;*/
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.left,.right{
+    width: 50%;
+    margin-left: 10px;
+
 }
 
 .lower{
@@ -972,3 +1019,5 @@ a:hover{
 .update-edit-pos{
     margin-top: 10px;
 }
+
+

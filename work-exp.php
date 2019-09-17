@@ -36,7 +36,10 @@
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                     $flag=1;
                     $userid_loggedin=$_SESSION['id'];
-                    $user_loggedin=$_SESSION['name'];             
+                    $user_loggedin=$_SESSION['name'];
+
+                    /*echo $_SESSION['profileid'];
+        			echo $_SESSION['profilename']; */            
                 }
                 else
                    	{
@@ -168,6 +171,19 @@
 				</div>
 				
 			</div>
+		</div>
+		<div class="row footer">
+			<div class="colp left">
+				<span class="flaticon_text">icons by</span>
+				<a href="https://www.flaticon.com/"><img src="img/flaticon-logo.svg" class="flaticon_img"></a>
+			</div>
+			<div class="colp right>">
+				<span class="social_ids">Connect with me</span>
+				<div class="social_id_img">
+					<a href=""><img src="img/instagram.png" class="insta_img"></a>
+					<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
+				</div>
+			</div>				
 		</div>
 
 			<div class="container modal-training" >	

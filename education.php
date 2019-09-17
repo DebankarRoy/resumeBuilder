@@ -33,7 +33,11 @@
                     $flag=1;
                     $userid_loggedin=$_SESSION['userid'];
                     //echo $userid_loggedin;
-                    $user_loggedin=$_SESSION['name'];             
+                    $user_loggedin=$_SESSION['name'];  
+
+
+                   /* echo $_SESSION['profileid'];
+        			echo $_SESSION['profilename'];  */         
                 }
                 else
                     {

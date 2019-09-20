@@ -156,6 +156,21 @@
 
 			</div>
 		</div>
+
+		<div class="row footer">
+			<div class="colp left">
+				<span class="flaticon_text">icons by</span>
+				<a href="https://www.flaticon.com/"><img src="img/flaticon-logo.svg" class="flaticon_img"></a>
+			</div>
+			<div class="colp right>">
+				<span class="social_ids">Connect with me</span>
+				<div class="social_id_img">
+					<a href=""><img src="img/instagram.png" class="insta_img"></a>
+					<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
+				</div>
+			</div>				
+		</div>
+		
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.min.js"></script>

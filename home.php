@@ -89,6 +89,11 @@
 	</div>
 
 	<div class="mid-part row">
+		<div class="triangle-left"></div>
+		<div class="triangle-right"></div>
+		<div class="triangle-left-up"></div>
+		<div class="triangle-right-up"></div>
+		<div class="row pad-row"></div>
 		<div class="row box">
 			<div class="colp new_box">
 				<div class="row add_new_cv">
@@ -97,15 +102,36 @@
 				</div>
 			</div>
 			<div class="colp browse_box">
-				<div class="colp browse_container">
+				
 					<div class="row browse_cv">
 						<a href="#"><img src="img/browse_cv.png" class="img_for_browse row">
 						<span class="row add_browse_text">previous</span></a>
 					</div>
-				</div>
+				
 			</div>
 		</div>
+		<div class="row pad-row lower-row"></div>
 	</div>	
+
+	<div class="row footer forskills home-case">
+			<div class="colp left">
+				<span class="flaticon_text">icons by</span>
+				<a href="https://www.flaticon.com/"><img src="img/flaticon-logo.svg" class="flaticon_img"></a>
+			</div>
+			<div class="colp right>">
+				<span class="social_ids">Connect with me</span>
+				<div class="social_id_img">
+					<a href=""><img src="img/instagram.png" class="insta_img"></a>
+					<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
+				</div>
+			</div>				
+		</div>
+
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/navbar.js"></script>
 
 </body>
 </html>

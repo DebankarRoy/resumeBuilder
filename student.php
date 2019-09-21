@@ -69,6 +69,7 @@
 					    <b><?php echo "$user_loggedin";?></b>
 					  </span>
 					  <div class="dropdown-menu">
+					  	<a class="dropdown-item" href="home.php">Home</a>
 					    <a class="dropdown-item" href="#">Resumes</a>
 					    <a class="dropdown-item" href="logout.php">Logout</a>
 					  </div>
@@ -116,6 +117,7 @@
 
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			  <a href="">Manage Account</a>
+			  <a href="#">Home</a>
 			  <a href="#">Resumes</a>
 			  <a href="#">Logout</a>
 			</div>

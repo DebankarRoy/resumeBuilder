@@ -104,7 +104,7 @@
 			<div class="colp browse_box">
 				
 					<div class="row browse_cv">
-						<a href="#"><img src="img/browse_cv.png" class="img_for_browse row">
+						<a href="resumes.php"><img src="img/browse_cv.png" class="img_for_browse row">
 						<span class="row add_browse_text">previous</span></a>
 					</div>
 				

@@ -16,6 +16,25 @@ $('document').ready(function(){
 	readRecordstudent();
 })
 
+function fetchRecordstudent(){
+				var fetchRecordstudent = 'fetchRecordstudent';
+				//console.log('working'+fetchRecordstudent);
+				$.ajax({
+					url: 'submit/resumes-fetch.php',
+					type: 'POST',
+					data: { fetchRecordstudent:fetchRecordstudent},
+					success:function(data,status){
+							
+				 			$('#student-profile-fetching').html(data);
+				 			
+						 }
+				})
+			}
+
+$('document').ready(function(){
+	fetchRecordstudent();
+})
+
 
 			/*function DeleteRecordskill(deleteidskill){
 				var conf = confirm("Are you sure?");

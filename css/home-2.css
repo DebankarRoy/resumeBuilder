@@ -1264,7 +1264,7 @@ a:hover{
     height: 350px;
     -ms-transform: rotate(30deg);
     transform: rotate(30deg);
-    position: absolute;
+    position: fixed;
     left: -115px;
     top: 110px;
     z-index: 1;
@@ -1278,7 +1278,7 @@ a:hover{
     height: 330px;
     -ms-transform: rotate(67deg);
     transform: rotate(67deg);
-    position: absolute;
+    position: fixed;
     right: -30px;
     top: 100px;
     z-index: 1;
@@ -1291,7 +1291,7 @@ a:hover{
     height: 300px;
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
-    position: absolute;
+    position: fixed;
     right: 25px;
     top: 110px;
     z-index: 1;
@@ -1303,18 +1303,46 @@ a:hover{
     height: 300px;
     -ms-transform: rotate(20deg);
     transform: rotate(155deg);
-    position: absolute;
+    position: fixed;
     left: -10px;
     top: 105px;
     z-index: 1;
 }
 
 .boxforresume{
-    width: 750px;
-    height: 150px;
-    margin-left: 20%;
-    position: relative;
-    top: -40px;
+    width: 600px;
+    height: auto;
+    margin-left: 25%;
+    margin-top: 10px;
+    /*position: relative;
+    top: -40px;*/
+}
+
+
+
+.padding-resume{
+    padding-top: 15px;
+    padding-left: 30px;
+    cursor: pointer;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.up{
+    height:30px;
+}
+
+@media (max-width: 600px){
+   .boxforresume{
+        width: auto;
+        margin-left: 17%;
+        margin-top: 10px;
+        /*position: relative;
+        top: -40px;*/
+    }
+    .up{
+        //height:70px;
+    }
 }
 
 /*.body-part >.triangle-left {

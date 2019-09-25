@@ -65,7 +65,7 @@
 					    <b><?php echo "$user_loggedin";?></b>
 					  </span>
 					  <div class="dropdown-menu">
-					    <a class="dropdown-item" href="#">Resumes</a>
+					    <a class="dropdown-item" href="home.php">Home</a>
 					    <a class="dropdown-item" href="logout.php">Logout</a>
 					  </div>
 					</div>
@@ -76,24 +76,60 @@
 
 			</div>
 		</div>
+
+		<div id="mySidenav" class="sidenav">
+
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="">Manage Account</a>
+			  <a href="#">Home</a>
+			  <a href="#">Resumes</a>
+			  <a href="#">Logout</a>
+			</div>
+
+			<div id="menu-bar-open">
+			  <span class="menu-bar" onclick="openNav()">&#9776;</span>
+			</div>
+
 		<div class="body-part">
 			<div class="triangle-left"></div>
 			<div class="triangle-right"></div>
 			<div class="triangle-left-up"></div>
 			<div class="triangle-right-up"></div>
-			<div class="row pad-row"></div>
-			<div class="row box boxforresume">	
-			</div>
-
-			<div class="triangle-left"></div>
-			<div class="triangle-right"></div>
-			<div class="triangle-left-up"></div>
-			<div class="triangle-right-up"></div>
-			<div class="row pad-row"></div>
-			<div class="row box boxforresume">	
-			</div>
-
+			<div class="row pad-row up"></div>
+			<div class="" id="student-profile-fetching">
 			<div class="row pad-row lower-row"></div>
 		</div>
+
+		<div class="row footer">
+			<div class="colp left">
+				<span class="flaticon_text">icons by</span>
+				<a href="https://www.flaticon.com/"><img src="img/flaticon-logo.svg" class="flaticon_img"></a>
+			</div>
+			<div class="colp right>">
+				<span class="social_ids">Connect with me</span>
+				<div class="social_id_img">
+					<a href=""><img src="img/instagram.png" class="insta_img"></a>
+					<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
+				</div>
+			</div>				
+		</div>
+
+
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/student-fetch.js"></script>
+		<script src="js/resume-fetch.js"></script>
+		<script>
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+		</script>
+
 </body>
 </html>

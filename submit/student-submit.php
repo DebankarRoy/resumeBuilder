@@ -11,8 +11,10 @@
     }
 
     if(isset($_POST['readRecordstudent'])) {
+
         $userid_loggedin=$_SESSION['id'];
-        $sql = "SELECT * FROM profiles where user_id=$userid_loggedin and id=2"; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM profiles where user_id=$userid_loggedin and id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){

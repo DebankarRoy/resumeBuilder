@@ -22,6 +22,7 @@
 
                 while ($row = mysqli_fetch_array($result)) {
 
+                    $form_counter=1;
                     $profileid=$row['id'];
                     $name= $row['name'];
                     $email= $row['email_student'];
@@ -29,21 +30,26 @@
                     $place= $row['city'];
                     
                     ?>
-                    <div class="student-profile row box boxforresume " onclick="openmyresume('<?php echo $profileid;echo ", ";echo $userid_loggedin;?>')">
-                    
+                    <div class="student-profile row box boxforresume " onclick="openmyresume('<?php echo $profileid?>')">
+                        <form action="resume.php" id="<?php echo $profileid?>" method="get">
+                        <input type="hidden" value="<?php echo $profileid?>" name="profileid" />
+                        </form>
                         <div class="row padding-resume">
                             <h2><?php echo$name; ?></h2>
                             <span class="grey"><?php echo$email; ?><br></span>
                             <span class="grey"><?php echo$phone; ?><br></span>
                             <span class="grey"><?php echo$place; ?></span>
                         </div>
-                    
+                        
                     </div>
                     <div class="row pad-row "></div>
                  <?php   
                 }
             }
         }
+    }
+
+    if(isset($_POST[''])) {
     }
     
     

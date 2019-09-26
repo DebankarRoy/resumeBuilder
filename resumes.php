@@ -120,7 +120,7 @@
 		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/student-fetch.js"></script>
-		<script src="js/resume-fetch.js"></script>
+		<script src="js/resumes-fetch.js"></script>
 		<script>
 			function openNav() {
 			  document.getElementById("mySidenav").style.width = "250px";

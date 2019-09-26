@@ -37,7 +37,8 @@
                     $flag=1;
                     $userid_loggedin=$_SESSION['id'];
                     //echo $userid_loggedin;
-                    $user_loggedin=$_SESSION['name'];             
+                    $user_loggedin=$_SESSION['name'];
+                    $_SESSION['profileid']=$_GET['profileid'];             
                 }
                 else
                     {
@@ -124,6 +125,12 @@
 			<div class="col resume-col"></div>
 			<div class="col resume-content">
 				<div class="row personal-table" id="student-fetching">	
+
+					<?php 
+					echo "kjthgrij";
+					$prfl=$_POST['profileid'];
+        			echo $prfl;
+        			?>
 				</div>
 				<div class="row education-table">
 					<div class="col details-left"><h4>Education</h4></div>

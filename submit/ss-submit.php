@@ -12,7 +12,8 @@
 
     if(isset($_POST['readRecordss'])) {
 
-        $sql = "SELECT * FROM senior_secondary"; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM senior_secondary where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
@@ -70,7 +71,7 @@
 
 
     if(isset($_POST['degree_completion_status_ss'])){
-        $userid_loggedin=$_SESSION['userid'];
+        $userid_loggedin=$_SESSION['profileid'];
         $deg_stat_ss=$_POST['degree_completion_status_ss'];
         $school_ss= $_POST['school'];
         $end_year=$_POST['end_year_ss'];

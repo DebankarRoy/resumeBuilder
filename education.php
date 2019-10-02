@@ -35,9 +35,8 @@
                     //echo $userid_loggedin;
                     $user_loggedin=$_SESSION['name'];  
 
-
-                   /* echo $_SESSION['profileid'];
-        			echo $_SESSION['profilename'];  */         
+                    /*echo $_SESSION['profileid'];
+        			echo $_SESSION['profilename'];  */        
                 }
                 else
                     {
@@ -499,7 +498,7 @@
 											</div>
 
 											<div class=" col btn-holder">
-			 									<button  class="next pos mt mb-5" onclick="submitss()">SUBMIT</button>
+			 									<button  class="next pos  mb-5" onclick="submitss()">SUBMIT</button>
 											</div>	
 										</div>
 										<div class="col padding"></div>
@@ -618,7 +617,7 @@
 											</div>
 
 											<div class=" col btn-holder">
-												<button  class="next pos mt mb-4" onclick="submitsecondary()">SUBMIT</button>
+												<button  class="next pos  mb-4" onclick="submitsecondary()">SUBMIT</button>
 											</div>
 
 										</div>

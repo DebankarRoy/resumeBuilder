@@ -1,6 +1,6 @@
 function submitgrad(){
     var frm = $('#graduation_details');
-    alert(frm);
+    
     console.log(frm);
     $('#graduation_details').validate({
     rules: {

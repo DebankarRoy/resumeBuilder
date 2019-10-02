@@ -38,7 +38,17 @@
                     $userid_loggedin=$_SESSION['id'];
                     //echo $userid_loggedin;
                     $user_loggedin=$_SESSION['name'];
-                    $_SESSION['profileid']=$_GET['profileid'];             
+                   /* echo $_POST['activeprofileid'];
+                    $abcd=$_SESSION['profileid'];
+                      
+                    echo $_SESSION['profileid'];
+        			echo $_SESSION['profilename'];*/ 
+
+        			if(isset($_POST['activeprofileid'])) {
+        				$_SESSION['profileid']=$_POST['activeprofileid'];
+                    echo $_SESSION['profileid'];
+        			echo $_SESSION['profilename'];
+        			}       
                 }
                 else
                     {
@@ -209,64 +219,64 @@
 		</div>
 
 	           <!-- Modal -->
-    <div class="modal fade" id="update_studentprofile" tabindex="-1" role="dialog" aria-labelledby="studentprofileTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content update-height">
-        
-            <div class="header-container update-clr">Student Details</div>
-            <span class="close" aria-hidden="true" data-dismiss="modal">+</span>
+	    <div class="modal fade" id="update_studentprofile" tabindex="-1" role="dialog" aria-labelledby="studentprofileTitle" aria-hidden="true">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content update-height">
+	        
+	            <div class="header-container update-clr">Student Details</div>
+	            <span class="close" aria-hidden="true" data-dismiss="modal">+</span>
 
-            <div class="col data-update update-padding">
-            	<form role="form" novalidate="novalidate" id="update_profile" name="profile_update" enctype="multipart/form-data">
-	                <div class="row form-group">
-	                    <label for="name" class="control-label" id="x">Name:</label>
-	                    <div class="input-group salutation">
-	                        <input class="form-control name" id="update_name" tabindex="2" name="name" placeholder="Update your name" value="" type="text">
-	                 
-	                    </div>
-	                </div>
-	                <div class="row form-group">
-	                    <label for="number" class="control-label">Mobile Number:</label>
-	                    <div class="input-group">
-	                        <input type="number"  class="wid form-control mobile-number" tabindex="4" id="update_mobile" name="phone_no" placeholder="Update mobile number " value="">
-	                    </div>
-	                </div>
+	            <div class="col data-update update-padding">
+	            	<form role="form" novalidate="novalidate" id="update_profile" name="profile_update" enctype="multipart/form-data">
+		                <div class="row form-group">
+		                    <label for="name" class="control-label" id="x">Name:</label>
+		                    <div class="input-group salutation">
+		                        <input class="form-control name" id="update_name" tabindex="2" name="name" placeholder="Update your name" value="" type="text">
+		                 
+		                    </div>
+		                </div>
+		                <div class="row form-group">
+		                    <label for="number" class="control-label">Mobile Number:</label>
+		                    <div class="input-group">
+		                        <input type="number"  class="wid form-control mobile-number" tabindex="4" id="update_mobile" name="phone_no" placeholder="Update mobile number " value="">
+		                    </div>
+		                </div>
 
-	                <div class="row form-group">
-	                    <label for="email" class="control-label">Email:</label>
-	                    <div class="input-group">
-	                        <input type="text" class="wid form-control" id="update_email" tabindex="5" name="email" placeholder="Update your email" value="" autocomplete="off">   
-	                    </div>
-	                </div>
+		                <div class="row form-group">
+		                    <label for="email" class="control-label">Email:</label>
+		                    <div class="input-group">
+		                        <input type="text" class="wid form-control" id="update_email" tabindex="5" name="email" placeholder="Update your email" value="" autocomplete="off">   
+		                    </div>
+		                </div>
 
-	                <div class="row form-group">
-	                    <label for="current_city" class="control-label">Current City:</label>
-	                    <div class="input-group">
-	                        <input type="text" class="wid form-control" id="update_city" tabindex="6" name="current_city" placeholder="Update your city" value="" autocomplete="off">    
-	                    </div>
-	                </div>
-                </form>
-            </div>
-            <div class="row">
-                <button type="button" class="btn btn-secondary update-btn-pos" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-info update-btn-pos" id="update_stu" onclick="updatestudent()">Save changes</button>
-            </div>
-        </div>
-      </div>
-    </div>
+		                <div class="row form-group">
+		                    <label for="current_city" class="control-label">Current City:</label>
+		                    <div class="input-group">
+		                        <input type="text" class="wid form-control" id="update_city" tabindex="6" name="current_city" placeholder="Update your city" value="" autocomplete="off">    
+		                    </div>
+		                </div>
+	                </form>
+	            </div>
+	            <div class="row">
+	                <button type="button" class="btn btn-secondary update-btn-pos" data-dismiss="modal">Close</button>
+	                <button type="button" class="btn btn-info update-btn-pos" id="update_stu" onclick="updatestudent()">Save changes</button>
+	            </div>
+	        </div>
+	      </div>
+	    </div>
 
-    <div class="row footer forresume">
-			<div class="colp left">
-				<span class="flaticon_text">icons by</span>
-				<a href="https://www.flaticon.com/"><img src="img/flaticon-logo.svg" class="flaticon_img"></a>
-			</div>
-			<div class="colp right>">
-				<span class="social_ids">Connect with me</span>
-				<div class="social_id_img">
-					<a href=""><img src="img/instagram.png" class="insta_img"></a>
-					<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
+	    <div class="row footer forresume">
+				<div class="colp left">
+					<span class="flaticon_text">icons by</span>
+					<a href="https://www.flaticon.com/"><img src="img/flaticon-logo.svg" class="flaticon_img"></a>
 				</div>
-			</div>				
+				<div class="colp right>">
+					<span class="social_ids">Connect with me</span>
+					<div class="social_id_img">
+						<a href=""><img src="img/instagram.png" class="insta_img"></a>
+						<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
+					</div>
+				</div>				
 		</div>
 
 	</body>

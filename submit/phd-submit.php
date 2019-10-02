@@ -13,7 +13,8 @@
 
      if(isset($_POST['readRecordphd'])) {
 
-        $sql = "SELECT * FROM phd "; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM phd where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
@@ -65,7 +66,7 @@
     }
 
     if(isset($_POST['degree_completion_status_ph'])){
-        $userid_loggedin=$_SESSION['userid'];
+        $userid_loggedin=$_SESSION['profileid'];
         $deg_stat_ph=$_POST['degree_completion_status_ph'];
         $college_ph = $_POST['college_ph'];
         $start_year_ph=$_POST['start_year_ph'];

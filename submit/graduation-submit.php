@@ -12,7 +12,9 @@
 
     if(isset($_POST['readRecordGrad'])) {
 
-        $sql = "SELECT * FROM graduation "; 
+        //$userid_loggedin=$_SESSION['id'];
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM graduation where profiles_id = $prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
@@ -65,9 +67,10 @@
     }
 
 
-    if(isset($_POST['degree_completion_status_grad']) && $_POST['college'] && isset($_POST['start_year_clg']) && isset($_POST['end_year_clg']) && isset($_POST['degree']) && isset($_POST['stream_clg']) && isset($_POST['performance_scale_clg']) && isset($_POST['performance_clg'])){
+    if(isset($_POST['degree_completion_status_grad']) && $_POST['college'] && isset($_POST['start_year_clg']) && isset($_POST['end_year_clg']) && isset($_POST['degree']) && isset($_POST['stream_clg'])){
         
-        $userid_loggedin=$_SESSION['userid'];
+        //$userid_loggedin=$_SESSION['userid'];
+        $prfl=$_SESSION['profileid'];
         $deg_stat=$_POST['degree_completion_status_grad'];
         $college = $_POST['college'];
         $start_year=$_POST['start_year_clg'];
@@ -78,7 +81,7 @@
         $performance_marks=$_POST['performance_clg'];
 
         $sql = "INSERT INTO graduation(degree_status ,college ,start_year ,end_year ,degree ,stream ,performence_scale ,performence_marks,profiles_id)
-            VALUES('$deg_stat' ,'$college' ,'$start_year', '$end_year' ,'$degree_name' ,'$stream_name' ,'$performance_scale' ,'$performance_marks','$userid_loggedin')";
+            VALUES('$deg_stat' ,'$college' ,'$start_year', '$end_year' ,'$degree_name' ,'$stream_name' ,'$performance_scale' ,'$performance_marks','$prfl')";
             
         if(!mysqli_query($conn,$sql)){
             die("Error : ".$sql."<br>".mysqli_error($conn));

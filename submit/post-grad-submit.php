@@ -12,7 +12,8 @@
 
     if(isset($_POST['readRecordspostgrad'])) {
 
-        $sql = "SELECT * FROM post_graduation "; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM post_graduation where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
@@ -65,8 +66,8 @@
     }
 
 
-    if(isset($_POST['degree_completion_status_pg']) && $_POST['college_pg'] && isset($_POST['start_year_pg']) && isset($_POST['end_year_pg']) && isset($_POST['degree_pg']) && isset($_POST['stream_pg']) && isset($_POST['performance_scale_pg']) && isset($_POST['performance_pg'])){
-        $userid_loggedin=$_SESSION['userid'];
+    if(isset($_POST['degree_completion_status_pg'])){
+        $userid_loggedin=$_SESSION['profileid'];
         $deg_stat_pg=$_POST['degree_completion_status_pg'];
         $college_pg = $_POST['college_pg'];
         $start_year_pg=$_POST['start_year_pg'];

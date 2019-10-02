@@ -31,6 +31,9 @@
                     
                     $user_loggedin=$_SESSION['name']; 
 
+                    /*echo $_SESSION['profileid'];
+        			echo $_SESSION['profilename'];*/
+
                 }
                 else
                     {

@@ -12,11 +12,12 @@
 
     if(isset($_POST['readRecordintern'])) {
 
-        $sql = "SELECT * FROM intern_details "; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM intern_details where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
-            echo'<div class="row data-fetch heads"><h3>Internships:</h3></div>';
+            echo'<div class="row data-fetch heads"><h3>Internship:</h3></div>';
             while ($row = mysqli_fetch_array($result)) {
 
                 $id=$row['id'];
@@ -67,7 +68,7 @@
     }
 
      if(isset($_POST['intern_profile']) && $_POST['intern_org'] && isset($_POST['intern_loc'])){
-        $userid_loggedin=$_SESSION['userid'];
+        $userid_loggedin=$_SESSION['profileid'];
         $intern_profile=$_POST['intern_profile'];
         $intern_org = $_POST['intern_org'];
         $intern_loc= $_POST['intern_loc'];

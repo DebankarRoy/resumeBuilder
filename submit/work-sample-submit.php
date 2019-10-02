@@ -12,7 +12,8 @@
 
     if(isset($_POST['readRecordworksample'])) {
 
-        $sql = "SELECT * FROM work_samples"; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM blog where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
@@ -20,89 +21,156 @@
             while ($row = mysqli_fetch_array($result)) {
 
                 $id=$row['id'];
-                $blog=$row['blog'];
-                $github = $row['github'];
-                $playstore=$row['playstore'];
-                $behance=$row['behance'];
-                $other = $row['other'];
-                    
+                $blog=$row['blog'];         
                     
                 if($blog!=''){
                     echo '<span class="title-style">Blog Link:</span><br><a href="'.$blog.'" class="link-clr">'.$blog.'</a><br><br>';
-                 ?>  
-                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordworksample('<?php echo $blog; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
-                 </div>
+                 ?>
+                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordblog('<?php echo $id; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
+                 </div>  
                  <?php
                 }
+            }
+        }
+
+         $sql = "SELECT * FROM github where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+
+                $id=$row['id'];
+                $github = $row['github'];     
+                    
+                
                 if($github!=''){
                     echo '<span class="title-style">Github Link:</span><br><a href="'.$github.'" class="link-clr">'.$github.'</a><br><br>';
                     ?>  
-                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordworksample('<?php echo $github; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
+                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordgithub('<?php echo $id; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
                  </div>
                  <?php
-                }
+                }         
+            }
+        }
+
+
+        $sql = "SELECT * FROM playstore where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+
+                $id=$row['id'];
+                $playstore=$row['playstore'];              
+                    
+                
                 if($playstore!=''){
                     echo '<span class="title-style">Playstore Link:</span><br><a href="'.$playstore.'" class="link-clr">'.$playstore.'</a><br><br>';
                    ?>  
-                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordworksample('<?php echo $playstore; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
+                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordplaystore('<?php echo $id; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
                  </div>
                  <?php 
-                }
+                }             
+            }
+        }
+
+        $sql = "SELECT * FROM behance where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+
+                $id=$row['id'];
+                $behance=$row['behance'];
+                    
                 if($behance!=''){
                     echo '<span class="title-style">Behance Link:</span><br><a href="'.$behance.'" class="link-clr">'.$behance.'</a><br><br>';
                     ?>  
-                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordworksample('<?php echo $behance; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
+                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordbehance('<?php echo $id; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
                  </div>
                  <?php 
-                }
+                }                
+            }
+        }
+
+        $sql = "SELECT * FROM other_samples where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+
+                $id=$row['id'];
+                $other = $row['other'];
+                      
+                
                 if($other!=''){
                     echo '<span class="title-style">Others Link:</span><br><a href="'.$other.'" class="link-clr">'.$other.'</a><br><br>';
                     ?>  
-                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordworksample('<?php echo $other; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
+                 <div class="col rating-col2 pos-resume"><a href="#" onclick="DeleteRecordothersample('<?php echo $id; ?>')"><img class="rmv-img rating_part" src="img/bin-with-lid.png"></a>
                  </div>
                  <?php
-                }
-                
-
-
-                
+                }  
             }
         }
-        
+
     }
     echo "<a href='work-sample.php'><span class='clr-blue'>+ Add more info:</span></a>";
 
+    if(isset($_POST['deleteidblog'])){
 
-    if(isset($_POST['deleteidworksample'])){
-
-        $worksample_id = $_POST['deleteidworksample'];
-        echo $skill_id; 
-        $deletequery = " delete from work_samples where coloumn ='$worksample_id";
+        $worksample_id = $_POST['deleteidblog']; 
+        $deletequery = " delete from blog where id ='$worksample_id'";
         if (!mysqli_query($conn,$deletequery)) {
             die("Error : ".$sql."<br>".mysqli_error($conn));
         }
         echo("deletion sucessful");
     }
 
+    if(isset($_POST['deleteidgithub'])){
 
-     if(isset($_POST['blog']) || isset($_POST['github']) || isset($_POST['playstore']) ||isset($_POST['behnace']) || isset($_POST['other'])){
-        $userid_loggedin=$_SESSION['userid'];
-        $blog=$_POST['blog'];
-        $github = $_POST['github'];
-        $playstore=$_POST['playstore'];
-        $behance=$_POST['behance'];
-        $other = $_POST['other'];
-
-        $sql = "INSERT INTO work_samples (blog ,github ,playstore ,behance ,other ,profiles_id)
-            VALUES('$blog' ,'$github' ,'$playstore' ,'$behance' ,'$other' ,'$userid_loggedin')";
-           
-          
-        if(!mysqli_query($conn,$sql)){
+        $worksample_id = $_POST['deleteidgithub'];
+        
+        $deletequery = " delete from github where id ='$worksample_id'";
+        if (!mysqli_query($conn,$deletequery)) {
             die("Error : ".$sql."<br>".mysqli_error($conn));
         }
-        echo "Registration Successful";
-        header('Location: /Resume/resume.php');
+        echo("deletion sucessful");
     }
-    exit;
-    mysqli_close($conn);
-?> 
+
+    if(isset($_POST['deleteidplaystore'])){
+
+        $worksample_id = $_POST['deleteidplaystore'];
+        
+        $deletequery = " delete from playstore where id ='$worksample_id'";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessful");
+    }
+
+    if(isset($_POST['deleteidbehance'])){
+
+        $worksample_id = $_POST['deleteidbehance'];
+        echo $skill_id; 
+        $deletequery = " delete from behance where id ='$worksample_id'";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessful");
+    }
+
+    if(isset($_POST['deleteidothersample'])){
+
+        $worksample_id = $_POST['deleteidothersample']; 
+        $deletequery = " delete from other_samples where id ='$worksample_id'";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo("deletion sucessful");
+    }
+?>

@@ -2,7 +2,7 @@ function readRecordworksample(){
 				var readRecordworksample = 'readRecordworksample';
 				
 				$.ajax({
-					url: 'submit/work-sample-submit2.php',
+					url: 'submit/work-sample-submit.php',
 					type: 'POST',
 					data: { readRecordworksample:readRecordworksample},
 					success:function(data,status){
@@ -19,7 +19,7 @@ function DeleteRecordblog(deleteidblog){
 				var conf = confirm("Are you sure?");
 				if(conf == true) {
 				$.ajax({
-					url:"submit/work-sample-submit2.php",
+					url:"submit/work-sample-submit.php",
 					type:'POST',
 					data: {  deleteidblog: deleteidblog },
 					success:function(data, status){
@@ -33,7 +33,7 @@ function DeleteRecordgithub(deleteidgithub){
 				var conf = confirm("Are you sure?");
 				if(conf == true) {
 				$.ajax({
-					url:"submit/work-sample-submit2.php",
+					url:"submit/work-sample-submit.php",
 					type:'POST',
 					data: {  deleteidgithub: deleteidgithub },
 					success:function(data, status){
@@ -47,7 +47,7 @@ function DeleteRecordplaystore(deleteidplaystore){
 				var conf = confirm("Are you sure?");
 				if(conf == true) {
 				$.ajax({
-					url:"submit/work-sample-submit2.php",
+					url:"submit/work-sample-submit.php",
 					type:'POST',
 					data: {  deleteidplaystore: deleteidplaystore },
 					success:function(data, status){
@@ -61,7 +61,7 @@ function DeleteRecordbehance(deleteidbehance){
 				var conf = confirm("Are you sure?");
 				if(conf == true) {
 				$.ajax({
-					url:"submit/work-sample-submit2.php",
+					url:"submit/work-sample-submit.php",
 					type:'POST',
 					data: {  deleteidbehance: deleteidbehance },
 					success:function(data, status){
@@ -75,7 +75,7 @@ function DeleteRecordothersample(deleteidothersample){
 				var conf = confirm("Are you sure?");
 				if(conf == true) {
 				$.ajax({
-					url:"submit/work-sample-submit2.php",
+					url:"submit/work-sample-submit.php",
 					type:'POST',
 					data: {  deleteidothersample: deleteidothersample },
 					success:function(data, status){

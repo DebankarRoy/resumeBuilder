@@ -16,7 +16,7 @@ function Submittraining(){
         url: "submit/training-submit.php",
        data: frm.serialize(),
        success: function(data,status) {
-          alert("success"+data);
+          //alert("success"+data);
           readRecordtraining();
           document.getElementById('training_details').reset();
             }   

@@ -13,7 +13,8 @@
 
      if(isset($_POST['readRecordother'])) {
 
-        $sql = "SELECT * FROM other_details "; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM other_details where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
@@ -47,7 +48,7 @@
 
     if(isset($_POST['achv_description']))
         {
-        $userid_loggedin=$_SESSION['userid'];
+        $userid_loggedin=$_SESSION['profileid'];
         $description_achv=$_POST['achv_description'];
         
         $sql = "INSERT INTO other_details(description ,profiles_id)

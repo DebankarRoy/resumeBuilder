@@ -65,7 +65,8 @@
 					    <b><?php echo "$user_loggedin";?></b>
 					  </span>
 					  <div class="dropdown-menu">
-					    <a class="dropdown-item" href="#">Resumes</a>
+					  	<a class="dropdown-item" href="home.php">Home</a>
+					    <a class="dropdown-item" href="resumes.php">Resumes</a>
 					    <a class="dropdown-item" href="logout.php">Logout</a>
 					  </div>
 					</div>

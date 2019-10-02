@@ -12,11 +12,12 @@
 
     if(isset($_POST['readRecordproject'])) {
 
-        $sql = "SELECT * FROM project_details "; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM project_details where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
-            echo'<div class="row data-fetch heads"><h3>Jobs:</h3></div>';
+            echo'<div class="row data-fetch heads"><h3>Project:</h3></div>';
             while ($row = mysqli_fetch_array($result)) {
                 $id=$row['id'];
                 $project=$row['project_name'];
@@ -65,7 +66,8 @@
 
 
     if(isset($_POST['project_name'])){
-        $userid_loggedin=$_SESSION['userid'];
+
+        $userid_loggedin=$_SESSION['profileid'];
         $project=$_POST['project_name'];
         $start_pro=$_POST['startdate_pro'];
         $end_pro=$_POST['enddate_pro'];

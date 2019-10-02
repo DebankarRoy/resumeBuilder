@@ -25,7 +25,7 @@
                 $str_yr_pg=$row['start_year'];
                 $end_yr_pg= $row['end_year'];
                 $clg_pg= $row['college'];
-                $board_pg= $row['board'];
+                
                 $prf_scl_pg= $row['performence_scale'];
                 $prf_mrk_pg= $row['performence_marks'];
 

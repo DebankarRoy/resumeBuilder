@@ -12,7 +12,8 @@
 
     if(isset($_POST['readRecordskill'])) {
 
-        $sql = "SELECT * FROM skills"; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM skills where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
@@ -45,7 +46,7 @@
     }
 
     if(isset($_POST['skillinput']) && isset($_POST['rating'])){
-        $userid_loggedin=$_SESSION['userid'];
+        $userid_loggedin=$_SESSION['profileid'];
         $skill=$_POST['skillinput'];
         $rating =$_POST['rating'];
        

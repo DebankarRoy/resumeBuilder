@@ -12,11 +12,12 @@
 
     if(isset($_POST['readRecordjob'])) {
 
-        $sql = "SELECT * FROM job_details "; 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM job_details where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
-            echo'<div class="row data-fetch heads"><h3>Jobs:</h3></div>';
+            echo'<div class="row data-fetch heads"><h3>Job:</h3></div>';
             while ($row = mysqli_fetch_array($result)) {
                 $id=$row['id'];
                 $profile=$row['job_profile'];
@@ -65,8 +66,9 @@
     }
 
 
-    if(isset($_POST['job_profile']) && $_POST['job_org'] && isset($_POST['job_loc']) && isset($_POST['startdate_job']) && isset($_POST['enddate_job']) && isset($_POST['job_description'])){
-        $userid_loggedin=$_SESSION['userid'];
+    if(isset($_POST['job_profile'])  && isset($_POST['job_loc']) && isset($_POST['startdate_job']) && isset($_POST['enddate_job']) && isset($_POST['job_description'])){
+
+        $userid_loggedin=$_SESSION['profileid'];
         $job_profile=$_POST['job_profile'];
         $job_org = $_POST['job_org'];
         $job_loc= $_POST['job_loc'];

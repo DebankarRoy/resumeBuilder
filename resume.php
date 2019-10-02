@@ -46,8 +46,6 @@
 
         			if(isset($_POST['activeprofileid'])) {
         				$_SESSION['profileid']=$_POST['activeprofileid'];
-                    echo $_SESSION['profileid'];
-        			echo $_SESSION['profilename'];
         			}       
                 }
                 else
@@ -82,7 +80,8 @@
 					    <b><?php echo "$user_loggedin";?></b>
 					  </span>
 					  <div class="dropdown-menu">
-					    <a class="dropdown-item" href="#">Resumes</a>
+					    <a class="dropdown-item" href="home.php">Home</a>
+					    <a class="dropdown-item" href="resumes.php">Resumes</a>
 					    <a class="dropdown-item" href="logout.php">Logout</a>
 					  </div>
 					</div>
@@ -96,9 +95,9 @@
 		<div id="mySidenav" class="sidenav">
 
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			  <a href="">Manage Account</a>
-			  <a href="#">Resumes</a>
-			  <a href="#">Logout</a>
+			  <a href="home.php">Home</a>
+			  <a href="resumes.php">Resumes</a>
+			  <a href="logout.php">Logout </a>
 		</div>
 		<div id="menu-bar-open">
 		  <span class="menu-bar" onclick="openNav()">&#9776;</span>
@@ -135,12 +134,6 @@
 			<div class="col resume-col"></div>
 			<div class="col resume-content">
 				<div class="row personal-table" id="student-fetching">	
-
-					<?php 
-					echo "kjthgrij";
-					$prfl=$_POST['profileid'];
-        			echo $prfl;
-        			?>
 				</div>
 				<div class="row education-table">
 					<div class="col details-left"><h4>Education</h4></div>

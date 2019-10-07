@@ -124,7 +124,7 @@
 			  <span class="menu-bar" onclick="openNav()">&#9776;</span>
 			</div>
 
-			<div class="row data">
+			<div class="row data" onmouseover="showedit()" onmouseout="shownothing()">
 				<div class="row info">
 					<div class="datatitle">Education</div>
 				</div>
@@ -1169,7 +1169,18 @@
                         $('#seniorsecondary').hide();
                     }
 			 });			
-		</script>	
+		</script>
+
+		<script>
+		function showedit(){
+			$('.abc').css("display","inline-block");
+		}
+
+		function shownothing(){
+			$('.abc').css("display","none");
+		}
+
+	</script>	
 	
 </html>
 <!--<a href="https://www.flaticon.com">for icons</a> -->

@@ -44,6 +44,9 @@
                     echo $_SESSION['profileid'];
         			echo $_SESSION['profilename'];*/ 
 
+        			/*echo get_current_user();
+        			echo exec('whoami'); */
+
         			if(isset($_POST['activeprofileid'])) {
         				$_SESSION['profileid']=$_POST['activeprofileid'];
         			}       
@@ -135,7 +138,7 @@
 			<div class="col resume-content">
 				<div class="row personal-table" id="student-fetching">	
 				</div>
-				<div class="row education-table">
+				<div class="row education-table" onmouseover="showedit()" onmouseout="shownothing()">
 					<div class="col details-left"><h4>Education</h4></div>
 					<div class="col details-right">
 
@@ -162,7 +165,7 @@
 					</div>
 					</div>
 				</div>
-				<div class="row experience-table">
+				<div class="row experience-table" onmouseover="showedit()" onmouseout="shownothing()">
 					<div class="col details-left"><h4>Experiences</h4></div>
 					<div class="col details-right">
 						<div class="row fetch phd-fetch" id="job-fetching">
@@ -199,7 +202,7 @@
 					</div>
 					
 				</div>
-				<div class="row samples-table">
+				<div class="row samples-table" onmouseover="showedit()" onmouseout="shownothing()">
 					<div class="col details-left"><h4>Work Samples</h4></div>
 					<div class="col details-right">
 						<div class="row add-more" id="work-sample-fetching">
@@ -343,5 +346,16 @@
 		    }
 		     
 		}
+	</script>
+
+	<script>
+		function showedit(){
+			$('.abc').css("display","inline-block");
+		}
+
+		function shownothing(){
+			$('.abc').css("display","none");
+		}
+
 	</script>
 </html>

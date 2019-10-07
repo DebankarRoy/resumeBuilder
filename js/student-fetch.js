@@ -2,7 +2,7 @@ function readRecordstudent(){
 				var readRecordstudent = 'readRecordstudent';
 				
 				$.ajax({
-					url: 'submit/student-submit.php',
+					url: 'student-submit.php',
 					type: 'POST',
 					data: { readRecordstudent:readRecordstudent},
 					success:function(data,status){

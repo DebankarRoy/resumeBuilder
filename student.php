@@ -70,7 +70,7 @@
 					  </span>
 					  <div class="dropdown-menu">
 					  	<a class="dropdown-item" href="home.php">Home</a>
-					    <a class="dropdown-item" href="#">Resumes</a>
+					    <a class="dropdown-item" href="resumes.php">Resumes</a>
 					    <a class="dropdown-item" href="logout.php">Logout</a>
 					  </div>
 					</div>
@@ -117,9 +117,9 @@
 
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			  <a href="">Manage Account</a>
-			  <a href="#">Home</a>
-			  <a href="#">Resumes</a>
-			  <a href="#">Logout</a>
+			  <a href="home.php">Home</a>
+			  <a href=resumes.php>Resumes</a>
+			  <a href="logout.php">Logout</a>
 			</div>
 
 			<div id="menu-bar-open">
@@ -135,7 +135,7 @@
 
 
 				<div class="col dataform">
-					<form role="form" novalidate="novalidate" id="personal_details" name="registration" enctype="multipart/form-data" method="POST" action = "submit/student-submit.php">
+					<form role="form" novalidate="novalidate" id="personal_details" name="registration" enctype="multipart/form-data" method="POST" action = "student-submit.php">
 					    <div class="row form-group">
 					        <label for="name" class="control-label" id="x">Name*:</label>
 					        <div class="input-group salutation">
@@ -169,8 +169,15 @@
 					            <input type="text" class="wid form-control" id="current_city" tabindex="6" name="current_city" placeholder="Start typing.." value="" autocomplete="off">	
 					        </div>
 					    </div>
+
+					    <div class="row form-group">
+					        <label for="picture" class="control-label">Image*:</label>
+					        <div class="input-group">
+					            <input type="file" class="wid form-control" id="image" tabindex="6" name="file"value="">	
+					        </div>
+					    </div>
 					    
-					    <div class="row button_container">
+					    <div class="row button_container student-next">
 	                        <input name="submit" class="next-button_container" id="personal-detail-submit" tabindex="7" value="NEXT" type="submit">
 					    </div>
 

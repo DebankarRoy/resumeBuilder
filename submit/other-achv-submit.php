@@ -28,7 +28,7 @@
                                 echo '<li>'.$profile.'</li></h5>';
                         echo '</div>';
 
-                        echo '<div class="col col2">';
+                        echo '<div class="col col2 abc" style="display:none;">';
                             echo '<a href="#" onclick="DeleteRecordother('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                             </div>
                             </div>';

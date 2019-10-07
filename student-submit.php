@@ -29,15 +29,19 @@
                 $place= $row['city'];
                 $image= $row['image'];
                 ?>
-                <div class="col col1 paddingleft">
-                    <h2><?php echo$name; ?></h2>
-                    <span class="grey"><?php echo$email; ?><br></span>
-                    <span class="grey"><?php echo$phone; ?><br></span>
-                    <span class="grey"><?php echo$place; ?></span>
-                    <img src='<?php echo $image ?>' height="40px" width="40px" >
-                </div>
-                <div class="col col2 update-edit-pos hover">
-                        <a href="#" onclick="editprofile('<?php echo$id; ?>')"data-toggle='modal' data-target='#update_studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>
+                <div class="row hove" onmouseover="showedit()" onmouseout="shownothing()">
+                    <div class="col dp-col">
+                        <img class="dp" src='<?php echo $image ?>'  >
+                    </div>
+                    <div class="col col1 paddingleft">
+                        <h2><?php echo$name; ?></h2>
+                        <span class="grey"><?php echo$email; ?><br></span>
+                        <span class="grey"><?php echo$phone; ?><br></span>
+                        <span class="grey"><?php echo$place; ?></span>
+                    </div>
+                    <div class="col col2 update-edit-pos abc" style="display: none"  >
+                            <a href="#" onclick="editprofile('<?php echo$id; ?>')"data-toggle='modal' data-target='#update_studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>
+                    </div>
                 </div>
              <?php   
             }
@@ -88,7 +92,7 @@
         }
 
         echo "Registration Successful";
-        //header('Location:/Resume/education.php');
+        header('Location:/Resume/education.php');
     }
 
     if(isset($_POST['id']) && isset($_POST['id']) != "")
@@ -121,3 +125,4 @@
     exit;
     mysqli_close($conn);
 ?> 
+

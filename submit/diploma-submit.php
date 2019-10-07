@@ -46,7 +46,7 @@
 
                         echo '</div>';
 
-                        echo '<div class="col col2">';
+                        echo '<div class="col col2 abc" style="display:none;">';
                             echo '<a href="#" onclick="DeleteRecorddiploma('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                             </div>
                             </div>';

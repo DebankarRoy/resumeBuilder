@@ -17,10 +17,14 @@ CREATE TABLE profiles(
     email_student VARCHAR(255) NOT NULL,
     phone_number varchar(10),
     city VARCHAR(255) NOT NULL,
+    image varchar(255) not null,
     user_id int,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+
+alter table profiles add image varchar(255) not null ;
 
 CREATE TABLE graduation(
     id int(200) NOT NULL AUTO_INCREMENT,

@@ -126,7 +126,7 @@
 			  <span class="menu-bar" onclick="openNav()">&#9776;</span>
 			</div>
 
-			<div class="row data bor">
+			<div class="row data bor" onmouseover="showedit()" onmouseout="shownothing()">
 				<div class="row info exp heading">
 					<div class="datatitle">Experience</div>
 				</div>
@@ -506,6 +506,17 @@
 				$("#end-date_job").datepicker();
 			});
 		</script>
+
+		<script>
+		function showedit(){
+			$('.abc').css("display","inline-block");
+		}
+
+		function shownothing(){
+			$('.abc').css("display","none");
+		}
+
+	</script>
 
 
 		<script>

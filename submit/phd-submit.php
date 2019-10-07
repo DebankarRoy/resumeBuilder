@@ -30,9 +30,9 @@
             $prf_mrk_phd= $row['performence_marks'];
 
                 
-                 echo '<div class="row data-fetch">
-                        <div class="col col1"><h5 class="fetched-head">'; 
-                            echo "PhD, ".$str_phd;
+                 ?> <div class="row data-fetch" onmouseover="showedit()" onmouseout="shownothing()">
+                        <div class="col col1"><h5 class="fetched-head"> 
+                           <?php echo "PhD, ".$str_phd;
                             echo "(".$str_yr_phd."-".$end_yr_phd.")";
                             echo '</h5>';
 
@@ -47,7 +47,7 @@
 
                         echo '</div>';
 
-                        echo '<div class="col col2">';
+                        echo '<div class="col col2 abc" style="display:none;">';
                             echo '<a href="#" onclick="DeleteRecordphd('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                             </div>
                             </div>';

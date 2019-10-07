@@ -51,7 +51,7 @@
                     echo'</div>
                 </div>
 
-                <div class="col col2"><a href="#" onclick="DeleteRecordss('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
+                <div class="col col2 abc" style="display:none;"><a href="#" onclick="DeleteRecordss('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                 </div>
             </div> ';
 

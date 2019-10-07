@@ -6,7 +6,15 @@
     	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/home-2.css"/>
 		<link rel="stylesheet" href="css/modal-2.css"/>
-		
+		<style>
+			html {
+			    background-color: #E0F2F2;
+			}
+			.footer{
+			    position: fixed;
+			    bottom: 0;
+			}
+		</style>
 		
 		<title>Resumes</title>
 </head>

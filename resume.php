@@ -10,6 +10,10 @@
 			.colp{
 				height: none;
 				}
+			/*body{
+				background-color: #E2F2F2;
+			}*/
+
 		</style>
 		
 		<title>Resume</title>
@@ -211,7 +215,9 @@
 					</div>
 				</div>
 			<div class="col resume-col"></div>
-			<div class="row resume-download"></div>
+			<div class="row resume-download">
+				<a href="pdf_generator.php" class="btn btn-success"></a>
+			</div>
 		</div>
 
 	           <!-- Modal -->

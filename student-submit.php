@@ -40,7 +40,7 @@
                         <span class="grey"><?php echo$place; ?></span>
                     </div>
                     <div class="col col2 update-edit-pos abc" style="display: none"  >
-                            <a href="#" onclick="editprofile('<?php echo$id; ?>')"data-toggle='modal' data-target='#update_studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>
+                            <a href="#" onclick="getstudent('<?php echo$id; ?>')"data-toggle='modal' data-target='#update_studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>
                     </div>
                 </div>
              <?php   
@@ -95,20 +95,23 @@
         header('Location:/Resume/education.php');
     }
 
-    if(isset($_POST['id']) && isset($_POST['id']) != "")
+    if(isset($_POST['updatestudent']))
     {
-        $user_id = $_POST['id'];
-        $query = "SELECT * FROM profiles WHERE id = '$user_id'";
-        if (!$result = mysqli_query($conn,$query)) {
-            exit(mysqli_error());
-        }
+        $userid_loggedin=$_SESSION['id'];
+        $prfl=$_SESSION['profileid'];
+
+       
+
+        $sql = "SELECT * FROM profiles where user_id=$userid_loggedin and id=$prfl";
+        $result = mysqli_query($conn,$sql);
+        
         
         $response = array();
 
         if(mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
            
-                $response = $row;
+               $response=$row;
             }
         } 
 
@@ -118,9 +121,26 @@
     if(isset($_POST['updateid']))
     {
         $id=$_POST['updateid'];
-        
-
     }
+
+
+    if(isset($_POST['update_name']) || isset($_POST['update_email']) || isset($_POST['update_city']) || isset($_POST['update_phone_number'])){
+    $userid_loggedin=$_SESSION['id'];
+    $prfl=$_SESSION['profileid'];   
+
+    $hidden_user_idupd = $_POST['hidden_user_idupd'];
+    $firstnameupd = $_POST['update_name'];
+    $cityupd = $_POST['update_city'];
+    $emailupd = $_POST['update_email'];
+    $mobileupd = $_POST['update_phone_number'];
+
+    $sql = " UPDATE `profiles` SET `name`='$firstnameupd',`email_student`='$emailupd',`phone_number`='$mobileupd',`city`='$cityupd' WHERE user_id=$userid_loggedin and id=$prfl ";
+
+     if(!mysqli_query($conn,$sql)){
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        echo "working";
+}
 
     exit;
     mysqli_close($conn);

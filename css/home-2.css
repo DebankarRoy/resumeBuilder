@@ -1,3 +1,4 @@
+
 button, input, optgroup, select, textarea {
     line-height: normal;
     outline: none;
@@ -1429,3 +1430,13 @@ a:hover{
     }
 }
 
+.font-siz{
+    font-size: 5px;
+}
+
+.bold
+{
+    position: absolute;
+    left: 400px;
+    color: green;
+}

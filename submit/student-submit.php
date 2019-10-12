@@ -37,7 +37,7 @@
                     <img src='<?php echo $image ?>' height="40px" width="40px" >
                 </div>
                 <div class="col col2 update-edit-pos hover">
-                        <a href="#" onclick="editprofile('<?php echo$id; ?>')"data-toggle='modal' data-target='#update_studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>
+                        <a href="#" onclick="updatestudent('<?php echo$id; ?>')"data-toggle='modal' data-target='#update_studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>
                 </div>
              <?php   
             }
@@ -91,12 +91,13 @@
         //header('Location:/Resume/education.php');
     }
 
-    if(isset($_POST['id']) && isset($_POST['id']) != "")
+    if(isset($_POST['getstudent']))
     {
-        $user_id = $_POST['id'];
-        $query = "SELECT * FROM profiles WHERE id = '$user_id'";
-        if (!$result = mysqli_query($conn,$query)) {
-            exit(mysqli_error());
+        $userid_loggedin=$_SESSION['id'];
+        $prfl=$_SESSION['profileid'];
+
+        $sql = "SELECT * FROM profiles WHERE id = '$prfl' & user_id=$userid_loggedin";
+        $result = mysqli_query($conn,$sql);
         }
         
         $response = array();

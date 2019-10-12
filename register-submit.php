@@ -10,15 +10,56 @@
         die("connection failed : ".mysqli_connect_error());
     }
     
-    $name = $_GET['name'];
-    $email = $_GET['email'];
-    $password = $_GET['password'];
-    $sql = "INSERT INTO users (name, email, password)
-            VALUES('$name', '$email', '$password')";
-    if(!mysqli_query($conn,$sql)){
-        die("Error : ".$sql."<br>".mysqli_error($conn));
+    if(isset($_GET['name']) && isset($_GET['email']) && isset($_GET['password']))
+    {
+        $name = $_GET['name'];
+        $email = $_GET['email'];
+        $password = $_GET['password'];
+        $sql = "INSERT INTO users (name, email, password)
+                VALUES('$name', '$email', '$password')";
+        $result=mysqli_query($conn,$sql);
+        if(!$result){
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+
+        while ($row=mysqli_fetch_array($result)) {
+            session_start();
+            $_SESSION['loggedin']=true;    
+            $_SESSION['id'] = $row['id'];
+            $_SESSION['name'] = $row['name'];
+            header('Location: home.php');
+            exit;
+        }
+
+        
     }
-    echo "Registration Successful";
+
+    if(isset($_GET['email']) && isset($_GET['password']))
+    {
+        $email = $_GET['email'];
+        $password = $_GET['password'];
+
+
+        $sql = "select * from users where email='$email' and password='$password'";
+        
+        $result = mysqli_query($conn, $sql);
+        if (!$result) {
+           die("Error: " . $sql . "<br>" . mysqli_error($conn));
+           //echo("wrong password or email");
+        }
+        
+        if(mysqli_num_rows($result)==0){
+                echo "login failed";
+        }
+        while ($row=mysqli_fetch_array($result)) {
+            session_start();
+            $_SESSION['loggedin']=true;    
+            $_SESSION['id'] = $row['id'];
+            $_SESSION['name'] = $row['name'];
+            header('Location: home.php');
+            exit;
+        }
+    }
     header('Location: login.php');
     exit;
     mysqli_close($conn);

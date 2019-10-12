@@ -36,6 +36,47 @@ $('document').ready(function(){
 })
 
 
+function getstudent(){
+				var updatestudent = 'updatestudent';
+				//console.log('working'+fetchRecordstudent);
+				$.ajax({
+					url: 'student-submit.php',
+					type: 'POST',
+					data: { updatestudent:updatestudent},
+					success:function(data,status){
+							//alert(data);
+				 			var user = JSON.parse(data);
+				 			//alert(user);
+				 			$("#update_name").val(user.name);
+				            $("#update_city").val(user.city);
+				            $("#update_email").val(user.email_student);
+				            $("#update_mobile").val(user.phone_number);
+						 }
+				})
+			}
+
+
+function UpdateStudent() {
+    var frm = $('#update_profile');
+    //alert(frm.serialize());
+		$.ajax({
+        type: "POST",
+        url: "student-submit.php",
+        data: frm.serialize(),
+        //console.log(data);
+        success: function(data,status) {
+      		readRecordstudent();
+            }
+        });
+}
+
+/*hidden_user_id: hidden_user_id,
+            firstname: firstname,
+            lastname: lastname,
+            email: email,
+            mobile: mobile
+
+
 			/*function DeleteRecordskill(deleteidskill){
 				var conf = confirm("Are you sure?");
 				if(conf == true) {

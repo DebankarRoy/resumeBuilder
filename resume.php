@@ -233,35 +233,35 @@
 		                <div class="row form-group">
 		                    <label for="name" class="control-label" id="x">Name:</label>
 		                    <div class="input-group salutation">
-		                        <input class="form-control name" id="update_name" tabindex="2" name="name" placeholder="Update your name" value="" type="text">
+		                        <input class="form-control name" id="update_name" tabindex="2" name="update_name" placeholder="Update your name" value="" type="text">
 		                 
 		                    </div>
 		                </div>
 		                <div class="row form-group">
 		                    <label for="number" class="control-label">Mobile Number:</label>
 		                    <div class="input-group">
-		                        <input type="number"  class="wid form-control mobile-number" tabindex="4" id="update_mobile" name="phone_no" placeholder="Update mobile number " value="">
+		                        <input type="number"  class="wid form-control mobile-number" tabindex="4" id="update_mobile" name="update_phone_number" placeholder="Update mobile number " value="">
 		                    </div>
 		                </div>
 
 		                <div class="row form-group">
 		                    <label for="email" class="control-label">Email:</label>
 		                    <div class="input-group">
-		                        <input type="text" class="wid form-control" id="update_email" tabindex="5" name="email" placeholder="Update your email" value="" autocomplete="off">   
+		                        <input type="text" class="wid form-control" id="update_email" tabindex="5" name="update_email" placeholder="Update your email" value="" autocomplete="off">   
 		                    </div>
 		                </div>
 
 		                <div class="row form-group">
 		                    <label for="current_city" class="control-label">Current City:</label>
 		                    <div class="input-group">
-		                        <input type="text" class="wid form-control" id="update_city" tabindex="6" name="current_city" placeholder="Update your city" value="" autocomplete="off">    
+		                        <input type="text" class="wid form-control" id="update_city" tabindex="6" name="update_city" placeholder="Update your city" value="" autocomplete="off">    
 		                    </div>
 		                </div>
 	                </form>
 	            </div>
 	            <div class="row">
 	                <button type="button" class="btn btn-secondary update-btn-pos" data-dismiss="modal">Close</button>
-	                <button type="button" class="btn btn-info update-btn-pos" id="update_stu" onclick="updatestudent()">Save changes</button>
+	                <button type="button" class="btn btn-info update-btn-pos" id="update_stu" onclick="UpdateStudent()" data-dismiss="modal" style="margin-bottom: 10px;" >Save changes</button>
 	            </div>
 	        </div>
 	      </div>

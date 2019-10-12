@@ -39,7 +39,7 @@
                 <p>Log-in</p>
             </div>
             <div class="form-box">
-                <form action="login-submit.php" id="login-form" enctype="multipart/form-data" method="POST">
+                <form action="register-submit.php" id="login-form" enctype="multipart/form-data" method="GET">
                     <div class="email">
                         <div class="col3"><label for="email">Email</label></div>
                         <div class="col4"><input type="text" name="email" required id="email"></div>

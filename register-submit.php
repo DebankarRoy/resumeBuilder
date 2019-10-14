@@ -15,6 +15,11 @@
         $name = $_GET['name'];
         $email = $_GET['email'];
         $password = $_GET['password'];
+
+        $name=mysqli_real_escape_string($conn,$_GET['name']);
+        $password=mysqli_real_escape_string($conn,$_GET['password']);
+        $email=mysqli_real_escape_string($conn,$_GET['email']);
+
         $sql = "INSERT INTO users (name, email, password)
                 VALUES('$name', '$email', '$password')";
         $result=mysqli_query($conn,$sql);
@@ -29,9 +34,7 @@
             $_SESSION['name'] = $row['name'];
             header('Location: home.php');
             exit;
-        }
-
-        
+        }   
     }
 
     if(isset($_GET['email']) && isset($_GET['password']))
@@ -39,6 +42,10 @@
         $email = $_GET['email'];
         $password = $_GET['password'];
 
+        $email=mysqli_real_escape_string($conn,$_GET['email']);
+        $password=mysqli_real_escape_string($conn,$_GET['password']);
+
+        //echo $email.$password;
 
         $sql = "select * from users where email='$email' and password='$password'";
         
@@ -49,7 +56,9 @@
         }
         
         if(mysqli_num_rows($result)==0){
-                echo "login failed";
+                
+                header('Location: loginerror.php');
+                //echo "<h3>login failed,try again</h3>";
         }
         while ($row=mysqli_fetch_array($result)) {
             session_start();
@@ -60,7 +69,7 @@
             exit;
         }
     }
-    header('Location: login.php');
+    //header('Location: login.php');
     exit;
     mysqli_close($conn);
 ?> 

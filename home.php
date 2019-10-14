@@ -125,7 +125,7 @@
 					<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
 				</div>
 			</div>				
-		</div>
+	</div>
 
 
 		<script src="js/jquery.min.js"></script>

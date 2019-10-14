@@ -3,6 +3,9 @@
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
            header("Location: home.php");
     }
+
+    require_once "config.php";
+    $loginUrl=$gClient->createAuthUrl();
 ?>
 
 <html>
@@ -10,7 +13,7 @@
         <title>Login</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-        <link rel="stylesheet" href="/social_media/css/register-login.css">
+        <link rel="stylesheet" href="css/register-login.css">
     </head>
     <body>
         <div class="col left">
@@ -60,7 +63,7 @@
                         <span class="sign-in-login"><span class="or">or<br></span><b>Connect with</b></span>
                     </div>
                     <div class="col google">
-                        <a href=""><img src="img/search.png" class="img-size"></a>
+                        <img src="img/search.png" class="img-size" onclick="window.location='<?php echo $loginUrl; ?>'">
                     </div>
                     <div class="col fb">
                         <a href=""><img src="img/facebook.png" class="img-size fb-left-padding"></a>

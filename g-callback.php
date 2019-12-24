@@ -10,72 +10,20 @@
 		header('Location: login.php');
 		exit();
 	}
-
 	$oAuth = new Google_Service_Oauth2($gClient);
 	$userData = $oAuth->userinfo_v2_me->get();
 
-	$password = $userData['id'];
-	$email = $userData['email'];
+	//var_dump($userData);
+	$_SESSION['ac_password'] = $userData['id'];
+	$_SESSION['ac_email'] = $userData['email'];
 	//$_SESSION['gender'] = $userData['gender'];
 	//$_SESSION['picture'] = $userData['picture'];
 	$last_name = $userData['familyName'];
 	$first_name = $userData['givenName'];
-	$name=$first_name.$last_name;
-	
+	$_SESSION['ac_name']=$first_name.$last_name;	
 
-	if(isset($userData['email']) && isset($userData['familyName']) && isset($userData['givenName']))
-    {
-		$hostname = "127.0.0.1";
-		$username = "root";
-		$db_password = "ralphubuntu";
-		$db_name = "resume";
+	//echo $email.$name;
 
-		$conn = mysqli_connect($hostname, $username, $db_password, $db_name);
-		if(!$conn){
-		die("connection failed : ".mysqli_connect_error());
-		}
-
-        $sql = "SELECT * FROM users WHERE email='$email'";
-		$results = mysqli_query($conn, $sql);
-
-		if (mysqli_num_rows($results) > 0) {
-
-		  	$sql = "select * from users where email='$email' and password='$password'";
-	        $result = mysqli_query($conn, $sql);
-	        if (!$result) {
-	           die("Error: " . $sql . "<br>" . mysqli_error($conn));
-	           //echo("wrong password or email");
-	        }
-	        
-	        while ($row=mysqli_fetch_array($result)) {
-	            session_start();
-	            $_SESSION['loggedin']=true;    
-	            $_SESSION['id'] = $row['id'];
-	            $_SESSION['name'] = $row['name'];
-	            header('Location: home.php');
-	            exit;
-	        }	
-		}
-		else{ 
-
-	        $sql = "INSERT INTO users (name, email, password)
-	                VALUES('$name', '$email', '$password')";
-	        $result=mysqli_query($conn,$sql);
-	        if(!$result){
-	            die("Error : ".$sql."<br>".mysqli_error($conn));
-	        }
-
-	        while ($row=mysqli_fetch_array($result)) {
-	            session_start();
-	            $_SESSION['loggedin']=true;    
-	            $_SESSION['id'] = $row['id'];
-	            $_SESSION['name'] = $row['name'];
-	            header('Location: home.php');
-	            exit;
-	        }
-        }   
-    }
-
-	//header('Location: index.php');
+	header('Location: register-submit.php');
 	exit();
 ?>

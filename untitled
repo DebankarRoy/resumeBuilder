@@ -1,0 +1,67 @@
+$left_column = <<<EOF
+	<!---- Education Table ---->
+	<div class="row education-table">
+		<div class="col details-left"><h2>Education</h2></div>
+		<div class="col details-right">	
+EOF;
+
+$obj_pdf->SetFillColor(215, 235, 255);
+$obj_pdf->SetTextColor(94, 185, 242);
+$obj_pdf->writeHTMLCell(80, '', '', '', $left_column, 0, 0, 0, true, 'J', true);
+
+$sql = "SELECT * FROM phd where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+				$id=$row['id'];    
+	            $str_phd= $row['stream'];
+	            $str_yr_phd=$row['start_year'];
+	            $end_yr_phd= $row['end_year'];
+	            $clg_phd= $row['college'];
+	            $prf_scl_phd= $row['performence_scale'];
+	            $prf_mrk_phd= $row['performence_marks'];
+            }
+        }
+$sql = "SELECT * FROM post_graduation where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+                $id=$row['id'];
+                $str_pg= $row['stream'];
+                $deg_pg=$row['degree'];
+                $str_yr_pg=$row['start_year'];
+                $end_yr_pg= $row['end_year'];
+                $clg_pg= $row['college'];
+                $prf_scl_pg= $row['performence_scale'];
+                $prf_mrk_pg= $row['performence_marks'];
+            }
+        }
+
+$right_column = <<<EOF
+		<div class="row data-fetch" >
+            <div class="col col1"><h5 class="fetched-head"> 
+                PhD, $str_phd
+                ($str_yr_phd-$end_yr_phd)
+                </h5>
+
+                <div>
+                         $clg_phd   
+                </div>
+
+                <div>
+                        SGPA: $prf_scl_phd/
+                        $prf_mrk_phd          
+                </div>
+            </div>
+        </div>
+		</div>
+		<div>
+EOF;
+
+	$obj_pdf->SetFillColor(215, 235, 255);
+	$obj_pdf->SetTextColor(40, 37, 41);
+	$obj_pdf->writeHTMLCell(80, '', '', '', $right_column, 0, 1, 0, true, 'J', false);

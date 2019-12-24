@@ -6,6 +6,18 @@
 
     require_once "config.php";
     $loginUrl=$gClient->createAuthUrl();
+
+    /*require_once "fbconfig.php";
+
+    if (isset($_SESSION['access_token'])) {
+        header('Location: login.php');
+        exit();
+    }
+
+    $redirectURL = "http://localhost/Resume/fb-callback.php";
+    $permissions = ['email'];
+    $fbloginURL = $helper->getLoginUrl($redirectURL, $permissions);
+    echo $fbloginURL;*/
 ?>
 
 <html>
@@ -66,7 +78,7 @@
                         <img src="img/search.png" class="img-size" onclick="window.location='<?php echo $loginUrl; ?>'">
                     </div>
                     <div class="col fb">
-                        <a href=""><img src="img/facebook.png" class="img-size fb-left-padding"></a>
+                        <img src="img/facebook.png" class="img-size fb-left-padding" onclick="window.location='<?php echo $fbloginURL; ?>'">
                     </div>   
             </div>
         </div>

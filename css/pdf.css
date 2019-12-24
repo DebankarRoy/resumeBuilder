@@ -1,0 +1,21 @@
+*{
+    box-sizing : border-box;
+    font-family: 'Open Sans';
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row{
+    width: 100%;
+    height: auto;
+    margin-right: 0px; 
+    margin-left: 0px;
+    display: block; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: solid 1px black;
+}

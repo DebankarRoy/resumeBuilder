@@ -347,8 +347,8 @@ input,.outer > .col4{
 }    
 
 .img-size{
-    
     height: 35px;
+    cursor: pointer;
 }
 
 @media (max-width: 600px){

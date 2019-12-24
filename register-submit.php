@@ -69,7 +69,60 @@
             exit;
         }
     }
-    //header('Location: login.php');
-    exit;
+    
+    if(isset($_SESSION['ac_password']) && isset($_SESSION['ac_email']) && isset($_SESSION['ac_name']))
+    {
+        $password=$_SESSION['ac_password'];
+        $email=$_SESSION['ac_email'];
+        $name=$_SESSION['ac_name'];
+
+        //echo $email.$name;
+
+        //checking whether user exists or not
+
+        $sql = "SELECT * FROM users WHERE email='$email'";
+
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+
+            $sql = "select * from users where email='$email' and password='$password'";
+            $result = mysqli_query($conn, $sql);
+
+            if (!$result) {
+               die("Error: " . $sql . "<br>" . mysqli_error($conn));
+               //echo("wrong password or email");
+            }                
+            while ($row=mysqli_fetch_array($result)) {
+
+                $_SESSION['loggedin']=true;    
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['name'] = $row['name'];
+                header('Location: home.php');
+                header("refresh: 1"); 
+                exit();
+            }   
+        }
+        else{ 
+
+            $sql = "INSERT INTO users (name, email, password)
+                    VALUES('$name', '$email', '$password')";
+            $result=mysqli_query($conn,$sql);
+            if(!$result){
+                die("Error : ".$sql."<br>".mysqli_error($conn));
+            }
+
+            while ($row=mysqli_fetch_array($result)) {
+                session_start();
+                $_SESSION['loggedin']=true;    
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['name'] = $row['name'];
+                header('Location: home.php');
+                exit();
+            }
+        }   
+    }
+    //header('Location: home.php');
+    exit();
     mysqli_close($conn);
 ?> 

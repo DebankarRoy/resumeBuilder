@@ -43,7 +43,40 @@
 		$image= $row['image'];
 		}	
 	}
-	
+	$sql = "SELECT * FROM phd where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+
+            $id=$row['id'];    
+            $str_phd= $row['stream'];
+            $str_yr_phd=$row['start_year'];
+            $end_yr_phd= $row['end_year'];
+            $clg_phd= $row['college'];
+            $prf_scl_phd= $row['performence_scale'];
+            $prf_mrk_phd= $row['performence_marks'];
+		}
+	}
+
+        $sql = "SELECT * FROM post_graduation where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+                $id=$row['id'];
+                $str_pg= $row['stream'];
+                $deg_pg=$row['degree'];
+                $str_yr_pg=$row['start_year'];
+                $end_yr_pg= $row['end_year'];
+                $clg_pg= $row['college']; 
+                $prf_scl_pg= $row['performence_scale'];
+                $prf_mrk_pg= $row['performence_marks']; 
+            }
+        } 
+
 
 	require_once('dompdf/autoload.inc.php');
 	require_once 'dompdf/lib/html5lib/Parser.php';
@@ -58,23 +91,98 @@
 	$file='example';
 	//$html = file_get_contents("pdfResume.php"); 
 	$html='<style>
-			.grey{
-				position:relative;
-				left:200px;
 
+			*{
+			    box-sizing : border-box;
+			    font-family: "Open Sans";
 			}
+
+			.row::after {
+			    content: "";
+			    display: block;
+			    clear: both;
+			}
+
+			.row{
+			    width: 100%;
+			    height: auto;
+			    margin-right: 0px; 
+			    margin-left: 0px;
+			    display: block; 
+			    border-top-left-radius: 5px;
+			    border-top-right-radius: 5px;
+			    border: solid 1px black;
+			}
+			.col{
+				height:auto;
+			    float: left;
+			    border: solid 1px green;
+			}
+
+			.dp-col{
+				width:20%;
+			}
+			.col1{
+				width:80%;
+			}
+			.title{
+				width:40%;
+			}
+			.activity{
+				width:55%;
+			}
+			.phd{
+				border:3 px solid red;
+			}
+
 		   </style>
-	<div class="row">
-                    <div class="col dp-col">
-                        <img class="dp" src='.$image.'style="height:50px;width:50px;">
-                    </div>
+			<div class="row">
                     <div class="col col1">
                         <h2>'.$name.'</h2>
                         <span class="grey">'.$email.'<br></span>
                         <span class="grey">'.$phone.'<br></span>
                         <span class="grey">'.$place.'</span>
                     </div>
-            </div>';
+                    <div class="col dp-col">
+                        <img class="dp" src='.$image.'style="height:50px;width:50px;">
+                    </div>
+            </div>
+            <div class="row education">
+            	<div class="col title">
+            		<h3>Education</h3>
+            	</div>
+            	<div class="col activity">
+	            	<div class="col phd">
+            			<h5 class="fetched-head"> 
+                       PhD,'.$str_phd.'
+                        ('.$str_yr_phd.'-'.$end_yr_phd.')
+                        </h5>
+                    	<div>
+	                        '.$clg_phd.'   
+	                    </div>
+						<div>
+	                         SGPA: '.$prf_scl_phd.'/'.
+	                        $prf_mrk_phd.'         
+	                    </div>
+                	</div>
+
+                	<div class="col post-grad">
+            			<h5 class="fetched-head"> 
+                       PhD,'.$deg_pg.','.$str_pg.'
+                        ('.$str_yr_pg.'-'.$end_yr_pg.')
+                        </h5>
+                    	<div>
+	                        '.$clg_pg.'   
+	                    </div>
+						<div>
+	                         SGPA: '.$prf_scl_pg.'/'.
+	                        $prf_mrk_pg.'         
+	                    </div>
+                	</div>
+
+            	</div>
+            </div>
+            ';
 
 	$dompdf->loadHtml($html);
 

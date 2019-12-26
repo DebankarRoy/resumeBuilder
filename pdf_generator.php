@@ -75,8 +75,56 @@
                 $prf_scl_pg= $row['performence_scale'];
                 $prf_mrk_pg= $row['performence_marks']; 
             }
-        } 
+        }
 
+        $sql = "SELECT * FROM graduation where profiles_id = $prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+                $id=$row['id'];
+                $deg= $row['degree'];
+                $str= $row['stream'];
+                $str_yr= $row['start_year'];
+                $end_yr= $row['end_year'];
+                $clg= $row['college'];
+                $prf_scl= $row['performence_scale'];
+                $prf_mrk= $row['performence_marks'];
+            }
+        }
+
+        $sql = "SELECT * FROM senior_secondary where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+
+                $id=$row['id'];
+                $str_ss= $row['stream'];
+                $end_yr_ss= $row['end_year'];
+                $scl_ss= $row['school'];
+                $board_ss= $row['board'];
+                $prf_scl_ss= $row['performence_scale'];
+                $prf_mrk_ss= $row['performence_marks'];
+            }
+        }
+
+         $sql = "SELECT * FROM secondary where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+
+            while ($row = mysqli_fetch_array($result)) {
+                $id=$row['id'];
+                $end_yr_s= $row['end_year'];
+                $scl_s= $row['school'];
+                $board_s= $row['board'];
+                $prf_scl_s= $row['performence_scale'];
+                $prf_mrk_s= $row['performence_marks'];
+            }
+        }
 
 	require_once('dompdf/autoload.inc.php');
 	require_once 'dompdf/lib/html5lib/Parser.php';
@@ -116,7 +164,8 @@
 			.col{
 				height:auto;
 			    float: left;
-			    border: solid 1px green;
+			    //border: solid 1px green;
+
 			}
 
 			.dp-col{
@@ -132,7 +181,13 @@
 				width:55%;
 			}
 			.phd{
-				border:3 px solid red;
+				
+			}
+			.post-grad{
+				
+			}
+			.grad{
+				
 			}
 
 		   </style>
@@ -152,7 +207,7 @@
             		<h3>Education</h3>
             	</div>
             	<div class="col activity">
-	            	<div class="col phd">
+	            	<div class="row phd">
             			<h5 class="fetched-head"> 
                        PhD,'.$str_phd.'
                         ('.$str_yr_phd.'-'.$end_yr_phd.')
@@ -164,11 +219,11 @@
 	                         SGPA: '.$prf_scl_phd.'/'.
 	                        $prf_mrk_phd.'         
 	                    </div>
-                	</div>
+                	</div><br>
 
-                	<div class="col post-grad">
+                	<div class=" row post-grad">
             			<h5 class="fetched-head"> 
-                       PhD,'.$deg_pg.','.$str_pg.'
+                       '.$deg_pg.','.$str_pg.'
                         ('.$str_yr_pg.'-'.$end_yr_pg.')
                         </h5>
                     	<div>
@@ -180,8 +235,54 @@
 	                    </div>
                 	</div>
 
+                	<div class=" row grad">
+            			<h5 class="fetched-head"> 
+                       '.$deg.','.$str.'
+                        ('.$str_yr.'-'.$end_yr.')
+                        </h5>
+                    	<div>
+	                        '.$clg.'   
+	                    </div>
+						<div>
+	                         SGPA: '.$prf_scl.'/'.
+	                        $prf_mrk.'         
+	                    </div>
+                	</div>
+
+                	<div class=" row ss">
+            			<h5 class="fetched-head"> 
+                        XII (Senior Secondary)<br></h5>
+                            Year of Completion:'.$end_yr_ss.'
+                    	<div>
+	                        '.$board_ss.'Board('.$scl_ss.')   
+	                    </div>
+						<div>
+	                         SGPA:'.$prf_scl_ss.'/'.$prf_mrk_ss.'        
+	                    </div>
+                	</div>
+
+                	<div class=" row s">
+            			<h5 class="fetched-head"> 
+                        X (Secondary),'.$str_s.'<br></h5>
+                            Year of Completion:'.$end_yr_s.'
+                    	<div>
+	                        '.$board_s.'Board('.$scl_s.')   
+	                    </div>
+						<div>
+	                         SGPA:'.$prf_scl_s.'/'.$prf_mrk_s.'        
+	                    </div>
+                	</div>
             	</div>
             </div>
+
+            <div class="row education">
+            	<div class="col title">
+            		<h3>Experiences</h3>
+            	</div>
+            	<div class="col activity">
+            	</div>
+            </div>
+
             ';
 
 	$dompdf->loadHtml($html);

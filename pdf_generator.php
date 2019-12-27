@@ -126,6 +126,86 @@
             }
         }
 
+        $prfl=$_SESSION['profileid'];
+        $sql = "SELECT * FROM job_details where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+            
+            while ($row = mysqli_fetch_array($result)) {
+                $id=$row['id'];
+                $profile=$row['job_profile'];
+                $org = $row['organization'];
+                $loc= $row['location'];
+                $start_job=$row['start_date'];
+                $end_job=$row['end_date'];
+                $description=$row['description'];
+                $start=date('M Y',strtotime($start_job));
+                $end=date('M Y',strtotime($end_job));
+            }
+        }
+
+        $sql = "SELECT * FROM intern_details where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+            while ($row = mysqli_fetch_array($result)) {
+
+                $id=$row['id'];
+                $profile_i=$row['intern_profile'];
+                $org_i= $row['organization'];
+                $loc_i= $row['location'];
+                $start_int=$row['start_date'];
+                $end_int=$row['end_date'];
+                $description_i=$row['description'];
+                $start_i=date('M Y',strtotime($start_int));
+                $end_i=date('M Y',strtotime($end_int));
+            }
+        }
+
+        $sql = "SELECT * FROM training_details where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+            while ($row = mysqli_fetch_array($result)) {
+                $id=$row['id'];
+                $program_t=$row['program_name'];
+                $org_t = $row['organization'];
+                $loc_t= $row['location'];
+                $start_pro=$row['start_date'];
+                $end_pro=$row['end_date'];
+                $description_t=$row['description'];
+                $start_t=date('M Y',strtotime($start_pro));
+                $end_t=date('M Y',strtotime($end_pro));
+        	}
+    	}
+
+    	$sql = "SELECT * FROM project_details where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+            while ($row = mysqli_fetch_array($result)) {
+                $id=$row['id'];
+                $project=$row['project_name'];
+                $link= $row['link'];
+                $start_pro=$row['start_date'];
+                $end_pro=$row['end_date'];
+                $description=$row['description'];
+                $start_p=date('M Y',strtotime($start_pro));
+                $end_p=date('M Y',strtotime($end_pro));
+            }
+        }
+
+        $sql = "SELECT * FROM other_details where profiles_id=$prfl"; 
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+            while ($row = mysqli_fetch_array($result)) {
+                $id=$row['id'];
+                $profile_oth=$row['description'];
+            }
+        }
+
 	require_once('dompdf/autoload.inc.php');
 	require_once 'dompdf/lib/html5lib/Parser.php';
 	require_once 'dompdf/lib/php-font-lib/src/FontLib/Autoloader.php';
@@ -189,6 +269,7 @@
 			.grad{
 				
 			}
+			.page_break { page-break-before: always; }
 
 		   </style>
 			<div class="row">
@@ -274,15 +355,98 @@
                 	</div>
             	</div>
             </div>
-
-            <div class="row education">
+            <div class="page_break">
+            </div>
+            <div class="row experience">
             	<div class="col title">
             		<h3>Experiences</h3>
             	</div>
             	<div class="col activity">
+            		<div class="row job">
+            			<h3>Job:</h3>
+            			<h5 class="fetched-head">'
+                            .$profile.
+                        '</h5>
+                        <div>
+                        	'.$org.'('.$loc.')   
+                        </div>
+                        <div>
+                        	'.$start.'-'.$end.'         
+                        </div>
+                        <div>
+                            '.$description.'       
+                        </div>
+            		</div>
+            		<br><br><br><br>
+            		<div class="row intern">
+
+            			<h3>Internship:</h3>
+            			<h5 class="fetched-head">'
+                            .$profile_i.
+                        '</h5>
+                        <div>
+                        	'.$org_i.'('.$loc_i.')   
+                        </div>
+                        <div>
+                        	'.$start_i.'-'.$end_i.'         
+                        </div>
+                        <div>
+                            '.$description_i.'       
+                        </div>
+            		</div>
+
+            		<div class="row training">
+
+            			<h3>Training:</h3>
+            			<h5 class="fetched-head">'
+                            .$profile_t.
+                        '</h5>
+                        <div>
+                        	'.$org_t.'('.$loc_t.')   
+                        </div>
+                        <div>
+                        	'.$start_t.'-'.$end_t.'         
+                        </div>
+                        <div>
+                            '.$description_t.'       
+                        </div>
+            		</div>
+
+            		<div class="row project">
+
+            			<h3>Project:</h3>
+            			<h5 class="fetched-head">'
+                            .$project.
+                        '</h5>
+                        <div>
+                        	'.$start_t.'-'.$end_t.'         
+                        </div>
+                         <div>
+                        	<a href="'.$link.'">'.$link.'</a>  
+                        </div>
+                        <div>
+                            '.$description_t.'       
+                        </div>
+            		</div>
+
+            		<div class="row project">
+
+            			<h3>Others:</h3>
+            			<h5 class="fetched-head">
+                            <li>'.$profile_oth.'</li>
+                        </h5>
+            		</div>
             	</div>
             </div>
-
+            <div class="page_break">
+            </div>
+            <div class="row skill">
+            	<div class="col title">
+            		<h3>Skill</h3>
+            	</div>
+            	<div class="col activity">
+            	</div>
+            </div>
             ';
 
 	$dompdf->loadHtml($html);

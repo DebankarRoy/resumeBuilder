@@ -190,8 +190,8 @@
 			<div class="colp right>">
 				<span class="social_ids">Connect with me</span>
 				<div class="social_id_img">
-					<a href=""><img src="img/instagram.png" class="insta_img"></a>
-					<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
+					<a href="https://www.instagram.com/ralph_since99/" target="_blank"><img src="img/instagram.png" class="insta_img"></a>
+					<a href="https://www.linkedin.com/in/debankar-roy-ralph/" target="_blank"><img src="img/linkedin.png" class="linkedin_img"></a>
 				</div>
 			</div>				
 		</div>
@@ -231,6 +231,7 @@
 										 				<div class="start-year-container">
 										 					<select data-placeholder="Choose year..." id="start_year" name="start_year_clg" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+										 						<option value="2020">2025</option>
 										 						<option value="2020">2024</option>
 											 					<option value="2019">2023</option>
 										 						<option value="2020">2022</option>
@@ -283,6 +284,11 @@
 									 					<div class="end-year-container">
 									 						<select data-placeholder="Choose year..." id="end_year input-type" name="end_year_clg" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+										 						<option value="2020">2025</option>
+										 						<option value="2020">2024</option>
+											 					<option value="2019">2023</option>
+										 						<option value="2020">2022</option>
+											 					<option value="2019">2021</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
 											 					<option value="2018">2018</option>
@@ -416,6 +422,11 @@
 										 					<select data-placeholder="Choose year..." id="end_year_ss" name="end_year_ss" class="chosen-select 
 										 					form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+										 						<option value="2020">2025</option>
+										 						<option value="2020">2024</option>
+											 					<option value="2019">2023</option>
+										 						<option value="2020">2022</option>
+											 					<option value="2019">2021</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
 											 					<option value="2018">2018</option>
@@ -547,6 +558,11 @@
 															<select data-placeholder="Choose year..." id="start_year" name="end_year_s" class="chosen-select 
 															form-control chosen-year" tabindex="-1" style="display:;">	 
 																<option value="">Choose year</option>
+																<option value="2020">2025</option>
+										 						<option value="2020">2024</option>
+											 					<option value="2019">2023</option>
+										 						<option value="2020">2022</option>
+											 					<option value="2019">2021</option>
 																<option value="2020">2020</option>
 																<option value="2019">2019</option>
 																<option value="2018">2018</option>
@@ -665,6 +681,7 @@
 										 				<div class="start-year-container">
 										 					<select data-placeholder="Choose year..." id="start_year" name="start_year_pg" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+											 					<option value="2019">2021</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
 											 					<option value="2018">2018</option>
@@ -713,6 +730,11 @@
 									 					<div class="end-year-container">
 									 						<select data-placeholder="Choose year..." id="end_year input-type" name="end_year_pg" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+										 						<option value="2020">2025</option>
+										 						<option value="2020">2024</option>
+											 					<option value="2019">2023</option>
+										 						<option value="2020">2022</option>
+											 					<option value="2019">2021</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
 											 					<option value="2018">2018</option>
@@ -843,6 +865,7 @@
 										 				<div class="start-year-container">
 										 					<select data-placeholder="Choose year..." id="start_year" name="start_year_dp" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+											 					<option value="2019">2021</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
 											 					<option value="2018">2018</option>
@@ -891,6 +914,11 @@
 									 					<div class="end-year-container">
 									 						<select data-placeholder="Choose year..." id="end_year input-type" name="end_year_dp" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+										 						<option value="2020">2025</option>
+										 						<option value="2020">2024</option>
+											 					<option value="2019">2023</option>
+										 						<option value="2020">2022</option>
+											 					<option value="2019">2021</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
 											 					<option value="2018">2018</option>
@@ -1013,6 +1041,7 @@
 										 				<div class="start-year-container">
 										 					<select data-placeholder="Choose year..." id="start_year" name="start_year_ph" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+											 					<option value="2019">2021</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
 											 					<option value="2018">2018</option>
@@ -1061,6 +1090,11 @@
 									 					<div class="end-year-container">
 									 						<select data-placeholder="Choose year..." id="end_year input-type" name="end_year_ph" class="chosen-select form-control chosen-year" tabindex="-1" style="display:;">	 
 										 						<option value="">Choose year</option>
+										 						<option value="2020">2025</option>
+										 						<option value="2020">2024</option>
+											 					<option value="2019">2023</option>
+										 						<option value="2020">2022</option>
+											 					<option value="2019">2021</option>
 										 						<option value="2020">2020</option>
 											 					<option value="2019">2019</option>
 											 					<option value="2018">2018</option>

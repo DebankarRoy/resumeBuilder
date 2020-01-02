@@ -181,8 +181,8 @@
 			<div class="colp right>">
 				<span class="social_ids">Connect with me</span>
 				<div class="social_id_img">
-					<a href=""><img src="img/instagram.png" class="insta_img"></a>
-					<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
+					<a href="https://www.instagram.com/ralph_since99/" target="_blank"><img src="img/instagram.png" class="insta_img"></a>
+					<a href="https://www.linkedin.com/in/debankar-roy-ralph/" target="_blank"><img src="img/linkedin.png" class="linkedin_img"></a>
 				</div>
 			</div>				
 		</div>
@@ -227,7 +227,7 @@
 							 								<input type="text" id="end-date_training" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_tra" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 						 								</div>
 						 								<div class="radio-btn">
-						 									<input type="checkbox" id="present"><span class="ongoing">Currently Ongoing</span>
+						 									<input type="checkbox" id="training_present"><span class="ongoing">Currently Ongoing</span>
 						 								</div>
 							 						</div>
 							 					</div>
@@ -270,15 +270,15 @@
 							 					<div class=" row start-end-date">
 							 						<div class="col date">Start Date
 							 							<div class="name-container">
-							 								<input type="text" id="start-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_pro" placeholder="Ex: starting date">
+							 								<input type="text" id="start-date_pro" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="startdate_pro" placeholder="Ex: starting date">
 						 								</div>
 							 						</div>
 							 						<div class="col date">End Date
 							 							<div class="name-container">
-							 								<input type="text" id="end-date" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_pro" placeholder="Ex: ending date">
+							 								<input type="text" id="end-date_pro" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_pro" placeholder="Ex: ending date">
 						 								</div>
 						 								<div class="radio-btn">
-						 									<input type="checkbox" id="present">Currently working
+						 									<input type="checkbox" id="project_present">Currently working
 						 								</div>
 							 						</div>
 							 					</div>
@@ -346,7 +346,7 @@
 						 								<input type="text" id="end-date_intern" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_int" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
-					 									<input type="checkbox" id="present">Currently Ongoing
+					 									<input type="checkbox" id="intern_present">Currently Ongoing
 					 								</div>
 						 						</div>
 						 					</div>
@@ -408,7 +408,7 @@
 						 								<input type="text" id="end-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_job" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
 					 								<div class="radio-btn">
-					 									<input type="checkbox" id="present">Currently Ongoing 
+					 									<input type="checkbox" id="job_present">Currently Ongoing 
 					 								</div>
 						 						</div>
 						 					</div>
@@ -479,10 +479,10 @@
 
 		<script >
 			$(document).ready(function(){
-				$("#start-date").datepicker();
+				$("#start-date_pro").datepicker();
 			});
 			$(document).ready(function(){
-				$("#end-date").datepicker();
+				$("#end-date_pro").datepicker();
 			});
 			
 			$(document).ready(function(){
@@ -519,38 +519,52 @@
 	</script>
 
 
-		<script>
-			/*$(document).ready(function(){
-				$("#start-date").datepicker();
-			});
-
-			$(document).ready(function(){
-				$("#end-date").datepicker();
-			});
-			/*if ("#present"===true) {
-				$("#end-date").datepicker()="false";
-			}*/
-			/*$(document).ready(function(){
-				$('input[id="end-date"]').attr('disabled',false);
-				if($('input[id="present"]').prop('checked')==true){
-					$('input[id="end-date"]').attr('disabled', true);
-				}
-			})*/
-		</script>
 
 		<script>
-			/*$(function(){
-				$("present").change(function(){
-					var st=this.checked;
-					if(!st){
-						$('#end-date').prop('disabled', true);
-					}
-					else{
-						$('#end-date').prop('disabled',false);
-					}
-				})
-			})
-			//cursor: not-allowed;*/
+		$('#job_present').click(function() {
+		    if ($(this).is(':checked')) {
+		      //return confirm("Are you sure?");
+		      $('#end-date_job').prop('disabled', true);
+		    }
+		    else{
+		    	$('#end-date_job').prop('disabled', false);
+
+		    }
+	  	});
+
+	  	$('#training_present').click(function() {
+		    if ($(this).is(':checked')) {
+		      //return confirm("Are you sure?");
+		      $('#end-date_training').prop('disabled', true);
+		    }
+		    else{
+		    	$('#end-date_training').prop('disabled', false);
+
+		    }
+	  	});
+
+	  	$('#intern_present').click(function() {
+		    if ($(this).is(':checked')) {
+		      //return confirm("Are you sure?");
+		      $('#end-date_intern').prop('disabled', true);
+		    }
+		    else{
+		    	$('#end-date_intern').prop('disabled', false);
+
+		    }
+	  	});
+
+	  	$('#project_present').click(function() {
+		    if ($(this).is(':checked')) {
+		      //return confirm("Are you sure?");
+		      $('#end-date_pro').prop('disabled', true);
+		    }
+		    else{
+		    	$('#end-date_pro').prop('disabled', false);
+
+		    }
+	  	});
+
 		</script>
 	</body>
 </html>

@@ -1,5 +1,14 @@
 <?php
 	
+	//Include required PHPMailer files
+			require 'mail/includes/PHPMailer.php';
+			require 'mail/includes/SMTP.php';
+			require 'mail/includes/Exception.php';
+		//Define name spaces
+			use PHPMailer\PHPMailer\PHPMailer;
+			use PHPMailer\PHPMailer\SMTP;
+			use PHPMailer\PHPMailer\Exception;
+	
 	$hostname = "127.0.0.1";
 	$username = "root";
 	$db_password = "ralphubuntu";
@@ -22,63 +31,47 @@
         }  
 
 		$msg = "Hello ".$name."\n\nYour password is ".$password;
-
-		require_once('PhpMail/mailerClass/PHPMailerAutoload.php');
-
-		/*use PHPMailer\PHPMailer\PHPMailer;
-		use PHPMailer\PHPMailer\Exception;*/
-
-		/*require 'PHPMailer/src/Exception.php';
-		require 'PHPMailer/src/PHPMailer.php';
-		require 'PHPMailer/src/SMTP.php';*/
-
-
-		$mail = new PHPMailer();
-
-		try {
-		    //Server settings
-		    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-		    $mail->isSMTP();                                            // Send using SMTP
-		    $mail->Host= 'tls://smtp.gmail.com:587';                    // Set the SMTP server to send through
-		    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-		    $mail->Username   = 'resumerhelp@gmail.com';               // SMTP username
-		    $mail->Password   = 'resumer$147@Ralph';                	 // SMTP password
-		    $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-		    $mail->Port       = 587;                                    // TCP port to connect to
-
-		    //Recipients
-		    $mail->setFrom('no-reply@resumerhelp.com');
-		    $mail->addAddress($email);     // Add a recipient
-		    /*$mail->addAddress('ellen@example.com');               // Name is optional
-		    $mail->addReplyTo('info@example.com', 'Information');
-		    $mail->addCC('cc@example.com');
-		    $mail->addBCC('bcc@example.com');*/
-
-		    // Attachments
-		    /*$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-		    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');*/    // Optional name
-
-		    // Content
-		    $mail->isHTML(true);                                  // Set email format to HTML
-		    $mail->Subject = 'Here is the subject';
-		    $mail->Body    = $msg;
-		    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-		    if(!$mail->send()) {
-			   echo 'Message could not be sent.';
-			   echo 'Mailer Error: ' . $mail->ErrorInfo;
-			   exit;
-			}
-			else{
-				echo 'sent';
-			}
-		} catch (Exception $e) {
-		    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-		}
-
-		header('Location: login.php');
-	}
+	
 
 		
-	
+		//Create instance of PHPMailer
+			$mail = new PHPMailer();
+			$mail->SMTPDebug = 2;
+		//Set mailer to use smtp
+			$mail->isSMTP();
+		//Define smtp host
+			$mail->Host = "smtp.gmail.com";
+		//Enable smtp authentication
+			$mail->SMTPAuth = true;
+		//Set smtp encryption type (ssl/tls)
+			$mail->SMTPSecure = "tls";
+		//Port to connect smtp
+			$mail->Port = "587";
+		//Set gmail username
+			$mail->Username = "helpresume63@gmail.com";
+		//Set gmail password
+			$mail->Password = "resumer$147@Ralph";
+		//Email subject
+			$mail->Subject = "Test email using PHPMailer";
+		//Set sender email
+			$mail->setFrom('helpresume63@gmail.com');
+		//Enable HTML
+			//$mail->isHTML(true);
+		//Attachment
+			//$mail->addAttachment('img/attachment.png');
+		//Email body
+			$mail->Body = $msg;
+		//Add recipient
+			$mail->addAddress($email);
+		//Finally send email
+			if ( $mail->send() ) {
+				echo "Email Sent..!";
+			}else{
+				echo "Message could not be sent. Mailer Error: "{$mail->ErrorInfo};
+			}
+		//Closing smtp connection
+			$mail->smtpClose();
+		}
+		header('Location:/Resume/login.php');
+
 ?>

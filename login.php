@@ -77,9 +77,7 @@
                     <div class="col google">
                         <img src="img/search.png" class="img-size" onclick="window.location='<?php echo $loginUrl; ?>'">
                     </div>
-                    <div class="col fb">
-                        <img src="img/facebook.png" class="img-size fb-left-padding" onclick="window.location='<?php echo $fbloginURL; ?>'">
-                    </div>   
+                     
             </div>
         </div>
         <script src="js/jquery.min.js"></script>

@@ -33,7 +33,7 @@
                     <div class="col dp-col">
                         <img class="dp" src='<?php echo $image ?>'  >
                     </div>
-                    <div class="col col1 paddingleft">
+                    <div class="col col1 ">
                         <h2><?php echo$name; ?></h2>
                         <span class="grey"><?php echo$email; ?><br></span>
                         <span class="grey"><?php echo$phone; ?><br></span>

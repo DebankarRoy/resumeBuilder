@@ -191,7 +191,6 @@
 							<a href="work-exp.php"><span class="clr-blue">+ Add more info:</span></a>
 						</div>
 					</div>
-					
 				</div>
 				<div class="row skills-table">
 					<div class="col details-left"><h4>Skills</h4></div>
@@ -213,11 +212,9 @@
 							<a href="work-sample.php"><span class="clr-blue">+ Add more info:</span></a>
 						</div>
 					</div>
-				</div>
-			<div class="col resume-col"></div>
-			<div class="row resume-download">
-				<a href="pdf_generator.php" class="btn btn-success"></a>
+				</div>	
 			</div>
+
 		</div>
 
 	           <!-- Modal -->
@@ -267,6 +264,10 @@
 	      </div>
 	    </div>
 
+	    <div class="row resume-download">
+				<a href="pdf_generator.php" target="_blank" class="btn btn-success">Download</a>
+			</div>
+
 	    <div class="row footer forresume">
 				<div class="colp left">
 					<span class="flaticon_text">icons by</span>
@@ -275,8 +276,8 @@
 				<div class="colp right>">
 					<span class="social_ids">Connect with me</span>
 					<div class="social_id_img">
-						<a href=""><img src="img/instagram.png" class="insta_img"></a>
-						<a href=""><img src="img/linkedin.png" class="linkedin_img"></a>
+						<a href="https://www.instagram.com/ralph_since99/" target="_blank"><img src="img/instagram.png" class="insta_img"></a>
+					<a href="https://www.linkedin.com/in/debankar-roy-ralph/" target="_blank"><img src="img/linkedin.png" class="linkedin_img"></a>
 					</div>
 				</div>				
 		</div>
@@ -362,6 +363,26 @@
 		function shownothing(){
 			$('.abc').css("display","none");
 		}
+	</script>
+	<script>
+		/*const mq = window.matchMedia( "(max-width: 600px)" );
 
+		if (mq.matches) {
+			alert("mobile view");
+				$( document ).ready(function() {
+				    $('.abc').css("display","inline-block");
+				});
+			}
+				
+		 else {
+			alert("not mobile view");
+				function showedit(){
+				$('.abc').css("display","inline-block");
+			}
+
+			function shownothing(){
+				$('.abc').css("display","none");
+			}
+		}*/
 	</script>
 </html>

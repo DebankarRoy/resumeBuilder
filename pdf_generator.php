@@ -658,6 +658,6 @@
 
 	$mpdf = new \Mpdf\Mpdf();
 	$mpdf->WriteHTML($html);
-	$mpdf->Output();
+	$mpdf->Output('resume.pdf','D');
 	 
 ?>

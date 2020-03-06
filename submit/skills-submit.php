@@ -37,7 +37,7 @@
     if(isset($_POST['deleteidskill'])){
 
         $skill_id = $_POST['deleteidskill'];
-        echo $skill_id; 
+        //echo $skill_id; 
         $deletequery = " delete from skills where id ='$skill_id' ";
         if (!mysqli_query($conn,$deletequery)) {
             die("Error : ".$sql."<br>".mysqli_error($conn));

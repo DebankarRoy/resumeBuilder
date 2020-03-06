@@ -34,7 +34,7 @@
                     <span class="grey"><?php echo$email; ?><br></span>
                     <span class="grey"><?php echo$phone; ?><br></span>
                     <span class="grey"><?php echo$place; ?></span>
-                    <img src='<?php echo $image ?>' height="40px" width="40px" >
+                    <img src='<?php echo $image ?>' height="40px" width="40px" ;>
                 </div>
                 <div class="col col2 update-edit-pos hover">
                         <a href="#" onclick="updatestudent('<?php echo$id; ?>')"data-toggle='modal' data-target='#update_studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>

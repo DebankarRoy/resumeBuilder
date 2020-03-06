@@ -34,13 +34,12 @@
                         <form action="resume.php" id="<?php echo $profileid?>" method="post">
                         <input type="hidden" value="<?php echo $profileid?>" name="activeprofileid" />
                         </form>
-                        <div class="row padding-resume">
+                        <div class="col padding-resume">
                             <h2><?php echo$name; ?></h2>
                             <span class="grey"><?php echo$email; ?><br></span>
                             <span class="grey"><?php echo$phone; ?><br></span>
-                            <span class="grey"><?php echo$place; ?></span>
-                        </div>
-                        
+                            <span class="grey"><?php echo$place; ?></span>   
+                        </div>                        
                     </div>
                     <div class="row pad-row "></div>
                  <?php   

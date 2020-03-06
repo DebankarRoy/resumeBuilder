@@ -14,6 +14,7 @@
 		
 
 		<title>Experience</title>
+		<link rel = "icon" href ="img/portfolio.png">
 	</head>
 	<body>
 

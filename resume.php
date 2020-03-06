@@ -17,6 +17,7 @@
 		</style>
 		
 		<title>Resume</title>
+		<link rel = "icon" href ="img/curriculum (1).png">
 	</head>
 
 	<body>

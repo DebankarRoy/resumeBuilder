@@ -13,6 +13,7 @@
 		</style>
 		
 		<title>Skills</title>
+		<link rel = "icon" href ="img/skills.png">
 	</head>
 	<body>
 		<div class="row upper">

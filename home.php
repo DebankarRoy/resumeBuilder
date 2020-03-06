@@ -11,6 +11,7 @@
 		</style>
 		
 		<title>Home</title>
+		<link rel = "icon" href ="img/resume2.png">
 	</head>
 <body>
 	<div class="row upper">

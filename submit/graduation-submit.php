@@ -48,7 +48,7 @@
 
                         echo '</div>';
 
-                        echo '<div class="col col2 abc" style="display:none;">';
+                        echo '<div class="col col2 abc" id="ab" style="display:none;">';
                             echo '<a href="#" onclick="DeleteRecordgrad('.$id.')"><img class="rmv-img" src="img/bin-with-lid.png"></a>
                             </div>
                             </div>';

@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/modal-2.css"/>
 		
 		<title>Work Samples</title>
+		<link rel = "icon" href ="img/concept.png">
 	</head>
 	<body>
 		<div class="row upper">

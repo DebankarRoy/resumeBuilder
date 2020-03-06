@@ -39,8 +39,10 @@
                         <span class="grey"><?php echo$phone; ?><br></span>
                         <span class="grey"><?php echo$place; ?></span>
                     </div>
-                    <div class="col col2 update-edit-pos abc" style="display: none"  >
+                    <div class="col col2 update-edit-pos abc" style="display: hidden"  >
                             <a href="#" onclick="getstudent('<?php echo$id; ?>')"data-toggle='modal' data-target='#update_studentprofile'><img class="edit-img" src="img/pencil-edit-button.png"></a>
+                            <a href="#" onclick="DeleteProfile('<?php echo $profileid; ?>')"><img class="rmv-img " src="img/bin-with-lid.png"></a>
+                        
                     </div>
                 </div>
              <?php   
@@ -141,6 +143,107 @@
         }
         echo "working";
 }
+
+    if(isset($_POST['profiledeleteid']))
+    {
+        $del_id=$_POST['profiledeleteid'];
+
+        $deletequery = " delete from skills where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        //echo("skills deletion sucessful");
+
+        $deletequery = " delete from training_details where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        //echo("training deletion sucessful");
+
+        $deletequery = " delete from senior_secondary where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        //echo("ss training deletion sucessful");
+
+        $deletequery = " delete from secondary where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        //echo("secondary  deletion sucessful");
+
+        $deletequery = " delete from project_details where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+       // echo("projects deletion sucessful");
+
+        $deletequery = " delete from profiles where id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$deletequery."<br>".mysqli_error($conn));
+        }
+        //echo("profile deletion sucessful");
+
+        $deletequery = " delete from post_graduation where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        //echo("pg  deletion sucessful");
+
+        $deletequery = " delete from playstore where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        //echo("ps deletion sucessful");
+
+        $deletequery = " delete from phd where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+       // echo("phd deletion sucessful");
+
+        $deletequery = " delete from other_samples where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+       // echo("samples  deletion sucessful");
+
+        $deletequery = " delete from other_details where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+       // echo("others  deletion sucessful");
+
+        $deletequery = " delete from job_details where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+       // echo("job  deletion sucessful");
+
+        $deletequery = " delete from intern_details where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+       // echo("intern deletion sucessful");
+
+        $deletequery = " delete from graduation where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+       // echo("graduation deletion sucessful");
+
+        $deletequery = " delete from github where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+       // echo("git  deletion sucessful");
+
+        $deletequery = " delete from diploma where profiles_id ='$del_id' ";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+       // echo("diploma  deletion sucessful");
+    }
 
     exit;
     mysqli_close($conn);

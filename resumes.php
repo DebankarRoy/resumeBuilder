@@ -17,6 +17,7 @@
 		</style>
 		
 		<title>Resumes</title>
+		<link rel = "icon" href ="img/binder.png">
 </head>
 <body>
 	<div class="row upper">
@@ -104,7 +105,7 @@
 			<div class="triangle-left-up"></div>
 			<div class="triangle-right-up"></div>
 			<div class="row pad-row up"></div>
-			<div class="" id="student-profile-fetching">
+			<div class="" id="student-profile-fetching"></div>
 			<div class="row pad-row lower-row"></div>
 		</div>
 
@@ -129,6 +130,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/student-fetch.js"></script>
 		<script src="js/resumes-fetch.js"></script>
+		<script src="js/education-fetch.js"></script>
 		<script>
 			function openNav() {
 			  document.getElementById("mySidenav").style.width = "250px";

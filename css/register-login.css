@@ -333,13 +333,17 @@ input,.outer > .col4{
 .google,.fb{
     height: 50px;
     width: 50%;
-    
+    padding-left: 100px;
+}
+
+@media (max-width: 600px){
+    .google{
+   padding-left: 50px;
+
+    }
 } 
 
-.google{
-    border-right: 1px solid #7C7C7C;
-
-}  
+  
 
 .sign-in-login{
     color: #7c7c7c;

@@ -11,6 +11,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
         <link rel="stylesheet" href="/social_media/css/register-login.css">
+        <link rel = "icon" href ="img/resume2.png">
     </head>
     <body>
         <div class="col left">

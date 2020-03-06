@@ -13,6 +13,7 @@
 
 		</style>
 		<title>Student details</title>
+		<link rel = "icon" href ="img/student.png">
 	</head>
 	<body>
 		<div class="row upper">
@@ -170,7 +171,7 @@
 					        </div>
 					    </div>
 
-					    <div class="row form-group">
+					    <div class="row form-group" style="display:none;">
 					        <label for="picture" class="control-label">Image*:</label>
 					        <div class="input-group">
 					            <input type="file" class="wid form-control" id="image" tabindex="6" name="file"value="">	

@@ -70,6 +70,22 @@ function UpdateStudent() {
         });
 }
 
+function DeleteProfile(profiledeleteid) {
+	//console.log(form_counter);
+	var conf = confirm("Are you sure?");
+		if(conf == true) {
+		$.ajax({
+			url:"student-submit.php",
+			type:'POST',
+			data: {  profiledeleteid: profiledeleteid },
+			success:function(data, status){
+				fetchRecordstudent();
+				//reload();	
+			}
+		});
+	}	 	
+}
+
 /*hidden_user_id: hidden_user_id,
             firstname: firstname,
             lastname: lastname,

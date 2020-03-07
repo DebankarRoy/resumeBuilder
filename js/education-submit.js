@@ -8,7 +8,9 @@ function submitgrad(){
       college: 'required', 
       start_year_clg: 'required',
       end_year_clg: 'required',
-      degree: 'required'
+      degree: 'required',
+      performance_scale_clg:'required',
+      performance_clg:'required'
     }
   });
 
@@ -34,7 +36,11 @@ function submitss(){
     rules:{
         school: 'required',
         end_year_ss: 'required',  
-        board_ss:'required'
+        board_ss:'required',
+        performance_scale_ss:'required',
+        performance_marks_ss:'required',
+        stream_ss:'required'
+
         }
     });
 
@@ -62,7 +68,9 @@ function submitsecondary(){
     rules:{
         school_s: 'required',
         end_year_s: 'required',  
-        board_s:'required'
+        board_s:'required',
+        performance_scale_s:'required',
+        performance_s:'required'
         }
     });
 
@@ -89,7 +97,10 @@ function submitpostgrad(){
       college_pg: 'required', 
       start_year_pg: 'required',
       end_year_pg: 'required',
-      degree_pg: 'required'
+      degree_pg: 'required',
+      stream_pg:'required',
+      performance_scale_pg:'required',
+      performance_pg:'required'
         }
     });
 
@@ -114,7 +125,10 @@ function submitdiploma(){
     rules: {
       college_dp: 'required', 
       start_year_dp: 'required',
-      end_year_dp: 'required'
+      end_year_dp: 'required',
+      stream_dp:'required',
+      performance_scale:'required',
+      performance_dp:'required'
         }
     });
 
@@ -139,7 +153,10 @@ function submitphd(){
     rules: {
       college_phd: 'required', 
       start_year_ph: 'required',
-      end_year_ph: 'required'
+      end_year_ph: 'required',
+      stream_ph:'required',
+      performance_scale_ph:'required',
+      performance_ph:'required'
         }
     });
 

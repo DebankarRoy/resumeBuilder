@@ -46,6 +46,34 @@
                 }
             }
         }
+        else
+        {
+            ?>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        
+                      </div>
+                      <div class="modal-body">
+                        <h5 style="text-align: center">You don't have any resume</h5>
+                      </div>
+                      <div class="modal-footer">    
+                        <a class="btn btn-warning" href="/Resume/student.php" >Create a new</a>
+                        <a class="btn btn-primary" href="/Resume/home.php">Home</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        $("#exampleModalCenter").modal('show');
+                    });
+                    $('#exampleModalCenter').modal({backdrop: 'static', keyboard: false});
+                </script>
+            <?php
+        }
     }
 
     if(isset($_POST[''])) {

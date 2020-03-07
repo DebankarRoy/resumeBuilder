@@ -147,8 +147,14 @@
     if(isset($_POST['profiledeleteid']))
     {
         $del_id=$_POST['profiledeleteid'];
+        
+        $deletequery = "SET FOREIGN_KEY_CHECKS=0";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        //echo("FOREIGN_KEY_CHECKS disabled");
 
-        $deletequery = " delete from skills where profiles_id ='$del_id' ";
+        $deletequery = "delete from skills where profiles_id ='$del_id' ";
         if (!mysqli_query($conn,$deletequery)) {
             die("Error : ".$sql."<br>".mysqli_error($conn));
         }
@@ -243,6 +249,11 @@
             die("Error : ".$sql."<br>".mysqli_error($conn));
         }
        // echo("diploma  deletion sucessful");
+        $deletequery = "SET FOREIGN_KEY_CHECKS=1";
+        if (!mysqli_query($conn,$deletequery)) {
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+        }
+        //echo("FOREIGN_KEY_CHECKS enabled");
     }
 
     exit;

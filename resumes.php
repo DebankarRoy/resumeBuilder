@@ -141,5 +141,11 @@
 			}
 		</script>
 
+		<script>
+		    $(document).ready(function(){
+		        $("#myModal").modal('show');
+		    });
+		</script>
+
 </body>
 </html>

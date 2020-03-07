@@ -79,8 +79,7 @@ function DeleteProfile(profiledeleteid) {
 			type:'POST',
 			data: {  profiledeleteid: profiledeleteid },
 			success:function(data, status){
-				fetchRecordstudent();
-				//reload();	
+				window.location = "home.php";	
 			}
 		});
 	}	 	

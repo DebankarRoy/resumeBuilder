@@ -479,7 +479,7 @@
 									 		</div>
 
 									 		<div class="row scl-performence-scale">
-							 						<div class="col per-scale">Performence Scale:
+							 						<div class="col per-scale">Performence Scale:*
 							 							<div class="scale-container">
 							 								<select class="perfor-scale" id="performance-scale-ss" tabindex="6" name="performance_scale_ss" aria-invalid="false">
 							                                    <option value="" selected="">Percentage</option>
@@ -492,7 +492,7 @@
 							                                </select>
 							 							</div>
 							 						</div>
-							 						<div class="col per-num">Performence
+							 						<div class="col per-num">Performence*
 							 							<div class="per-container">
 							 								<input type="number" class="per-marks" id="performance-ss" tabindex="7" name="performance_marks_ss" placeholder="0.00" aria-invalid="false">
 							 							</div>
@@ -615,7 +615,7 @@
 											</div>
 
 											<div class="row scl-performence-scale">
-													<div class="col per-scale">Performence Scale:
+													<div class="col per-scale">Performence Scale:*
 														<div class="scale-container">
 															<select class="perfor-scale" id="performance-scale-college" tabindex="6" name="performance_scale_s" aria-invalid="false">
 																<option value="" selected="">Percentage</option>
@@ -628,7 +628,7 @@
 															</select>
 														</div>
 													</div>
-													<div class="col per-num">Performence
+													<div class="col per-num">Performence*
 														<div class="per-container">
 															<input type="number" class="per-marks" id="performance-college" tabindex="7" name="performance_s" placeholder="0.00" aria-invalid="false">
 														</div>
@@ -787,7 +787,7 @@
 							 								<input type="text" id="degree" tabindex="4" class="deg-input" autocomplete="off" isautocomplete="" name="degree_pg" placeholder="Ex: MBA " required="" aria-required="true" aria-invalid="true">
 							 							</div>
 							 						</div>
-							 						<div class=" col stream-name" id="input-type">Stream:
+							 						<div class=" col stream-name" id="input-type">Stream:*
 							 							<div class="stream-container">
 							 								<input type="text" id="stream" tabindex="5" class="stream-input" autocomplete="off" isautocomplete="" name="stream_pg" placeholder="Ex: Finance ">
 							 							</div>
@@ -966,7 +966,7 @@
 									 				</div>
 							 					</div>
 							 					<div class="row dip-degree-stream">
-							 						<div class=" col dip-stream-name" id="input-type">Stream:
+							 						<div class=" col dip-stream-name" id="input-type">Stream:*
 							 							<div class="stream-container">
 							 								<input type="text" id="stream" tabindex="5" class="stream-input" autocomplete="off" isautocomplete="" name="stream_dp" placeholder="Ex: Creative Writing ">
 							 							</div>
@@ -974,7 +974,7 @@
 							 					</div>
 							 					
 							 					<div class="row performence-scale">
-							 						<div class="col per-scale">Performence Scale:
+							 						<div class="col per-scale">Performence Scale:*
 							 							<div class="scale-container">
 							 								<select class="perfor-scale" id="performance-scale-college" tabindex="6" name="performance_scale" aria-invalid="false">
 							                                    <option value="" selected="">Percentage</option>
@@ -987,7 +987,7 @@
 							                                </select>
 							 							</div>
 							 						</div>
-							 						<div class="col per-num">Performence
+							 						<div class="col per-num">Performence*
 							 							<div class="per-container">
 							 								<input type="number" class="per-marks" id="performance-college" tabindex="7" name="performance_dp" placeholder="0.00" aria-invalid="false">
 							 							</div>
@@ -1142,7 +1142,7 @@
 									 				</div>
 							 					</div>
 							 					<div class="row dip-degree-stream">
-							 						<div class=" col dip-stream-name" id="input-type">Stream:
+							 						<div class=" col dip-stream-name" id="input-type">Stream:*
 							 							<div class="stream-container">
 							 								<input type="text" id="stream" tabindex="5" class="stream-input" autocomplete="off" isautocomplete="" name="stream_ph" placeholder="Ex: Bussiness Studies ">
 							 							</div>

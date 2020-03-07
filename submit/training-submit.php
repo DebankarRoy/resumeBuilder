@@ -32,6 +32,10 @@
                 $description=$row['description'];
                 $start=date('M Y',strtotime($start_pro));
                 $end=date('M Y',strtotime($end_pro));
+                if($end =="Jan 1970")
+                {
+                    $end='ongoing';
+                }
 
                 echo '<div class="row data-fetch">
                         <div class="col col1"><h5 class="fetched-head">'; 
@@ -83,8 +87,10 @@
         $end=date('Y/m/d',strtotime($end_year_tra));
         $prfl=$_SESSION['profileid'];
 
-        echo $training_org;
-        echo $training_prog.$training_loc ;
+        
+        //echo $training_org;
+        //echo $training_prog.$training_loc ;
+        //echo $end;
 
         $sql = "INSERT INTO training_details(program_name ,organization ,location ,start_date ,end_date ,description ,profiles_id)
             VALUES('$training_prog' ,'$training_org' ,'$training_loc' ,'$start', '$end' ,'$description_tra' ,'$userid_loggedin')";

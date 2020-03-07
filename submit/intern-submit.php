@@ -29,6 +29,10 @@
                 $description=$row['description'];
                 $start=date('M Y',strtotime($start_int));
                 $end=date('M Y',strtotime($end_int));
+                if($end =="Jan 1970")
+                {
+                    $end='ongoing';
+                }
 
                 echo '<div class="row data-fetch">
                         <div class="col col1"><h5 class="fetched-head">'; 

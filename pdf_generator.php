@@ -358,93 +358,96 @@
                         <img class="dp" style="height:100px;width:100px;margin-top:10px;">
                     </div>
             </div>
-            <br>
-            <div class="row education border-top">
-            	<div class="col title">
-            		<h3>Education</h3>
-            	</div>
-            	<div class="col activity">';
-	            	if($clg_phd!="")
-	            	{
-	            		$html.='<div class="row phd">
-	            			<h5 class="fetched-head"> 
-	                       PhD,'.$str_phd.'
-	                        ('.$str_yr_phd.'-'.$end_yr_phd.')
-	                        </h5>
-	                    	<div class="clr">
-		                        '.$clg_phd.'   
-		                    </div>
-							<div class="clr">
-		                         SGPA: '.$prf_scl_phd.'/'.
-		                        $prf_mrk_phd.'         
-		                    </div>
-	                	</div>';
-	                }
-
-                	if($clg_pg!="")
-                	{
-	            		$html.='<div class=" row post-grad">
-	            			<h5 class="fetched-head"> 
-	                       '.$deg_pg.','.$str_pg.'
-	                        ('.$str_yr_pg.'-'.$end_yr_pg.')
-	                        </h5>
-	                    	<div class="clr">
-		                        '.$clg_pg.'   
-		                    </div>
-							<div class="clr">
-		                         SGPA: '.$prf_scl_pg.'/'.
-		                        $prf_mrk_pg.'         
-		                    </div>
-	                	</div>';
-               		}
-
-                	if($clg!="")
-                	{
-                		$html.='<div class=" row grad">
-	            			<h5 class="fetched-head"> 
-	                       '.$deg.','.$str.'
-	                        ('.$str_yr.'-'.$end_yr.')
-	                        </h5>
-	                    	<div class="clr">
-		                        '.$clg.'   
-		                    </div>
-							<div class="clr">
-		                         SGPA: '.$prf_scl.'/'.
-		                        $prf_mrk.'         
-		                    </div>
-	                	</div>';
-	                }
-
-                	if($scl_ss!=""){
-                		$html.='<div class=" row ss">
-	            			<h5 class="fetched-head"> 
-	                        XII (Senior Secondary)<br></h5>
-	                        <div class="clr">    Year of Completion:'.$end_yr_ss.'</div>
-	                    	<div class="clr">
-		                        '.$board_ss.' Board('.$scl_ss.')   
-		                    </div>
-							<div class="clr">
-		                         SGPA:'.$prf_scl_ss.'/'.$prf_mrk_ss.'        
-		                    </div>
-	                	</div>';
-	                }
-
-                	if($scl_ss!=""){
-                		$html.='<div class=" row s">
-	            			<h5 class="fetched-head"> 
-	                        X (Secondary),'.$str_s.'<br></h5>
-	                        <div class="clr">    Year of Completion:'.$end_yr_s.'</div>
-	                    	<div class="clr">
-		                        '.$board_s.' Board('.$scl_s.')   
-		                    </div>
-							<div class="clr">
-		                         SGPA:'.$prf_scl_s.'/'.$prf_mrk_s.'        
-		                    </div>
-	                	</div>';
-	                }
-            	$html.='</div>
-            </div>
             <br>';
+            if($clg_phd!="" || $clg_pg!="" || $clg!="" || $scl_s!="" || $scl_ss!="")
+            {
+                $html.='<div class="row education border-top">
+                	<div class="col title">
+                		<h3>Education</h3>
+                	</div>
+                	<div class="col activity">';
+    	            	if($clg_phd!="")
+    	            	{
+    	            		$html.='<div class="row phd">
+    	            			<h5 class="fetched-head"> 
+    	                       PhD,'.$str_phd.'
+    	                        ('.$str_yr_phd.'-'.$end_yr_phd.')
+    	                        </h5>
+    	                    	<div class="clr">
+    		                        '.$clg_phd.'   
+    		                    </div>
+    							<div class="clr">
+    		                         SGPA: '.$prf_scl_phd.'/'.
+    		                        $prf_mrk_phd.'         
+    		                    </div>
+    	                	</div>';
+    	                }
+
+                    	if($clg_pg!="")
+                    	{
+    	            		$html.='<div class=" row post-grad">
+    	            			<h5 class="fetched-head"> 
+    	                       '.$deg_pg.','.$str_pg.'
+    	                        ('.$str_yr_pg.'-'.$end_yr_pg.')
+    	                        </h5>
+    	                    	<div class="clr">
+    		                        '.$clg_pg.'   
+    		                    </div>
+    							<div class="clr">
+    		                         SGPA: '.$prf_scl_pg.'/'.
+    		                        $prf_mrk_pg.'         
+    		                    </div>
+    	                	</div>';
+                   		}
+
+                    	if($clg!="")
+                    	{
+                    		$html.='<div class=" row grad">
+    	            			<h5 class="fetched-head"> 
+    	                       '.$deg.','.$str.'
+    	                        ('.$str_yr.'-'.$end_yr.')
+    	                        </h5>
+    	                    	<div class="clr">
+    		                        '.$clg.'   
+    		                    </div>
+    							<div class="clr">
+    		                         SGPA: '.$prf_scl.'/'.
+    		                        $prf_mrk.'         
+    		                    </div>
+    	                	</div>';
+    	                }
+
+                    	if($scl_ss!=""){
+                    		$html.='<div class=" row ss">
+    	            			<h5 class="fetched-head"> 
+    	                        XII (Senior Secondary)<br></h5>
+    	                        <div class="clr">    Year of Completion:'.$end_yr_ss.'</div>
+    	                    	<div class="clr">
+    		                        '.$board_ss.' Board('.$scl_ss.')   
+    		                    </div>
+    							<div class="clr">
+    		                         SGPA:'.$prf_scl_ss.'/'.$prf_mrk_ss.'        
+    		                    </div>
+    	                	</div>';
+    	                }
+
+                    	if($scl_s!=""){
+                    		$html.='<div class=" row s">
+    	            			<h5 class="fetched-head"> 
+    	                        X (Secondary),'.$str_s.'<br></h5>
+    	                        <div class="clr">    Year of Completion:'.$end_yr_s.'</div>
+    	                    	<div class="clr">
+    		                        '.$board_s.' Board('.$scl_s.')   
+    		                    </div>
+    							<div class="clr">
+    		                         SGPA:'.$prf_scl_s.'/'.$prf_mrk_s.'        
+    		                    </div>
+    	                	</div>';
+    	                }
+                	$html.='</div>
+                </div>
+                <br>';
+            }
             if($profile!="" || $profile_i!="" || $profile_t!="" || $project!="" || $others!="")
             {
         	$html.='<div class="row experience border-top">
@@ -561,7 +564,9 @@
                     </div>
                     <br>';
             }
-        $html.=
+        if($skill!="")
+        {    
+            $html.=
             '<div class="row skill border-top">
             	<div class="col title">
             		<h3>Skill</h3>
@@ -651,7 +656,7 @@
                         
                         ';
             }
-                        
+        }                
 
 
 	include 'mpdf/vendor/autoload.php';

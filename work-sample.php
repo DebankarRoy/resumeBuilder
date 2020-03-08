@@ -111,9 +111,8 @@
 		    <div id="mySidenav" class="sidenav">
 
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			  <a href="">Manage Account</a>
-			  <a href="#">Resumes</a>
-			  <a href="#">Logout</a>
+			  <a href="resumes.php">Resumes</a>
+			  <a href="logout.php">Logout</a>
 			</div>
 
 			<div id="menu-bar-open">
@@ -128,7 +127,7 @@
 				<div class="row empty"></div>
 				<div class="col dataform ">
 					<h4 class="font-weight-h4 padding-h4">Add your work sample links here (if any):</h4>
-					<form role="form" novalidate="novalidate" id="work-samples" name="work-samples" enctype="multipart/form-data" method="POST" action = "submit/work-sample-submit2.php">
+					<form role="form" novalidate="novalidate" id="work-samples" name="work-samples" enctype="multipart/form-data" method="POST" action = "submit/work-sample-submit.php">
 						<div class="row link-in">Blog Link:
 							<input class="form-control link-input " id="skill"index="2" name="blog" placeholder="http://myblog.com" value="" type="text">
 						</div>

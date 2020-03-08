@@ -377,7 +377,7 @@
 								<div class="modal-conts">
 									<div class="header-container exp">Job Details</div>
 									<span class="close" aria-hidden="true" data-dismiss="modal">+</span>
-									<form role="form" novalidate="novalidate" id="job_details" name="job" enctype="multipart/form-data">
+									<form type="get" role="form" novalidate="novalidate" id="job_details" name="job" enctype="multipart/form-data">
 										<div class="row empty"></div>
 										<div class="col padding mbl-view"></div>
 										<div class="col dataform">
@@ -408,7 +408,7 @@
 						 							<div class="name-container">
 						 								<input type="text" id="end-date_job" tabindex="" class="input-name" autocomplete="off" isautocomplete="" name="enddate_job" placeholder="Ex: ending date" required="" aria-required="true" aria-invalid="true">
 					 								</div>
-					 								<div class="radio-btn">
+					 								<div class="radio-btn" style="display: none">
 					 									<input type="checkbox" id="job_present">Currently Ongoing 
 					 								</div>
 						 						</div>

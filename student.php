@@ -117,7 +117,6 @@
 		    <div id="mySidenav" class="sidenav">
 
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			  <a href="">Manage Account</a>
 			  <a href="home.php">Home</a>
 			  <a href=resumes.php>Resumes</a>
 			  <a href="logout.php">Logout</a>

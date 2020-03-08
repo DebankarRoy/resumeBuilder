@@ -117,7 +117,6 @@
                 }  
             }
         }
-
     }
     echo "<a href='work-sample.php'><span class='clr-blue'>+ Add more info:</span></a>";
 
@@ -173,4 +172,64 @@
         }
         echo("deletion sucessful");
     }
+
+    if(isset($_POST['blog']) || isset($_POST['github']) || isset($_POST['playstore']) ||isset($_POST['behnace']) || isset($_POST['other'])){
+
+        $userid_loggedin=$_SESSION['profileid'];
+        $blog=$_POST['blog'];
+        $github = $_POST['github'];
+        $playstore=$_POST['playstore'];
+        $behance=$_POST['behance'];
+        $other = $_POST['other'];
+
+        if($blog!='')
+        {   
+            $sql = "INSERT INTO blog (blog ,profiles_id)
+                VALUES('$blog','$userid_loggedin')";
+            if(!mysqli_query($conn,$sql)){
+            die("Error : ".$sql."<br>".mysqli_error($conn));
+            }
+        }
+        if($github!="")
+        { 
+            $sql = "INSERT INTO github (github ,profiles_id)
+                VALUES('$github','$userid_loggedin')";
+            if(!mysqli_query($conn,$sql)){
+                die("Error : ".$sql."<br>".mysqli_error($conn));
+            }
+        }
+
+        if($playstore!="")
+        { 
+            $sql = "INSERT INTO playstore (playstore ,profiles_id)
+                VALUES('$playstore' ,'$userid_loggedin')";
+            if(!mysqli_query($conn,$sql)){
+                die("Error : ".$sql."<br>".mysqli_error($conn));
+            }
+        }
+
+        if($behance!="")
+        { 
+            $sql = "INSERT INTO behance (behance ,profiles_id)
+                VALUES('$behance' ,'$userid_loggedin')";
+            if(!mysqli_query($conn,$sql)){
+                die("Error : ".$sql."<br>".mysqli_error($conn));
+            }
+        }
+
+        if($other!="")
+        { 
+            $sql = "INSERT INTO other_samples (other ,profiles_id)
+                VALUES('$other' ,'$userid_loggedin')";  
+            if(!mysqli_query($conn,$sql)){
+                die("Error : ".$sql."<br>".mysqli_error($conn));
+            }
+        }
+
+
+        //echo "Registration Successful";
+        header('Location: /Resume/resume.php');
+    }
+    exit;
+    mysqli_close($conn);
 ?>

@@ -20,8 +20,12 @@
         $password=mysqli_real_escape_string($conn,$_GET['password']);
         $email=mysqli_real_escape_string($conn,$_GET['email']);
 
-        $sql = "INSERT INTO users (name, email, password)
-                VALUES('$name', '$email', '$password')";
+        $pass=password_hash($password, PASSWORD_BCRYPT);
+
+        $token=bin2hex(random_bytes(15));
+
+        $sql = "INSERT INTO users (name, email, password, token, status)
+                VALUES('$name', '$email', '$pass', '$token', 'active')";
         $result=mysqli_query($conn,$sql);
         if(!$result){
             die("Error : ".$sql."<br>".mysqli_error($conn));
@@ -45,36 +49,36 @@
         $email=mysqli_real_escape_string($conn,$_GET['email']);
         $password=mysqli_real_escape_string($conn,$_GET['password']);
 
-        //echo $email.$password;
 
-        $sql = "select * from users where email='$email' and password='$password'";
+        $sql = "select * from users where email='$email'"; 
         
         $result = mysqli_query($conn, $sql);
-        if (!$result) {
-           die("Error: " . $sql . "<br>" . mysqli_error($conn));
-           //echo("wrong password or email");
-        }
         
-        if(mysqli_num_rows($result)==0){
-                
-                header('Location: loginerror.php');
-                //echo "<h3>login failed,try again</h3>";
-        }
         while ($row=mysqli_fetch_array($result)) {
-            session_start();
-            $_SESSION['loggedin']=true;    
-            $_SESSION['id'] = $row['id'];
-            $_SESSION['name'] = $row['name'];
-            header('Location: home.php');
-            exit;
+            $db_pass=$row['password'];
+            $verify=password_verify($password, $db_pass);
+            if($verify)
+            {
+                session_start();
+                $_SESSION['loggedin']=true;    
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['name'] = $row['name'];
+                header('Location: home.php');
+                exit;
+            }
+            else
+                header('Location: loginerror.php');
+                exit;
         }
     }
     
-    if(isset($_SESSION['ac_password']) && isset($_SESSION['ac_email']) && isset($_SESSION['ac_name']))
+    /*if(isset($_SESSION['ac_password']) && isset($_SESSION['ac_email']) && isset($_SESSION['ac_name']))
     {
         $password=$_SESSION['ac_password'];
         $email=$_SESSION['ac_email'];
         $name=$_SESSION['ac_name'];
+
+
 
         //echo $email.$name;
 
@@ -121,7 +125,7 @@
                 exit();
             }
         }   
-    }
+    }*/
     //header('Location: home.php');
     exit();
     mysqli_close($conn);

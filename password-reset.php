@@ -27,10 +27,10 @@
 		$result = mysqli_query($conn, $sql);
 		while ($row=mysqli_fetch_array($result)) {
 			$name=$row['name'];
-            $password = $row['password'];
+            $token = $row['token'];
         }  
 
-		$msg = "Hello ".$name."\n\nYour password is ".$password;
+		$msg = "Hello,$name\n\nClick on this link to reset your password\n\nhttp://localhost/Resume/setpassword.php?token=$token";
 	
 
 		
@@ -52,7 +52,7 @@
 		//Set gmail password
 			$mail->Password = "resumer$147@Ralph";
 		//Email subject
-			$mail->Subject = "Test email using PHPMailer";
+			$mail->Subject = "Password Reset";
 		//Set sender email
 			$mail->setFrom('helpresume63@gmail.com');
 		//Enable HTML
@@ -72,6 +72,12 @@
 		//Closing smtp connection
 			$mail->smtpClose();
 		}
-		header('Location:/Resume/login.php');
+		?>
+		<script>
+			alert("Check your email");
+			location.replace("login.php");
+		</script>
+		<?php
+		//header('Location:/Resume/login.php');
 
 ?>

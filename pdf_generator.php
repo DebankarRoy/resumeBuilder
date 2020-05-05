@@ -206,13 +206,13 @@
             }
         }
 
-        $sql = "SELECT COUNT(*) as total FROM skills where profiles_id=6"; 
+        /*$sql = "SELECT COUNT(*) as total FROM skills where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);
          if(mysqli_num_rows($result) > 0){
             while ($row = mysqli_fetch_array($result)) {
                 $skill_counter= $row[total];
             }
-        }
+        }*/
 
         $sql = "SELECT * FROM skills where profiles_id=$prfl"; 
         $result = mysqli_query($conn,$sql);

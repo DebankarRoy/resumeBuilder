@@ -11,6 +11,7 @@
 
   if ($_GET['email']!=""){
     $email = $_GET['email'];
+    $email=mysqli_real_escape_string($conn,$_GET['email']);
   
 	$sql = "SELECT * FROM users WHERE email='$email'";
 	$results = mysqli_query($conn, $sql);
